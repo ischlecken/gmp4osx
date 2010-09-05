@@ -2,8 +2,8 @@ gmp4osx
 =============
 
 This is the GNU [GMP](http://gmplib.org/) Math Library for osx compiled with xcode 3.2.3.
-The main objective of this dev should be to create a osx framework
-that is usable for osx and for iphone development.
+The main objective of this development should be to create an osx framework
+that is usable for osx and iphone development.
 
 Installation
 -----------
