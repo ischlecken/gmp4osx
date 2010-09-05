@@ -1,0 +1,13 @@
+//
+//  gmp.xcconfig
+//  gmp
+//
+//  Created by Feldmaus on 04.09.10.
+//  Copyright 2010 ischlecken.com. All rights reserved.
+//
+VALID_ARCHS = x86_64 armv6 armv6
+GCC_C_LANGUAGE_STANDARD = gnu99
+GCC_MODEL_TUNING = core2
+CURRENT_PROJECT_VERSION = 5.0
+OTHER_LDFLAGS = 
+OTHER_CFLAGS = 

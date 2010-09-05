@@ -1,0 +1,19 @@
+//
+//  gmp.xcconfig
+//  gmp
+//
+//  Created by Feldmaus on 04.09.10.
+//  Copyright 2010 ischlecken.com. All rights reserved.
+//
+VALID_ARCHS = x86_64 armv6 armv6
+GCC_C_LANGUAGE_STANDARD = gnu99
+GCC_MODEL_TUNING = core2
+CURRENT_PROJECT_VERSION = 5.0.1
+OTHER_LDFLAGS = 
+OTHER_CFLAGS = 
+GCC_PREPROCESSOR_DEFINITIONS = __GMP_WITHIN_GMP HAVE_CONFIG_H PIC
+ENABLE_OPENMP_SUPPORT = NO
+LD_OPENMP_FLAGS = 					
+HEADER_SEARCH_PATHS = $(PROJECT_DIR)/src $(BUILD_ROOT)/include $(BUILD_ROOT)/include/mpn $(BUILD_ROOT)/include/mpz
+ARCHS = $(ARCHS_STANDARD_32_64_BIT)
+
