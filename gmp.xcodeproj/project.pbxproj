@@ -26,6 +26,11 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		856ADA591238496700893019 /* invert_limb.asm in Sources */ = {isa = PBXBuildFile; fileRef = 856ADA581238496700893019 /* invert_limb.asm */; };
+		856ADAAE1238566F00893019 /* aorrlsh_n.asm in Sources */ = {isa = PBXBuildFile; fileRef = 856ADAAA1238566F00893019 /* aorrlsh_n.asm */; };
+		856ADAAF1238566F00893019 /* aorrlsh1_n.asm in Sources */ = {isa = PBXBuildFile; fileRef = 856ADAAB1238566F00893019 /* aorrlsh1_n.asm */; };
+		856ADAB01238566F00893019 /* mul_2.asm in Sources */ = {isa = PBXBuildFile; fileRef = 856ADAAC1238566F00893019 /* mul_2.asm */; };
+		856ADAB11238566F00893019 /* sublsh1_n.asm in Sources */ = {isa = PBXBuildFile; fileRef = 856ADAAD1238566F00893019 /* sublsh1_n.asm */; };
 		85B4E89212345AC30091D2C2 /* assert.c in Sources */ = {isa = PBXBuildFile; fileRef = 85B4E86D12345AC30091D2C2 /* assert.c */; };
 		85B4E89312345AC30091D2C2 /* compat.c in Sources */ = {isa = PBXBuildFile; fileRef = 85B4E86E12345AC30091D2C2 /* compat.c */; };
 		85B4E89512345AC30091D2C2 /* errno.c in Sources */ = {isa = PBXBuildFile; fileRef = 85B4E87012345AC30091D2C2 /* errno.c */; };
@@ -486,24 +491,24 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
-		85B4E8FA1234624D0091D2C2 /* PBXBuildRule */ = {
+		856ADA8F1238541D00893019 /* PBXBuildRule */ = {
 			isa = PBXBuildRule;
-			compilerSpec = com.apple.compilers.proxy.script;
-			filePatterns = "*.asm";
+			compilerSpec = com.apple.compilers.gcc;
 			fileType = sourcecode.asm;
 			isEditable = 1;
 			outputFiles = (
 			);
-			script = m4call;
 		};
-		85B4E9151234646E0091D2C2 /* PBXBuildRule */ = {
+		85B4E8FA1234624D0091D2C2 /* PBXBuildRule */ = {
 			isa = PBXBuildRule;
-			compilerSpec = com.apple.compilers.gcc.4_2;
-			filePatterns = "*.s";
-			fileType = pattern.proxy;
+			compilerSpec = com.apple.compilers.proxy.script;
+			filePatterns = "*.asm";
+			fileType = sourcecode.asm.asm;
 			isEditable = 1;
 			outputFiles = (
+				"${DERIVED_FILES_DIR}/${INPUT_FILE_BASE}.s",
 			);
+			script = "#env\nm4 -I ${PROJECT_DIR}/src/mpn -DHAVE_CONFIG_H -D__GMP_WITHIN_GMP -DOPERATION_add_n -DPIC ${INPUT_FILE_PATH} > ${DERIVED_FILES_DIR}/${INPUT_FILE_BASE}.s";
 		};
 /* End PBXBuildRule section */
 
@@ -529,46 +534,53 @@
 			remoteGlobalIDString = 85876B561232BC19009F25BF;
 			remoteInfo = "gen-psqr";
 		};
+		856ADAA6123855C200893019 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 85B4E8EC123460BE0091D2C2 /* gmp-mpn-x86 */;
+			remoteInfo = "gmp-mpn-x86";
+		};
 		85B4E8D712345C530091D2C2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 85D5E463123418ED0017B49B /* gmp-base */;
+			remoteGlobalIDString = 85D5E463123418ED0017B49B;
 			remoteInfo = "gmp-base";
 		};
 		85B4E8D912345C530091D2C2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 85D5E49712341BAD0017B49B /* gmp-mnp-generic */;
+			remoteGlobalIDString = 85D5E49712341BAD0017B49B;
 			remoteInfo = "gmp-mnp-generic";
 		};
 		85B4E8DB12345C530091D2C2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 85D5E5C012341D570017B49B /* gmp-mpz */;
+			remoteGlobalIDString = 85D5E5C012341D570017B49B;
 			remoteInfo = "gmp-mpz";
 		};
 		85B4E8DD12345C530091D2C2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 85D5E7A812341EFB0017B49B /* gmp-mpq */;
+			remoteGlobalIDString = 85D5E7A812341EFB0017B49B;
 			remoteInfo = "gmp-mpq";
 		};
 		85B4E8DF12345C530091D2C2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 85D5E70C12341E900017B49B /* gmp-mpf */;
+			remoteGlobalIDString = 85D5E70C12341E900017B49B;
 			remoteInfo = "gmp-mpf";
 		};
 		85B4E8E112345C530091D2C2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 85D5E7FE12341F810017B49B /* gmp-io */;
+			remoteGlobalIDString = 85D5E7FE12341F810017B49B;
 			remoteInfo = "gmp-io";
 		};
 		85D5E49212341B850017B49B /* PBXContainerItemProxy */ = {
@@ -608,6 +620,11 @@
 		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		32DBCF5E0370ADEE00C91783 /* gmp_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gmp_Prefix.pch; sourceTree = "<group>"; };
 		856823A51233D1280031911F /* gmplib.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = gmplib.xcconfig; sourceTree = "<group>"; };
+		856ADA581238496700893019 /* invert_limb.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = invert_limb.asm; path = src/mpn/x86_64/invert_limb.asm; sourceTree = "<group>"; };
+		856ADAAA1238566F00893019 /* aorrlsh_n.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = aorrlsh_n.asm; path = src/mpn/x86_64/aorrlsh_n.asm; sourceTree = "<group>"; };
+		856ADAAB1238566F00893019 /* aorrlsh1_n.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = aorrlsh1_n.asm; path = src/mpn/x86_64/aorrlsh1_n.asm; sourceTree = "<group>"; };
+		856ADAAC1238566F00893019 /* mul_2.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = mul_2.asm; path = src/mpn/x86_64/mul_2.asm; sourceTree = "<group>"; };
+		856ADAAD1238566F00893019 /* sublsh1_n.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = sublsh1_n.asm; path = src/mpn/x86_64/sublsh1_n.asm; sourceTree = "<group>"; };
 		858764D8123274F8009F25BF /* gmp.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = gmp.xcconfig; sourceTree = "<group>"; };
 		85876B571232BC19009F25BF /* gen-psqr */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "gen-psqr"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85876B651232BCE1009F25BF /* gen-fib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "gen-fib"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -646,7 +663,7 @@
 		85B4E88C12345AC30091D2C2 /* randsdui.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = randsdui.c; path = src/randsdui.c; sourceTree = "<group>"; };
 		85B4E88F12345AC30091D2C2 /* tal-reent.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "tal-reent.c"; path = "src/tal-reent.c"; sourceTree = "<group>"; };
 		85B4E89012345AC30091D2C2 /* version.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = version.c; path = src/version.c; sourceTree = "<group>"; };
-		85B4E8ED123460BE0091D2C2 /* libgmp-mpn-x86.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libgmp-mpn-x86.a"; path = "build/Debug/libgmp-mpn-x86.a"; sourceTree = "<group>"; };
+		85B4E8ED123460BE0091D2C2 /* libgmp-mpn-x86.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libgmp-mpn-x86.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85D5E464123418ED0017B49B /* libgmp-base.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libgmp-base.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85D5E48912341A430017B49B /* gmp-impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "gmp-impl.h"; path = "src/gmp-impl.h"; sourceTree = "<group>"; };
 		85D5E48A12341A430017B49B /* gmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gmp.h; path = src/gmp.h; sourceTree = "<group>"; };
@@ -1217,6 +1234,11 @@
 		0867D691FE84028FC02AAC07 /* gmp */ = {
 			isa = PBXGroup;
 			children = (
+				856ADAAA1238566F00893019 /* aorrlsh_n.asm */,
+				856ADAAB1238566F00893019 /* aorrlsh1_n.asm */,
+				856ADAAC1238566F00893019 /* mul_2.asm */,
+				856ADAAD1238566F00893019 /* sublsh1_n.asm */,
+				856ADA581238496700893019 /* invert_limb.asm */,
 				85D5E48F12341AE00017B49B /* src */,
 				85D5E48E12341AB90017B49B /* inc */,
 				858764D8123274F8009F25BF /* gmp.xcconfig */,
@@ -1922,7 +1944,7 @@
 			);
 			buildRules = (
 				85B4E8FA1234624D0091D2C2 /* PBXBuildRule */,
-				85B4E9151234646E0091D2C2 /* PBXBuildRule */,
+				856ADA8F1238541D00893019 /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -2081,6 +2103,7 @@
 			dependencies = (
 				85B4E8D812345C530091D2C2 /* PBXTargetDependency */,
 				85B4E8DA12345C530091D2C2 /* PBXTargetDependency */,
+				856ADAA7123855C200893019 /* PBXTargetDependency */,
 				85B4E8DC12345C530091D2C2 /* PBXTargetDependency */,
 				85B4E8DE12345C530091D2C2 /* PBXTargetDependency */,
 				85B4E8E012345C530091D2C2 /* PBXTargetDependency */,
@@ -2183,6 +2206,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				856ADA591238496700893019 /* invert_limb.asm in Sources */,
+				856ADAAE1238566F00893019 /* aorrlsh_n.asm in Sources */,
+				856ADAAF1238566F00893019 /* aorrlsh1_n.asm in Sources */,
+				856ADAB01238566F00893019 /* mul_2.asm in Sources */,
+				856ADAB11238566F00893019 /* sublsh1_n.asm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2713,6 +2741,11 @@
 			isa = PBXTargetDependency;
 			target = 85876B561232BC19009F25BF /* gen-psqr */;
 			targetProxy = 852031BB1234104D00A11CA5 /* PBXContainerItemProxy */;
+		};
+		856ADAA7123855C200893019 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 85B4E8EC123460BE0091D2C2 /* gmp-mpn-x86 */;
+			targetProxy = 856ADAA6123855C200893019 /* PBXContainerItemProxy */;
 		};
 		85B4E8D812345C530091D2C2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
