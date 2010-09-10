@@ -27,8 +27,6 @@
 
 /* Begin PBXBuildFile section */
 		856ADA591238496700893019 /* invert_limb.asm in Sources */ = {isa = PBXBuildFile; fileRef = 856ADA581238496700893019 /* invert_limb.asm */; };
-		856ADAAE1238566F00893019 /* aorrlsh_n.asm in Sources */ = {isa = PBXBuildFile; fileRef = 856ADAAA1238566F00893019 /* aorrlsh_n.asm */; };
-		856ADAAF1238566F00893019 /* aorrlsh1_n.asm in Sources */ = {isa = PBXBuildFile; fileRef = 856ADAAB1238566F00893019 /* aorrlsh1_n.asm */; };
 		856ADAB01238566F00893019 /* mul_2.asm in Sources */ = {isa = PBXBuildFile; fileRef = 856ADAAC1238566F00893019 /* mul_2.asm */; };
 		856ADAB11238566F00893019 /* sublsh1_n.asm in Sources */ = {isa = PBXBuildFile; fileRef = 856ADAAD1238566F00893019 /* sublsh1_n.asm */; };
 		85B4E89212345AC30091D2C2 /* assert.c in Sources */ = {isa = PBXBuildFile; fileRef = 85B4E86D12345AC30091D2C2 /* assert.c */; };
@@ -487,6 +485,40 @@
 		85F38C5C1234130B009AEE58 /* gen-psqr.c in Sources */ = {isa = PBXBuildFile; fileRef = 85F38C5B1234130B009AEE58 /* gen-psqr.c */; };
 		85F38C6012341328009AEE58 /* gen-fib.c in Sources */ = {isa = PBXBuildFile; fileRef = 85F38C5F12341328009AEE58 /* gen-fib.c */; };
 		85F38C6D12341352009AEE58 /* gen-trialdivtab.c in Sources */ = {isa = PBXBuildFile; fileRef = 85F38C6C12341352009AEE58 /* gen-trialdivtab.c */; };
+		85F7B5DE123AE82C00ED0DAD /* add_n.asm in Sources */ = {isa = PBXBuildFile; fileRef = 85F7B5D3123AE82C00ED0DAD /* add_n.asm */; };
+		85F7B5DF123AE82C00ED0DAD /* addaddmul_1msb0.asm in Sources */ = {isa = PBXBuildFile; fileRef = 85F7B5D4123AE82C00ED0DAD /* addaddmul_1msb0.asm */; };
+		85F7B5E0123AE82C00ED0DAD /* addlsh_n.asm in Sources */ = {isa = PBXBuildFile; fileRef = 85F7B5D5123AE82C00ED0DAD /* addlsh_n.asm */; };
+		85F7B5E1123AE82C00ED0DAD /* addlsh1_n.asm in Sources */ = {isa = PBXBuildFile; fileRef = 85F7B5D6123AE82C00ED0DAD /* addlsh1_n.asm */; };
+		85F7B5E2123AE82C00ED0DAD /* addlsh2_n.asm in Sources */ = {isa = PBXBuildFile; fileRef = 85F7B5D7123AE82C00ED0DAD /* addlsh2_n.asm */; };
+		85F7B5E3123AE82C00ED0DAD /* addmul_1.asm in Sources */ = {isa = PBXBuildFile; fileRef = 85F7B5D8123AE82C00ED0DAD /* addmul_1.asm */; };
+		85F7B5E4123AE82C00ED0DAD /* addmul_2.asm in Sources */ = {isa = PBXBuildFile; fileRef = 85F7B5D9123AE82C00ED0DAD /* addmul_2.asm */; };
+		85F7B5E5123AE82C00ED0DAD /* rsblsh_n.asm in Sources */ = {isa = PBXBuildFile; fileRef = 85F7B5DA123AE82C00ED0DAD /* rsblsh_n.asm */; };
+		85F7B5E6123AE82C00ED0DAD /* rsblsh1_n.asm in Sources */ = {isa = PBXBuildFile; fileRef = 85F7B5DB123AE82C00ED0DAD /* rsblsh1_n.asm */; };
+		85F7B5E7123AE82C00ED0DAD /* rsblsh2_n.asm in Sources */ = {isa = PBXBuildFile; fileRef = 85F7B5DC123AE82C00ED0DAD /* rsblsh2_n.asm */; };
+		85F7B5E8123AE82C00ED0DAD /* sub_n.asm in Sources */ = {isa = PBXBuildFile; fileRef = 85F7B5DD123AE82C00ED0DAD /* sub_n.asm */; };
+		85F7B603123AE8C700ED0DAD /* bdiv_dbm1c.asm in Sources */ = {isa = PBXBuildFile; fileRef = 85F7B5EA123AE8C700ED0DAD /* bdiv_dbm1c.asm */; };
+		85F7B604123AE8C700ED0DAD /* bdiv_q_1.asm in Sources */ = {isa = PBXBuildFile; fileRef = 85F7B5EB123AE8C700ED0DAD /* bdiv_q_1.asm */; };
+		85F7B605123AE8C700ED0DAD /* com.asm in Sources */ = {isa = PBXBuildFile; fileRef = 85F7B5EC123AE8C700ED0DAD /* com.asm */; };
+		85F7B606123AE8C700ED0DAD /* copyd.asm in Sources */ = {isa = PBXBuildFile; fileRef = 85F7B5ED123AE8C700ED0DAD /* copyd.asm */; };
+		85F7B607123AE8C700ED0DAD /* copyi.asm in Sources */ = {isa = PBXBuildFile; fileRef = 85F7B5EE123AE8C700ED0DAD /* copyi.asm */; };
+		85F7B608123AE8C700ED0DAD /* dive_1.asm in Sources */ = {isa = PBXBuildFile; fileRef = 85F7B5EF123AE8C700ED0DAD /* dive_1.asm */; };
+		85F7B609123AE8C700ED0DAD /* divrem_1.asm in Sources */ = {isa = PBXBuildFile; fileRef = 85F7B5F0123AE8C700ED0DAD /* divrem_1.asm */; };
+		85F7B60A123AE8C700ED0DAD /* divrem_2.asm in Sources */ = {isa = PBXBuildFile; fileRef = 85F7B5F1123AE8C700ED0DAD /* divrem_2.asm */; };
+		85F7B60B123AE8C700ED0DAD /* gcd_1.asm in Sources */ = {isa = PBXBuildFile; fileRef = 85F7B5F2123AE8C700ED0DAD /* gcd_1.asm */; };
+		85F7B60D123AE8C700ED0DAD /* lshift.asm in Sources */ = {isa = PBXBuildFile; fileRef = 85F7B5F4123AE8C700ED0DAD /* lshift.asm */; };
+		85F7B60E123AE8C700ED0DAD /* lshiftc.asm in Sources */ = {isa = PBXBuildFile; fileRef = 85F7B5F5123AE8C700ED0DAD /* lshiftc.asm */; };
+		85F7B60F123AE8C700ED0DAD /* lshsub_n.asm in Sources */ = {isa = PBXBuildFile; fileRef = 85F7B5F6123AE8C700ED0DAD /* lshsub_n.asm */; };
+		85F7B610123AE8C700ED0DAD /* mod_1_4.asm in Sources */ = {isa = PBXBuildFile; fileRef = 85F7B5F7123AE8C700ED0DAD /* mod_1_4.asm */; };
+		85F7B611123AE8C700ED0DAD /* mod_34lsub1.asm in Sources */ = {isa = PBXBuildFile; fileRef = 85F7B5F8123AE8C700ED0DAD /* mod_34lsub1.asm */; };
+		85F7B612123AE8C700ED0DAD /* mode1o.asm in Sources */ = {isa = PBXBuildFile; fileRef = 85F7B5F9123AE8C700ED0DAD /* mode1o.asm */; };
+		85F7B613123AE8C700ED0DAD /* mul_1.asm in Sources */ = {isa = PBXBuildFile; fileRef = 85F7B5FA123AE8C700ED0DAD /* mul_1.asm */; };
+		85F7B614123AE8C700ED0DAD /* mul_basecase.asm in Sources */ = {isa = PBXBuildFile; fileRef = 85F7B5FB123AE8C700ED0DAD /* mul_basecase.asm */; };
+		85F7B616123AE8C700ED0DAD /* redc_1.asm in Sources */ = {isa = PBXBuildFile; fileRef = 85F7B5FD123AE8C700ED0DAD /* redc_1.asm */; };
+		85F7B617123AE8C700ED0DAD /* rsh1add_n.asm in Sources */ = {isa = PBXBuildFile; fileRef = 85F7B5FE123AE8C700ED0DAD /* rsh1add_n.asm */; };
+		85F7B618123AE8C700ED0DAD /* rsh1sub_n.asm in Sources */ = {isa = PBXBuildFile; fileRef = 85F7B5FF123AE8C700ED0DAD /* rsh1sub_n.asm */; };
+		85F7B619123AE8C700ED0DAD /* rshift.asm in Sources */ = {isa = PBXBuildFile; fileRef = 85F7B600123AE8C700ED0DAD /* rshift.asm */; };
+		85F7B61A123AE8C700ED0DAD /* sqr_basecase.asm in Sources */ = {isa = PBXBuildFile; fileRef = 85F7B601123AE8C700ED0DAD /* sqr_basecase.asm */; };
+		85F7B61B123AE8C700ED0DAD /* submul_1.asm in Sources */ = {isa = PBXBuildFile; fileRef = 85F7B602123AE8C700ED0DAD /* submul_1.asm */; };
 		8DC2EF530486A6940098B216 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C1666FE841158C02AAC07 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
@@ -538,7 +570,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 85B4E8EC123460BE0091D2C2 /* gmp-mpn-x86 */;
+			remoteGlobalIDString = 85B4E8EC123460BE0091D2C2;
 			remoteInfo = "gmp-mpn-x86";
 		};
 		85B4E8D712345C530091D2C2 /* PBXContainerItemProxy */ = {
@@ -621,8 +653,6 @@
 		32DBCF5E0370ADEE00C91783 /* gmp_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gmp_Prefix.pch; sourceTree = "<group>"; };
 		856823A51233D1280031911F /* gmplib.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = gmplib.xcconfig; sourceTree = "<group>"; };
 		856ADA581238496700893019 /* invert_limb.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = invert_limb.asm; path = src/mpn/x86_64/invert_limb.asm; sourceTree = "<group>"; };
-		856ADAAA1238566F00893019 /* aorrlsh_n.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = aorrlsh_n.asm; path = src/mpn/x86_64/aorrlsh_n.asm; sourceTree = "<group>"; };
-		856ADAAB1238566F00893019 /* aorrlsh1_n.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = aorrlsh1_n.asm; path = src/mpn/x86_64/aorrlsh1_n.asm; sourceTree = "<group>"; };
 		856ADAAC1238566F00893019 /* mul_2.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = mul_2.asm; path = src/mpn/x86_64/mul_2.asm; sourceTree = "<group>"; };
 		856ADAAD1238566F00893019 /* sublsh1_n.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = sublsh1_n.asm; path = src/mpn/x86_64/sublsh1_n.asm; sourceTree = "<group>"; };
 		858764D8123274F8009F25BF /* gmp.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = gmp.xcconfig; sourceTree = "<group>"; };
@@ -1103,6 +1133,40 @@
 		85F38C5B1234130B009AEE58 /* gen-psqr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "gen-psqr.c"; path = "src/gen-psqr.c"; sourceTree = "<group>"; };
 		85F38C5F12341328009AEE58 /* gen-fib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "gen-fib.c"; path = "src/gen-fib.c"; sourceTree = "<group>"; };
 		85F38C6C12341352009AEE58 /* gen-trialdivtab.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "gen-trialdivtab.c"; path = "src/gen-trialdivtab.c"; sourceTree = "<group>"; };
+		85F7B5D3123AE82C00ED0DAD /* add_n.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = add_n.asm; path = src/mpn/x86_64/add_n.asm; sourceTree = "<group>"; };
+		85F7B5D4123AE82C00ED0DAD /* addaddmul_1msb0.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = addaddmul_1msb0.asm; path = src/mpn/x86_64/addaddmul_1msb0.asm; sourceTree = "<group>"; };
+		85F7B5D5123AE82C00ED0DAD /* addlsh_n.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = addlsh_n.asm; path = src/mpn/x86_64/addlsh_n.asm; sourceTree = "<group>"; };
+		85F7B5D6123AE82C00ED0DAD /* addlsh1_n.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = addlsh1_n.asm; path = src/mpn/x86_64/addlsh1_n.asm; sourceTree = "<group>"; };
+		85F7B5D7123AE82C00ED0DAD /* addlsh2_n.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = addlsh2_n.asm; path = src/mpn/x86_64/addlsh2_n.asm; sourceTree = "<group>"; };
+		85F7B5D8123AE82C00ED0DAD /* addmul_1.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = addmul_1.asm; path = src/mpn/x86_64/addmul_1.asm; sourceTree = "<group>"; };
+		85F7B5D9123AE82C00ED0DAD /* addmul_2.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = addmul_2.asm; path = src/mpn/x86_64/addmul_2.asm; sourceTree = "<group>"; };
+		85F7B5DA123AE82C00ED0DAD /* rsblsh_n.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = rsblsh_n.asm; path = src/mpn/x86_64/rsblsh_n.asm; sourceTree = "<group>"; };
+		85F7B5DB123AE82C00ED0DAD /* rsblsh1_n.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = rsblsh1_n.asm; path = src/mpn/x86_64/rsblsh1_n.asm; sourceTree = "<group>"; };
+		85F7B5DC123AE82C00ED0DAD /* rsblsh2_n.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = rsblsh2_n.asm; path = src/mpn/x86_64/rsblsh2_n.asm; sourceTree = "<group>"; };
+		85F7B5DD123AE82C00ED0DAD /* sub_n.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = sub_n.asm; path = src/mpn/x86_64/sub_n.asm; sourceTree = "<group>"; };
+		85F7B5EA123AE8C700ED0DAD /* bdiv_dbm1c.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = bdiv_dbm1c.asm; path = src/mpn/x86_64/bdiv_dbm1c.asm; sourceTree = "<group>"; };
+		85F7B5EB123AE8C700ED0DAD /* bdiv_q_1.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = bdiv_q_1.asm; path = src/mpn/x86_64/bdiv_q_1.asm; sourceTree = "<group>"; };
+		85F7B5EC123AE8C700ED0DAD /* com.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = com.asm; path = src/mpn/x86_64/com.asm; sourceTree = "<group>"; };
+		85F7B5ED123AE8C700ED0DAD /* copyd.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = copyd.asm; path = src/mpn/x86_64/copyd.asm; sourceTree = "<group>"; };
+		85F7B5EE123AE8C700ED0DAD /* copyi.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = copyi.asm; path = src/mpn/x86_64/copyi.asm; sourceTree = "<group>"; };
+		85F7B5EF123AE8C700ED0DAD /* dive_1.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = dive_1.asm; path = src/mpn/x86_64/dive_1.asm; sourceTree = "<group>"; };
+		85F7B5F0123AE8C700ED0DAD /* divrem_1.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = divrem_1.asm; path = src/mpn/x86_64/divrem_1.asm; sourceTree = "<group>"; };
+		85F7B5F1123AE8C700ED0DAD /* divrem_2.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = divrem_2.asm; path = src/mpn/x86_64/divrem_2.asm; sourceTree = "<group>"; };
+		85F7B5F2123AE8C700ED0DAD /* gcd_1.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = gcd_1.asm; path = src/mpn/x86_64/gcd_1.asm; sourceTree = "<group>"; };
+		85F7B5F4123AE8C700ED0DAD /* lshift.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = lshift.asm; path = src/mpn/x86_64/lshift.asm; sourceTree = "<group>"; };
+		85F7B5F5123AE8C700ED0DAD /* lshiftc.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = lshiftc.asm; path = src/mpn/x86_64/lshiftc.asm; sourceTree = "<group>"; };
+		85F7B5F6123AE8C700ED0DAD /* lshsub_n.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = lshsub_n.asm; path = src/mpn/x86_64/lshsub_n.asm; sourceTree = "<group>"; };
+		85F7B5F7123AE8C700ED0DAD /* mod_1_4.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = mod_1_4.asm; path = src/mpn/x86_64/mod_1_4.asm; sourceTree = "<group>"; };
+		85F7B5F8123AE8C700ED0DAD /* mod_34lsub1.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = mod_34lsub1.asm; path = src/mpn/x86_64/mod_34lsub1.asm; sourceTree = "<group>"; };
+		85F7B5F9123AE8C700ED0DAD /* mode1o.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = mode1o.asm; path = src/mpn/x86_64/mode1o.asm; sourceTree = "<group>"; };
+		85F7B5FA123AE8C700ED0DAD /* mul_1.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = mul_1.asm; path = src/mpn/x86_64/mul_1.asm; sourceTree = "<group>"; };
+		85F7B5FB123AE8C700ED0DAD /* mul_basecase.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = mul_basecase.asm; path = src/mpn/x86_64/mul_basecase.asm; sourceTree = "<group>"; };
+		85F7B5FD123AE8C700ED0DAD /* redc_1.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = redc_1.asm; path = src/mpn/x86_64/redc_1.asm; sourceTree = "<group>"; };
+		85F7B5FE123AE8C700ED0DAD /* rsh1add_n.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = rsh1add_n.asm; path = src/mpn/x86_64/rsh1add_n.asm; sourceTree = "<group>"; };
+		85F7B5FF123AE8C700ED0DAD /* rsh1sub_n.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = rsh1sub_n.asm; path = src/mpn/x86_64/rsh1sub_n.asm; sourceTree = "<group>"; };
+		85F7B600123AE8C700ED0DAD /* rshift.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = rshift.asm; path = src/mpn/x86_64/rshift.asm; sourceTree = "<group>"; };
+		85F7B601123AE8C700ED0DAD /* sqr_basecase.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = sqr_basecase.asm; path = src/mpn/x86_64/sqr_basecase.asm; sourceTree = "<group>"; };
+		85F7B602123AE8C700ED0DAD /* submul_1.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = submul_1.asm; path = src/mpn/x86_64/submul_1.asm; sourceTree = "<group>"; };
 		85FFA81B1233DCD3003299BA /* fib_table.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fib_table.c; path = build/src/mpn/fib_table.c; sourceTree = "<group>"; };
 		85FFA81C1233DCD3003299BA /* mp_bases.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mp_bases.c; path = build/src/mpn/mp_bases.c; sourceTree = "<group>"; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1234,8 +1298,40 @@
 		0867D691FE84028FC02AAC07 /* gmp */ = {
 			isa = PBXGroup;
 			children = (
-				856ADAAA1238566F00893019 /* aorrlsh_n.asm */,
-				856ADAAB1238566F00893019 /* aorrlsh1_n.asm */,
+				85F7B5EA123AE8C700ED0DAD /* bdiv_dbm1c.asm */,
+				85F7B5EB123AE8C700ED0DAD /* bdiv_q_1.asm */,
+				85F7B5EC123AE8C700ED0DAD /* com.asm */,
+				85F7B5ED123AE8C700ED0DAD /* copyd.asm */,
+				85F7B5EE123AE8C700ED0DAD /* copyi.asm */,
+				85F7B5EF123AE8C700ED0DAD /* dive_1.asm */,
+				85F7B5F0123AE8C700ED0DAD /* divrem_1.asm */,
+				85F7B5F1123AE8C700ED0DAD /* divrem_2.asm */,
+				85F7B5F2123AE8C700ED0DAD /* gcd_1.asm */,
+				85F7B5F4123AE8C700ED0DAD /* lshift.asm */,
+				85F7B5F5123AE8C700ED0DAD /* lshiftc.asm */,
+				85F7B5F6123AE8C700ED0DAD /* lshsub_n.asm */,
+				85F7B5F7123AE8C700ED0DAD /* mod_1_4.asm */,
+				85F7B5F8123AE8C700ED0DAD /* mod_34lsub1.asm */,
+				85F7B5F9123AE8C700ED0DAD /* mode1o.asm */,
+				85F7B5FA123AE8C700ED0DAD /* mul_1.asm */,
+				85F7B5FB123AE8C700ED0DAD /* mul_basecase.asm */,
+				85F7B5FD123AE8C700ED0DAD /* redc_1.asm */,
+				85F7B5FE123AE8C700ED0DAD /* rsh1add_n.asm */,
+				85F7B5FF123AE8C700ED0DAD /* rsh1sub_n.asm */,
+				85F7B600123AE8C700ED0DAD /* rshift.asm */,
+				85F7B601123AE8C700ED0DAD /* sqr_basecase.asm */,
+				85F7B602123AE8C700ED0DAD /* submul_1.asm */,
+				85F7B5D3123AE82C00ED0DAD /* add_n.asm */,
+				85F7B5D4123AE82C00ED0DAD /* addaddmul_1msb0.asm */,
+				85F7B5D5123AE82C00ED0DAD /* addlsh_n.asm */,
+				85F7B5D6123AE82C00ED0DAD /* addlsh1_n.asm */,
+				85F7B5D7123AE82C00ED0DAD /* addlsh2_n.asm */,
+				85F7B5D8123AE82C00ED0DAD /* addmul_1.asm */,
+				85F7B5D9123AE82C00ED0DAD /* addmul_2.asm */,
+				85F7B5DA123AE82C00ED0DAD /* rsblsh_n.asm */,
+				85F7B5DB123AE82C00ED0DAD /* rsblsh1_n.asm */,
+				85F7B5DC123AE82C00ED0DAD /* rsblsh2_n.asm */,
+				85F7B5DD123AE82C00ED0DAD /* sub_n.asm */,
 				856ADAAC1238566F00893019 /* mul_2.asm */,
 				856ADAAD1238566F00893019 /* sublsh1_n.asm */,
 				856ADA581238496700893019 /* invert_limb.asm */,
@@ -2207,10 +2303,42 @@
 			buildActionMask = 2147483647;
 			files = (
 				856ADA591238496700893019 /* invert_limb.asm in Sources */,
-				856ADAAE1238566F00893019 /* aorrlsh_n.asm in Sources */,
-				856ADAAF1238566F00893019 /* aorrlsh1_n.asm in Sources */,
 				856ADAB01238566F00893019 /* mul_2.asm in Sources */,
 				856ADAB11238566F00893019 /* sublsh1_n.asm in Sources */,
+				85F7B5DE123AE82C00ED0DAD /* add_n.asm in Sources */,
+				85F7B5DF123AE82C00ED0DAD /* addaddmul_1msb0.asm in Sources */,
+				85F7B5E0123AE82C00ED0DAD /* addlsh_n.asm in Sources */,
+				85F7B5E1123AE82C00ED0DAD /* addlsh1_n.asm in Sources */,
+				85F7B5E2123AE82C00ED0DAD /* addlsh2_n.asm in Sources */,
+				85F7B5E3123AE82C00ED0DAD /* addmul_1.asm in Sources */,
+				85F7B5E4123AE82C00ED0DAD /* addmul_2.asm in Sources */,
+				85F7B5E5123AE82C00ED0DAD /* rsblsh_n.asm in Sources */,
+				85F7B5E6123AE82C00ED0DAD /* rsblsh1_n.asm in Sources */,
+				85F7B5E7123AE82C00ED0DAD /* rsblsh2_n.asm in Sources */,
+				85F7B5E8123AE82C00ED0DAD /* sub_n.asm in Sources */,
+				85F7B603123AE8C700ED0DAD /* bdiv_dbm1c.asm in Sources */,
+				85F7B604123AE8C700ED0DAD /* bdiv_q_1.asm in Sources */,
+				85F7B605123AE8C700ED0DAD /* com.asm in Sources */,
+				85F7B606123AE8C700ED0DAD /* copyd.asm in Sources */,
+				85F7B607123AE8C700ED0DAD /* copyi.asm in Sources */,
+				85F7B608123AE8C700ED0DAD /* dive_1.asm in Sources */,
+				85F7B609123AE8C700ED0DAD /* divrem_1.asm in Sources */,
+				85F7B60A123AE8C700ED0DAD /* divrem_2.asm in Sources */,
+				85F7B60B123AE8C700ED0DAD /* gcd_1.asm in Sources */,
+				85F7B60D123AE8C700ED0DAD /* lshift.asm in Sources */,
+				85F7B60E123AE8C700ED0DAD /* lshiftc.asm in Sources */,
+				85F7B60F123AE8C700ED0DAD /* lshsub_n.asm in Sources */,
+				85F7B610123AE8C700ED0DAD /* mod_1_4.asm in Sources */,
+				85F7B611123AE8C700ED0DAD /* mod_34lsub1.asm in Sources */,
+				85F7B612123AE8C700ED0DAD /* mode1o.asm in Sources */,
+				85F7B613123AE8C700ED0DAD /* mul_1.asm in Sources */,
+				85F7B614123AE8C700ED0DAD /* mul_basecase.asm in Sources */,
+				85F7B616123AE8C700ED0DAD /* redc_1.asm in Sources */,
+				85F7B617123AE8C700ED0DAD /* rsh1add_n.asm in Sources */,
+				85F7B618123AE8C700ED0DAD /* rsh1sub_n.asm in Sources */,
+				85F7B619123AE8C700ED0DAD /* rshift.asm in Sources */,
+				85F7B61A123AE8C700ED0DAD /* sqr_basecase.asm in Sources */,
+				85F7B61B123AE8C700ED0DAD /* submul_1.asm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
