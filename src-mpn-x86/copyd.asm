@@ -1,0 +1,1 @@
+../src/mpn/x86_64/copyd.asm
