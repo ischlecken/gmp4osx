@@ -59,6 +59,18 @@
 		85B4E8BD12345BC70091D2C2 /* libgmp-mpf.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85D5E70D12341E900017B49B /* libgmp-mpf.a */; };
 		85B4E8BE12345BC70091D2C2 /* libgmp-mpq.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85D5E7A912341EFB0017B49B /* libgmp-mpq.a */; };
 		85B4E8BF12345BC70091D2C2 /* libgmp-io.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85D5E7FF12341F810017B49B /* libgmp-io.a */; };
+		85CC41C9123D844100514D1C /* gmp.h in Headers */ = {isa = PBXBuildFile; fileRef = 85D5E48A12341A430017B49B /* gmp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		85CC41E1123D863600514D1C /* libgmp-mpn-x86.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B4E8ED123460BE0091D2C2 /* libgmp-mpn-x86.a */; };
+		85CC4217123D8E9200514D1C /* amd64call.asm in Sources */ = {isa = PBXBuildFile; fileRef = 85CC4201123D8E9200514D1C /* amd64call.asm */; };
+		85CC4218123D8E9200514D1C /* amd64check.c in Sources */ = {isa = PBXBuildFile; fileRef = 85CC4202123D8E9200514D1C /* amd64check.c */; };
+		85CC4219123D8E9200514D1C /* memory.c in Sources */ = {isa = PBXBuildFile; fileRef = 85CC4203123D8E9200514D1C /* memory.c */; };
+		85CC421A123D8E9200514D1C /* misc.c in Sources */ = {isa = PBXBuildFile; fileRef = 85CC4204123D8E9200514D1C /* misc.c */; };
+		85CC421B123D8E9200514D1C /* refmpf.c in Sources */ = {isa = PBXBuildFile; fileRef = 85CC4205123D8E9200514D1C /* refmpf.c */; };
+		85CC421C123D8E9200514D1C /* refmpn.c in Sources */ = {isa = PBXBuildFile; fileRef = 85CC4206123D8E9200514D1C /* refmpn.c */; };
+		85CC421D123D8E9200514D1C /* refmpq.c in Sources */ = {isa = PBXBuildFile; fileRef = 85CC4207123D8E9200514D1C /* refmpq.c */; };
+		85CC421E123D8E9200514D1C /* refmpz.c in Sources */ = {isa = PBXBuildFile; fileRef = 85CC4208123D8E9200514D1C /* refmpz.c */; };
+		85CC421F123D8E9200514D1C /* spinner.c in Sources */ = {isa = PBXBuildFile; fileRef = 85CC4209123D8E9200514D1C /* spinner.c */; };
+		85CC422A123D8E9200514D1C /* trace.c in Sources */ = {isa = PBXBuildFile; fileRef = 85CC4214123D8E9200514D1C /* trace.c */; };
 		85D5E482123419E80017B49B /* fib_table.c in Sources */ = {isa = PBXBuildFile; fileRef = 85FFA81B1233DCD3003299BA /* fib_table.c */; };
 		85D5E483123419EC0017B49B /* mp_bases.c in Sources */ = {isa = PBXBuildFile; fileRef = 85FFA81C1233DCD3003299BA /* mp_bases.c */; };
 		85D5E66012341D990017B49B /* abs.c in Sources */ = {isa = PBXBuildFile; fileRef = 85D5E5C812341D990017B49B /* abs.c */; };
@@ -337,7 +349,7 @@
 		85D5E83D12341FC80017B49B /* vfscanf.c in Sources */ = {isa = PBXBuildFile; fileRef = 85D5E81F12341FC80017B49B /* vfscanf.c */; };
 		85D5E83E12341FC80017B49B /* vscanf.c in Sources */ = {isa = PBXBuildFile; fileRef = 85D5E82012341FC80017B49B /* vscanf.c */; };
 		85D5E83F12341FC80017B49B /* vsscanf.c in Sources */ = {isa = PBXBuildFile; fileRef = 85D5E82112341FC80017B49B /* vsscanf.c */; };
-		85DF439A123D377B0037DCE4 /* add_1.c in Sources */ = {isa = PBXBuildFile; fileRef = 85DF42FC123D377B0037DCE4 /* add_1.c */; };
+		85DF439A123D377B0037DCE4 /* add_1.c in Sources */ = {isa = PBXBuildFile; fileRef = 85DF42FC123D377B0037DCE4 /* add_1.c */; settings = {COMPILER_FLAGS = "-DOPERATION_add_1"; }; };
 		85DF439B123D377B0037DCE4 /* add_n.asm in Sources */ = {isa = PBXBuildFile; fileRef = 85DF42FD123D377B0037DCE4 /* add_n.asm */; settings = {COMPILER_FLAGS = "-DOPERATION_add_n"; }; };
 		85DF439C123D377B0037DCE4 /* add.c in Sources */ = {isa = PBXBuildFile; fileRef = 85DF42FE123D377B0037DCE4 /* add.c */; };
 		85DF439D123D377B0037DCE4 /* addaddmul_1msb0.asm in Sources */ = {isa = PBXBuildFile; fileRef = 85DF42FF123D377B0037DCE4 /* addaddmul_1msb0.asm */; };
@@ -514,6 +526,16 @@
 			);
 			script = "#env\nm4 ${OTHER_INPUT_FILE_FLAGS} -I ${PROJECT_DIR}/src/mpn -DHAVE_CONFIG_H -D__GMP_WITHIN_GMP -DPIC ${INPUT_FILE_PATH} > ${DERIVED_FILES_DIR}/${INPUT_FILE_BASE}.s";
 		};
+		85CC423D123D8F4F00514D1C /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = sourcecode.asm.asm;
+			isEditable = 1;
+			outputFiles = (
+				"${DERIVED_FILES_DIR}/${INPUT_FILE_BASE}.s",
+			);
+			script = "#env\nmkdir -p ${DERIVED_FILES_DIR}\nm4 ${OTHER_INPUT_FILE_FLAGS} -I ${PROJECT_DIR}/src/tests -DHAVE_CONFIG_H -DPIC ${INPUT_FILE_PATH} > ${DERIVED_FILES_DIR}/${INPUT_FILE_BASE}.s";
+		};
 /* End PBXBuildRule section */
 
 /* Begin PBXContainerItemProxy section */
@@ -579,6 +601,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 85D5E7FE12341F810017B49B;
 			remoteInfo = "gmp-io";
+		};
+		85CC424D123D908900514D1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 85D5E463123418ED0017B49B /* gmp-base */;
+			remoteInfo = "gmp-base";
 		};
 		85D5E49212341B850017B49B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -656,6 +685,27 @@
 		85B4E88F12345AC30091D2C2 /* tal-reent.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "tal-reent.c"; path = "src/tal-reent.c"; sourceTree = "<group>"; };
 		85B4E89012345AC30091D2C2 /* version.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = version.c; path = src/version.c; sourceTree = "<group>"; };
 		85B4E8ED123460BE0091D2C2 /* libgmp-mpn-x86.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libgmp-mpn-x86.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		85CC41FD123D8E4400514D1C /* libgmp-tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libgmp-tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		85CC4201123D8E9200514D1C /* amd64call.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = amd64call.asm; path = src/tests/amd64call.asm; sourceTree = "<group>"; };
+		85CC4202123D8E9200514D1C /* amd64check.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = amd64check.c; path = src/tests/amd64check.c; sourceTree = "<group>"; };
+		85CC4203123D8E9200514D1C /* memory.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = memory.c; path = src/tests/memory.c; sourceTree = "<group>"; };
+		85CC4204123D8E9200514D1C /* misc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = misc.c; path = src/tests/misc.c; sourceTree = "<group>"; };
+		85CC4205123D8E9200514D1C /* refmpf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = refmpf.c; path = src/tests/refmpf.c; sourceTree = "<group>"; };
+		85CC4206123D8E9200514D1C /* refmpn.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = refmpn.c; path = src/tests/refmpn.c; sourceTree = "<group>"; };
+		85CC4207123D8E9200514D1C /* refmpq.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = refmpq.c; path = src/tests/refmpq.c; sourceTree = "<group>"; };
+		85CC4208123D8E9200514D1C /* refmpz.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = refmpz.c; path = src/tests/refmpz.c; sourceTree = "<group>"; };
+		85CC4209123D8E9200514D1C /* spinner.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = spinner.c; path = src/tests/spinner.c; sourceTree = "<group>"; };
+		85CC420A123D8E9200514D1C /* t-bswap.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "t-bswap.c"; path = "src/tests/t-bswap.c"; sourceTree = "<group>"; };
+		85CC420B123D8E9200514D1C /* t-constants.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "t-constants.c"; path = "src/tests/t-constants.c"; sourceTree = "<group>"; };
+		85CC420C123D8E9200514D1C /* t-count_zeros.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "t-count_zeros.c"; path = "src/tests/t-count_zeros.c"; sourceTree = "<group>"; };
+		85CC420D123D8E9200514D1C /* t-gmpmax.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "t-gmpmax.c"; path = "src/tests/t-gmpmax.c"; sourceTree = "<group>"; };
+		85CC420E123D8E9200514D1C /* t-hightomask.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "t-hightomask.c"; path = "src/tests/t-hightomask.c"; sourceTree = "<group>"; };
+		85CC420F123D8E9200514D1C /* t-modlinv.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "t-modlinv.c"; path = "src/tests/t-modlinv.c"; sourceTree = "<group>"; };
+		85CC4210123D8E9200514D1C /* t-parity.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "t-parity.c"; path = "src/tests/t-parity.c"; sourceTree = "<group>"; };
+		85CC4211123D8E9200514D1C /* t-popc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "t-popc.c"; path = "src/tests/t-popc.c"; sourceTree = "<group>"; };
+		85CC4212123D8E9200514D1C /* t-sub.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "t-sub.c"; path = "src/tests/t-sub.c"; sourceTree = "<group>"; };
+		85CC4213123D8E9200514D1C /* tests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tests.h; path = src/tests/tests.h; sourceTree = "<group>"; };
+		85CC4214123D8E9200514D1C /* trace.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = trace.c; path = src/tests/trace.c; sourceTree = "<group>"; };
 		85D5E464123418ED0017B49B /* libgmp-base.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libgmp-base.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85D5E48912341A430017B49B /* gmp-impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "gmp-impl.h"; path = "src/gmp-impl.h"; sourceTree = "<group>"; };
 		85D5E48A12341A430017B49B /* gmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gmp.h; path = src/gmp.h; sourceTree = "<group>"; };
@@ -1147,6 +1197,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		85CC41FB123D8E4400514D1C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		85D5E462123418ED0017B49B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1200,6 +1257,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85CC41E1123D863600514D1C /* libgmp-mpn-x86.a in Frameworks */,
 				85B4E8BA12345BC70091D2C2 /* libgmp-base.a in Frameworks */,
 				85B4E8BC12345BC70091D2C2 /* libgmp-mpz.a in Frameworks */,
 				85B4E8BD12345BC70091D2C2 /* libgmp-mpf.a in Frameworks */,
@@ -1226,6 +1284,7 @@
 				85D5E7A912341EFB0017B49B /* libgmp-mpq.a */,
 				85D5E7FF12341F810017B49B /* libgmp-io.a */,
 				85B4E8ED123460BE0091D2C2 /* libgmp-mpn-x86.a */,
+				85CC41FD123D8E4400514D1C /* libgmp-tests.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1298,6 +1357,33 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
+		85CC422F123D8EA100514D1C /* tests */ = {
+			isa = PBXGroup;
+			children = (
+				85CC4201123D8E9200514D1C /* amd64call.asm */,
+				85CC4202123D8E9200514D1C /* amd64check.c */,
+				85CC4203123D8E9200514D1C /* memory.c */,
+				85CC4204123D8E9200514D1C /* misc.c */,
+				85CC4205123D8E9200514D1C /* refmpf.c */,
+				85CC4206123D8E9200514D1C /* refmpn.c */,
+				85CC4207123D8E9200514D1C /* refmpq.c */,
+				85CC4208123D8E9200514D1C /* refmpz.c */,
+				85CC4209123D8E9200514D1C /* spinner.c */,
+				85CC420A123D8E9200514D1C /* t-bswap.c */,
+				85CC420B123D8E9200514D1C /* t-constants.c */,
+				85CC420C123D8E9200514D1C /* t-count_zeros.c */,
+				85CC420D123D8E9200514D1C /* t-gmpmax.c */,
+				85CC420E123D8E9200514D1C /* t-hightomask.c */,
+				85CC420F123D8E9200514D1C /* t-modlinv.c */,
+				85CC4210123D8E9200514D1C /* t-parity.c */,
+				85CC4211123D8E9200514D1C /* t-popc.c */,
+				85CC4212123D8E9200514D1C /* t-sub.c */,
+				85CC4213123D8E9200514D1C /* tests.h */,
+				85CC4214123D8E9200514D1C /* trace.c */,
+			);
+			name = tests;
+			sourceTree = "<group>";
+		};
 		85D5E48E12341AB90017B49B /* inc */ = {
 			isa = PBXGroup;
 			children = (
@@ -1311,6 +1397,7 @@
 		85D5E48F12341AE00017B49B /* src */ = {
 			isa = PBXGroup;
 			children = (
+				85CC422F123D8EA100514D1C /* tests */,
 				85D5E7FA12341F750017B49B /* io */,
 				85D5E7AC12341F0E0017B49B /* mpq */,
 				85D5E71012341EAC0017B49B /* mpf */,
@@ -1845,6 +1932,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		85CC41F9123D8E4400514D1C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		85D5E460123418ED0017B49B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1884,6 +1978,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85CC41C9123D844100514D1C /* gmp.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1955,6 +2050,25 @@
 			name = "gmp-mpn";
 			productName = "gmp-mpn-x86";
 			productReference = 85B4E8ED123460BE0091D2C2 /* libgmp-mpn-x86.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		85CC41FC123D8E4400514D1C /* gmp-tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85CC4200123D8E7800514D1C /* Build configuration list for PBXNativeTarget "gmp-tests" */;
+			buildPhases = (
+				85CC41F9123D8E4400514D1C /* Headers */,
+				85CC41FA123D8E4400514D1C /* Sources */,
+				85CC41FB123D8E4400514D1C /* Frameworks */,
+			);
+			buildRules = (
+				85CC423D123D8F4F00514D1C /* PBXBuildRule */,
+			);
+			dependencies = (
+				85CC424E123D908900514D1C /* PBXTargetDependency */,
+			);
+			name = "gmp-tests";
+			productName = "gmp-tests";
+			productReference = 85CC41FD123D8E4400514D1C /* libgmp-tests.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		85D5E463123418ED0017B49B /* gmp-base */ = {
@@ -2123,6 +2237,7 @@
 				85D5E7A812341EFB0017B49B /* gmp-mpq */,
 				85D5E70C12341E900017B49B /* gmp-mpf */,
 				85D5E7FE12341F810017B49B /* gmp-io */,
+				85CC41FC123D8E4400514D1C /* gmp-tests */,
 				85876B561232BC19009F25BF /* gen-psqr */,
 				85876B641232BCE1009F25BF /* gen-fib */,
 				85876B6F1232BD23009F25BF /* gen-trialdivtab */,
@@ -2347,6 +2462,23 @@
 				85DF4434123D377B0037DCE4 /* xnor_n.asm in Sources */,
 				85DF4435123D377B0037DCE4 /* xor_n.asm in Sources */,
 				85DF4436123D377B0037DCE4 /* zero.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85CC41FA123D8E4400514D1C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85CC4217123D8E9200514D1C /* amd64call.asm in Sources */,
+				85CC4218123D8E9200514D1C /* amd64check.c in Sources */,
+				85CC4219123D8E9200514D1C /* memory.c in Sources */,
+				85CC421A123D8E9200514D1C /* misc.c in Sources */,
+				85CC421B123D8E9200514D1C /* refmpf.c in Sources */,
+				85CC421C123D8E9200514D1C /* refmpn.c in Sources */,
+				85CC421D123D8E9200514D1C /* refmpq.c in Sources */,
+				85CC421E123D8E9200514D1C /* refmpz.c in Sources */,
+				85CC421F123D8E9200514D1C /* spinner.c in Sources */,
+				85CC422A123D8E9200514D1C /* trace.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2762,6 +2894,11 @@
 			target = 85D5E7FE12341F810017B49B /* gmp-io */;
 			targetProxy = 85B4E8E112345C530091D2C2 /* PBXContainerItemProxy */;
 		};
+		85CC424E123D908900514D1C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 85D5E463123418ED0017B49B /* gmp-base */;
+			targetProxy = 85CC424D123D908900514D1C /* PBXContainerItemProxy */;
+		};
 		85D5E49312341B850017B49B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 858CE1C51232DF0C00BB15DC /* gen-src */;
@@ -3012,6 +3149,38 @@
 				INSTALL_PATH = /usr/local/lib;
 				PREBINDING = NO;
 				PRODUCT_NAME = "gmp-mpn-x86";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		85CC41FE123D8E4500514D1C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 856823A51233D1280031911F /* gmplib.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = core2;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/lib;
+				PREBINDING = NO;
+				PRODUCT_NAME = "gmp-tests";
+			};
+			name = Debug;
+		};
+		85CC41FF123D8E4500514D1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 856823A51233D1280031911F /* gmplib.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = core2;
+				INSTALL_PATH = /usr/local/lib;
+				PREBINDING = NO;
+				PRODUCT_NAME = "gmp-tests";
 				ZERO_LINK = NO;
 			};
 			name = Release;
@@ -3300,6 +3469,15 @@
 			buildConfigurations = (
 				85B4E8EE123460BE0091D2C2 /* Debug */,
 				85B4E8EF123460BE0091D2C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85CC4200123D8E7800514D1C /* Build configuration list for PBXNativeTarget "gmp-tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85CC41FE123D8E4500514D1C /* Debug */,
+				85CC41FF123D8E4500514D1C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
