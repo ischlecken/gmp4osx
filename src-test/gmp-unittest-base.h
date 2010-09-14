@@ -9,7 +9,7 @@
 #import <SenTestingKit/SenTestingKit.h>
 
 
-@interface first : SenTestCase {
+@interface GmpUnittestBase : SenTestCase {
 
 }
 
