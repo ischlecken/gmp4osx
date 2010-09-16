@@ -26,6 +26,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		8556F5431241967B00801DDE /* gmp-unittest-constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 8556F5421241967B00801DDE /* gmp-unittest-constants.m */; };
 		85A29BC5124026EE00EDE349 /* add_1.c in Sources */ = {isa = PBXBuildFile; fileRef = 85A29B27124026EE00EDE349 /* add_1.c */; settings = {COMPILER_FLAGS = "-DOPERATION_add_1"; }; };
 		85A29BC6124026EE00EDE349 /* add_n.asm in Sources */ = {isa = PBXBuildFile; fileRef = 85A29B28124026EE00EDE349 /* add_n.asm */; settings = {COMPILER_FLAGS = "-DOPERATION_add_n"; }; };
 		85A29BC7124026EE00EDE349 /* add.c in Sources */ = {isa = PBXBuildFile; fileRef = 85A29B29124026EE00EDE349 /* add.c */; };
@@ -560,21 +561,21 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* gmp */;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = gmp;
 		};
 		85A29D2912402B1000EDE349 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 85CC41FC123D8E4400514D1C /* gmp-testlib */;
+			remoteGlobalIDString = 85CC41FC123D8E4400514D1C;
 			remoteInfo = "gmp-testlib";
 		};
 		85A29D2B12402B1800EDE349 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* gmp */;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = gmp;
 		};
 		85AE09B8123EEDBC0094E4B0 /* PBXContainerItemProxy */ = {
@@ -606,6 +607,8 @@
 		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		32DBCF5E0370ADEE00C91783 /* gmp_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gmp_Prefix.pch; sourceTree = "<group>"; };
+		8556F5411241967B00801DDE /* gmp-unittest-constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "gmp-unittest-constants.h"; path = "src-test/gmp-unittest-constants.h"; sourceTree = "<group>"; };
+		8556F5421241967B00801DDE /* gmp-unittest-constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "gmp-unittest-constants.m"; path = "src-test/gmp-unittest-constants.m"; sourceTree = "<group>"; };
 		856823A51233D1280031911F /* gmplib.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = gmplib.xcconfig; sourceTree = "<group>"; };
 		858764D8123274F8009F25BF /* gmp.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = gmp.xcconfig; sourceTree = "<group>"; };
 		85876B571232BC19009F25BF /* gen-psqr */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "gen-psqr"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1268,6 +1271,8 @@
 		85A29D3912402B3200EDE349 /* src-test */ = {
 			isa = PBXGroup;
 			children = (
+				8556F5411241967B00801DDE /* gmp-unittest-constants.h */,
+				8556F5421241967B00801DDE /* gmp-unittest-constants.m */,
 				85A29D4912402BA000EDE349 /* gmp-unittest-base.h */,
 				85A29D4A12402BA000EDE349 /* gmp-unittest-base.m */,
 			);
@@ -2098,6 +2103,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				85A29D4B12402BA000EDE349 /* gmp-unittest-base.m in Sources */,
+				8556F5431241967B00801DDE /* gmp-unittest-constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
