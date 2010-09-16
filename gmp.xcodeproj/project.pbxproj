@@ -493,6 +493,10 @@
 		85B4E8B112345AC30091D2C2 /* randsdui.c in Sources */ = {isa = PBXBuildFile; fileRef = 85B4E88C12345AC30091D2C2 /* randsdui.c */; };
 		85B4E8B412345AC30091D2C2 /* tal-reent.c in Sources */ = {isa = PBXBuildFile; fileRef = 85B4E88F12345AC30091D2C2 /* tal-reent.c */; };
 		85B4E8B512345AC30091D2C2 /* version.c in Sources */ = {isa = PBXBuildFile; fileRef = 85B4E89012345AC30091D2C2 /* version.c */; };
+		85C65D401242BF3E0056B5D8 /* gmp-unittest-mpq-aors.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C65D3F1242BF3E0056B5D8 /* gmp-unittest-mpq-aors.m */; };
+		85C65D551242C1970056B5D8 /* gmp-unittest-mpq-cmp.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C65D541242C1970056B5D8 /* gmp-unittest-mpq-cmp.m */; };
+		85C65DAD1242C8E90056B5D8 /* gmp-calc.c in Sources */ = {isa = PBXBuildFile; fileRef = 85C65D771242C4380056B5D8 /* gmp-calc.c */; };
+		85C65DAE1242C8FC0056B5D8 /* gmp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* gmp.framework */; };
 		85CC41C9123D844100514D1C /* gmp.h in Headers */ = {isa = PBXBuildFile; fileRef = 85D5E48A12341A430017B49B /* gmp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		85CC4217123D8E9200514D1C /* amd64call.asm in Sources */ = {isa = PBXBuildFile; fileRef = 85CC4201123D8E9200514D1C /* amd64call.asm */; };
 		85CC4218123D8E9200514D1C /* amd64check.c in Sources */ = {isa = PBXBuildFile; fileRef = 85CC4202123D8E9200514D1C /* amd64check.c */; };
@@ -570,13 +574,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 85CC41FC123D8E4400514D1C;
 			remoteInfo = "gmp-testlib";
-		};
-		85A29D2B12402B1800EDE349 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
-			remoteInfo = gmp;
 		};
 		85AE09B8123EEDBC0094E4B0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -809,6 +806,13 @@
 		85B4E88C12345AC30091D2C2 /* randsdui.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = randsdui.c; path = src/randsdui.c; sourceTree = "<group>"; };
 		85B4E88F12345AC30091D2C2 /* tal-reent.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "tal-reent.c"; path = "src/tal-reent.c"; sourceTree = "<group>"; };
 		85B4E89012345AC30091D2C2 /* version.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = version.c; path = src/version.c; sourceTree = "<group>"; };
+		85C65D3E1242BF3E0056B5D8 /* gmp-unittest-mpq-aors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "gmp-unittest-mpq-aors.h"; path = "src-test/gmp-unittest-mpq-aors.h"; sourceTree = "<group>"; };
+		85C65D3F1242BF3E0056B5D8 /* gmp-unittest-mpq-aors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "gmp-unittest-mpq-aors.m"; path = "src-test/gmp-unittest-mpq-aors.m"; sourceTree = "<group>"; };
+		85C65D531242C1970056B5D8 /* gmp-unittest-mpq-cmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "gmp-unittest-mpq-cmp.h"; path = "src-test/gmp-unittest-mpq-cmp.h"; sourceTree = "<group>"; };
+		85C65D541242C1970056B5D8 /* gmp-unittest-mpq-cmp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "gmp-unittest-mpq-cmp.m"; path = "src-test/gmp-unittest-mpq-cmp.m"; sourceTree = "<group>"; };
+		85C65D761242C4380056B5D8 /* gmp-calc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "gmp-calc.h"; sourceTree = "<group>"; };
+		85C65D771242C4380056B5D8 /* gmp-calc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "gmp-calc.c"; sourceTree = "<group>"; };
+		85C65D961242C8850056B5D8 /* gmp-calc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "gmp-calc"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85CC41FD123D8E4400514D1C /* libgmp-testlib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libgmp-testlib.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85CC4201123D8E9200514D1C /* amd64call.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = amd64call.asm; path = src/tests/amd64call.asm; sourceTree = "<group>"; };
 		85CC4202123D8E9200514D1C /* amd64check.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = amd64check.c; path = src/tests/amd64check.c; sourceTree = "<group>"; };
@@ -1152,6 +1156,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		85C65D941242C8850056B5D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85C65DAE1242C8FC0056B5D8 /* gmp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		85CC41FB123D8E4400514D1C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1194,6 +1206,7 @@
 				85F26E571234173000B62153 /* gen-fac_ui */,
 				85CC41FD123D8E4400514D1C /* libgmp-testlib.a */,
 				85AE0763123EDC7C0094E4B0 /* gmp-tests-basic.octest */,
+				85C65D961242C8850056B5D8 /* gmp-calc */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1213,6 +1226,8 @@
 				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
 				034768DFFF38A50411DB9C8B /* Products */,
 				85AE0764123EDC7C0094E4B0 /* gmp-tests-basic-Info.plist */,
+				85C65D761242C4380056B5D8 /* gmp-calc.h */,
+				85C65D771242C4380056B5D8 /* gmp-calc.c */,
 			);
 			name = gmp;
 			sourceTree = "<group>";
@@ -1273,8 +1288,12 @@
 			children = (
 				8556F5411241967B00801DDE /* gmp-unittest-constants.h */,
 				8556F5421241967B00801DDE /* gmp-unittest-constants.m */,
+				85C65D3E1242BF3E0056B5D8 /* gmp-unittest-mpq-aors.h */,
+				85C65D3F1242BF3E0056B5D8 /* gmp-unittest-mpq-aors.m */,
 				85A29D4912402BA000EDE349 /* gmp-unittest-base.h */,
 				85A29D4A12402BA000EDE349 /* gmp-unittest-base.m */,
+				85C65D531242C1970056B5D8 /* gmp-unittest-mpq-cmp.h */,
+				85C65D541242C1970056B5D8 /* gmp-unittest-mpq-cmp.m */,
 			);
 			name = "src-test";
 			sourceTree = "<group>";
@@ -1916,13 +1935,28 @@
 			buildRules = (
 			);
 			dependencies = (
-				85A29D2C12402B1800EDE349 /* PBXTargetDependency */,
 				85A29D2A12402B1000EDE349 /* PBXTargetDependency */,
 			);
 			name = "gmp-unittest";
 			productName = "gmp-tests-basic";
 			productReference = 85AE0763123EDC7C0094E4B0 /* gmp-tests-basic.octest */;
 			productType = "com.apple.product-type.bundle";
+		};
+		85C65D951242C8850056B5D8 /* gmp-calc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85C65DA71242C89F0056B5D8 /* Build configuration list for PBXNativeTarget "gmp-calc" */;
+			buildPhases = (
+				85C65D931242C8850056B5D8 /* Sources */,
+				85C65D941242C8850056B5D8 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "gmp-calc";
+			productName = "gmp-calc";
+			productReference = 85C65D961242C8850056B5D8 /* gmp-calc */;
+			productType = "com.apple.product-type.tool";
 		};
 		85CC41FC123D8E4400514D1C /* gmp-testlib */ = {
 			isa = PBXNativeTarget;
@@ -2021,6 +2055,7 @@
 				85F26E561234173000B62153 /* gen-fac_ui */,
 				85F26E4E123416F100B62153 /* gen-bases */,
 				858CE1C51232DF0C00BB15DC /* gen-src */,
+				85C65D951242C8850056B5D8 /* gmp-calc */,
 			);
 		};
 /* End PBXProject section */
@@ -2104,6 +2139,16 @@
 			files = (
 				85A29D4B12402BA000EDE349 /* gmp-unittest-base.m in Sources */,
 				8556F5431241967B00801DDE /* gmp-unittest-constants.m in Sources */,
+				85C65D401242BF3E0056B5D8 /* gmp-unittest-mpq-aors.m in Sources */,
+				85C65D551242C1970056B5D8 /* gmp-unittest-mpq-cmp.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85C65D931242C8850056B5D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85C65DAD1242C8E90056B5D8 /* gmp-calc.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2638,11 +2683,6 @@
 			target = 85CC41FC123D8E4400514D1C /* gmp-testlib */;
 			targetProxy = 85A29D2912402B1000EDE349 /* PBXContainerItemProxy */;
 		};
-		85A29D2C12402B1800EDE349 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8DC2EF4F0486A6940098B216 /* gmp */;
-			targetProxy = 85A29D2B12402B1800EDE349 /* PBXContainerItemProxy */;
-		};
 		85AE09B9123EEDBC0094E4B0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 858CE1C51232DF0C00BB15DC /* gen-src */;
@@ -2916,6 +2956,38 @@
 			};
 			name = Release;
 		};
+		85C65D981242C8850056B5D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 856823A51233D1280031911F /* gmplib.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = "gmp-calc";
+			};
+			name = Debug;
+		};
+		85C65D991242C8850056B5D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 856823A51233D1280031911F /* gmplib.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = "gmp-calc";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		85CC41FE123D8E4500514D1C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 856823A51233D1280031911F /* gmplib.xcconfig */;
@@ -3072,6 +3144,15 @@
 			buildConfigurations = (
 				85AE0765123EDC7D0094E4B0 /* Debug */,
 				85AE0766123EDC7D0094E4B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85C65DA71242C89F0056B5D8 /* Build configuration list for PBXNativeTarget "gmp-calc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85C65D981242C8850056B5D8 /* Debug */,
+				85C65D991242C8850056B5D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
