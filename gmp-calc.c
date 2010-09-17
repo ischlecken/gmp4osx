@@ -31,5 +31,9 @@ int main (int argc, char **argv)
     gmp_printf ("%Zd * %Zd = %Zd\n", a,b,c);
   } // of if
   
+  mpz_clear(a);
+  mpz_clear(b);
+  mpz_clear(c);
+  
 } // of main()
 //================END-OF-FILE=================

@@ -26,6 +26,9 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		8514DA2612441F7000D2E8B9 /* gmp-unittest-mpq-cmp_si.m in Sources */ = {isa = PBXBuildFile; fileRef = 8514DA2512441F7000D2E8B9 /* gmp-unittest-mpq-cmp_si.m */; };
+		8514DA4A124420A800D2E8B9 /* gmp-unittest-mpq-cmp_ui.m in Sources */ = {isa = PBXBuildFile; fileRef = 8514DA49124420A800D2E8B9 /* gmp-unittest-mpq-cmp_ui.m */; };
+		8514DA5F1244229A00D2E8B9 /* gmp-unittest-mpq-equal.m in Sources */ = {isa = PBXBuildFile; fileRef = 8514DA5E1244229A00D2E8B9 /* gmp-unittest-mpq-equal.m */; };
 		8556F5431241967B00801DDE /* gmp-unittest-constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 8556F5421241967B00801DDE /* gmp-unittest-constants.m */; };
 		85A29BC5124026EE00EDE349 /* add_1.c in Sources */ = {isa = PBXBuildFile; fileRef = 85A29B27124026EE00EDE349 /* add_1.c */; settings = {COMPILER_FLAGS = "-DOPERATION_add_1"; }; };
 		85A29BC6124026EE00EDE349 /* add_n.asm in Sources */ = {isa = PBXBuildFile; fileRef = 85A29B28124026EE00EDE349 /* add_n.asm */; settings = {COMPILER_FLAGS = "-DOPERATION_add_n"; }; };
@@ -604,6 +607,12 @@
 		089C1667FE841158C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		32DBCF5E0370ADEE00C91783 /* gmp_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gmp_Prefix.pch; sourceTree = "<group>"; };
+		8514DA2412441F7000D2E8B9 /* gmp-unittest-mpq-cmp_si.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "gmp-unittest-mpq-cmp_si.h"; path = "src-test/gmp-unittest-mpq-cmp_si.h"; sourceTree = "<group>"; };
+		8514DA2512441F7000D2E8B9 /* gmp-unittest-mpq-cmp_si.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "gmp-unittest-mpq-cmp_si.m"; path = "src-test/gmp-unittest-mpq-cmp_si.m"; sourceTree = "<group>"; };
+		8514DA48124420A800D2E8B9 /* gmp-unittest-mpq-cmp_ui.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "gmp-unittest-mpq-cmp_ui.h"; path = "src-test/gmp-unittest-mpq-cmp_ui.h"; sourceTree = "<group>"; };
+		8514DA49124420A800D2E8B9 /* gmp-unittest-mpq-cmp_ui.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "gmp-unittest-mpq-cmp_ui.m"; path = "src-test/gmp-unittest-mpq-cmp_ui.m"; sourceTree = "<group>"; };
+		8514DA5D1244229A00D2E8B9 /* gmp-unittest-mpq-equal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "gmp-unittest-mpq-equal.h"; path = "src-test/gmp-unittest-mpq-equal.h"; sourceTree = "<group>"; };
+		8514DA5E1244229A00D2E8B9 /* gmp-unittest-mpq-equal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "gmp-unittest-mpq-equal.m"; path = "src-test/gmp-unittest-mpq-equal.m"; sourceTree = "<group>"; };
 		8556F5411241967B00801DDE /* gmp-unittest-constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "gmp-unittest-constants.h"; path = "src-test/gmp-unittest-constants.h"; sourceTree = "<group>"; };
 		8556F5421241967B00801DDE /* gmp-unittest-constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "gmp-unittest-constants.m"; path = "src-test/gmp-unittest-constants.m"; sourceTree = "<group>"; };
 		856823A51233D1280031911F /* gmplib.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = gmplib.xcconfig; sourceTree = "<group>"; };
@@ -1286,6 +1295,12 @@
 		85A29D3912402B3200EDE349 /* src-test */ = {
 			isa = PBXGroup;
 			children = (
+				8514DA2412441F7000D2E8B9 /* gmp-unittest-mpq-cmp_si.h */,
+				8514DA2512441F7000D2E8B9 /* gmp-unittest-mpq-cmp_si.m */,
+				8514DA48124420A800D2E8B9 /* gmp-unittest-mpq-cmp_ui.h */,
+				8514DA49124420A800D2E8B9 /* gmp-unittest-mpq-cmp_ui.m */,
+				8514DA5D1244229A00D2E8B9 /* gmp-unittest-mpq-equal.h */,
+				8514DA5E1244229A00D2E8B9 /* gmp-unittest-mpq-equal.m */,
 				8556F5411241967B00801DDE /* gmp-unittest-constants.h */,
 				8556F5421241967B00801DDE /* gmp-unittest-constants.m */,
 				85C65D3E1242BF3E0056B5D8 /* gmp-unittest-mpq-aors.h */,
@@ -2141,6 +2156,9 @@
 				8556F5431241967B00801DDE /* gmp-unittest-constants.m in Sources */,
 				85C65D401242BF3E0056B5D8 /* gmp-unittest-mpq-aors.m in Sources */,
 				85C65D551242C1970056B5D8 /* gmp-unittest-mpq-cmp.m in Sources */,
+				8514DA2612441F7000D2E8B9 /* gmp-unittest-mpq-cmp_si.m in Sources */,
+				8514DA4A124420A800D2E8B9 /* gmp-unittest-mpq-cmp_ui.m in Sources */,
+				8514DA5F1244229A00D2E8B9 /* gmp-unittest-mpq-equal.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
