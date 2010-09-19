@@ -13,6 +13,7 @@
 int main (int argc, char **argv)
 {
   mpz_t a,b,c;
+  int   repeatCount=1;
   
   mpz_init(a);
   mpz_init(b);
@@ -20,15 +21,17 @@ int main (int argc, char **argv)
   
   if( argc>=3 )
   {
-    long al = atol(argv[1]);
-    long bl = atol(argv[2]);
+    mpz_set_str(a,argv[1],10);
+    mpz_set_str(b,argv[2],10);
     
-    mpz_set_ui(a,al);
-    mpz_set_ui(b,bl);
+    if( argc>=4 )
+      repeatCount = atoi(argv[3]);
     
-    mpz_mul(c,a,b);
+    for (int i=0; i<repeatCount; i++) 
+    { mpz_mul(c,a,b);
+    }
     
-    gmp_printf ("%Zd * %Zd = %Zd\n", a,b,c);
+    gmp_printf ("%d: %Zd * %Zd = %Zd\n", repeatCount, a,b,c);
   } // of if
   
   mpz_clear(a);
