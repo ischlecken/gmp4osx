@@ -477,6 +477,7 @@ __GMP_DECLSPEC void  __gmp_tmp_debug_free  __GMP_PROTO ((const char *, int, int,
 #define LIKELY(cond)                   __GMP_LIKELY(cond)
 #define UNLIKELY(cond)                 __GMP_UNLIKELY(cond)
 
+#undef ABS
 #define ABS(x) ((x) >= 0 ? (x) : -(x))
 #undef MIN
 #define MIN(l,o) ((l) < (o) ? (l) : (o))
