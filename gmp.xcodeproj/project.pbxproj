@@ -29,6 +29,8 @@
 		8514DA2612441F7000D2E8B9 /* gmp-unittest-mpq-cmp_si.m in Sources */ = {isa = PBXBuildFile; fileRef = 8514DA2512441F7000D2E8B9 /* gmp-unittest-mpq-cmp_si.m */; };
 		8514DA4A124420A800D2E8B9 /* gmp-unittest-mpq-cmp_ui.m in Sources */ = {isa = PBXBuildFile; fileRef = 8514DA49124420A800D2E8B9 /* gmp-unittest-mpq-cmp_ui.m */; };
 		8514DA5F1244229A00D2E8B9 /* gmp-unittest-mpq-equal.m in Sources */ = {isa = PBXBuildFile; fileRef = 8514DA5E1244229A00D2E8B9 /* gmp-unittest-mpq-equal.m */; };
+		853E3EF112493D3100A65C8D /* gmp-unittest-misc-locale.m in Sources */ = {isa = PBXBuildFile; fileRef = 853E3EF012493D3100A65C8D /* gmp-unittest-misc-locale.m */; };
+		853E3F0B1249443100A65C8D /* gmp-unittest-misc-printf.m in Sources */ = {isa = PBXBuildFile; fileRef = 853E3F0A1249443100A65C8D /* gmp-unittest-misc-printf.m */; };
 		8542BF551248200B00169509 /* gmp-unittest-mpq-get-d.m in Sources */ = {isa = PBXBuildFile; fileRef = 8542BF501248200B00169509 /* gmp-unittest-mpq-get-d.m */; };
 		8542BF561248200B00169509 /* gmp-unittest-mpq-get-str.m in Sources */ = {isa = PBXBuildFile; fileRef = 8542BF521248200B00169509 /* gmp-unittest-mpq-get-str.m */; };
 		8542BF571248200B00169509 /* gmp-unittest-mpq-inp-str.m in Sources */ = {isa = PBXBuildFile; fileRef = 8542BF541248200B00169509 /* gmp-unittest-mpq-inp-str.m */; };
@@ -619,6 +621,10 @@
 		8514DA49124420A800D2E8B9 /* gmp-unittest-mpq-cmp_ui.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "gmp-unittest-mpq-cmp_ui.m"; path = "src-test/gmp-unittest-mpq-cmp_ui.m"; sourceTree = "<group>"; };
 		8514DA5D1244229A00D2E8B9 /* gmp-unittest-mpq-equal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "gmp-unittest-mpq-equal.h"; path = "src-test/gmp-unittest-mpq-equal.h"; sourceTree = "<group>"; };
 		8514DA5E1244229A00D2E8B9 /* gmp-unittest-mpq-equal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "gmp-unittest-mpq-equal.m"; path = "src-test/gmp-unittest-mpq-equal.m"; sourceTree = "<group>"; };
+		853E3EEF12493D3100A65C8D /* gmp-unittest-misc-locale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "gmp-unittest-misc-locale.h"; path = "src-test/gmp-unittest-misc-locale.h"; sourceTree = "<group>"; };
+		853E3EF012493D3100A65C8D /* gmp-unittest-misc-locale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "gmp-unittest-misc-locale.m"; path = "src-test/gmp-unittest-misc-locale.m"; sourceTree = "<group>"; };
+		853E3F091249443100A65C8D /* gmp-unittest-misc-printf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "gmp-unittest-misc-printf.h"; path = "src-test/gmp-unittest-misc-printf.h"; sourceTree = "<group>"; };
+		853E3F0A1249443100A65C8D /* gmp-unittest-misc-printf.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "gmp-unittest-misc-printf.m"; path = "src-test/gmp-unittest-misc-printf.m"; sourceTree = "<group>"; };
 		8542BF4F1248200B00169509 /* gmp-unittest-mpq-get-d.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "gmp-unittest-mpq-get-d.h"; path = "src-test/gmp-unittest-mpq-get-d.h"; sourceTree = "<group>"; };
 		8542BF501248200B00169509 /* gmp-unittest-mpq-get-d.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "gmp-unittest-mpq-get-d.m"; path = "src-test/gmp-unittest-mpq-get-d.m"; sourceTree = "<group>"; };
 		8542BF511248200B00169509 /* gmp-unittest-mpq-get-str.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "gmp-unittest-mpq-get-str.h"; path = "src-test/gmp-unittest-mpq-get-str.h"; sourceTree = "<group>"; };
@@ -1317,6 +1323,10 @@
 				8542BF6F1248226700169509 /* gmp-unittest-mpq-set-f.m */,
 				8542BF88124824B600169509 /* gmp-unittest-mpq-set-str.h */,
 				8542BF89124824B600169509 /* gmp-unittest-mpq-set-str.m */,
+				853E3EEF12493D3100A65C8D /* gmp-unittest-misc-locale.h */,
+				853E3EF012493D3100A65C8D /* gmp-unittest-misc-locale.m */,
+				853E3F091249443100A65C8D /* gmp-unittest-misc-printf.h */,
+				853E3F0A1249443100A65C8D /* gmp-unittest-misc-printf.m */,
 				8542BF69124821B500169509 /* gmp-unittest-mpq-md-2exp.h */,
 				8542BF6A124821B500169509 /* gmp-unittest-mpq-md-2exp.m */,
 				8542BF4F1248200B00169509 /* gmp-unittest-mpq-get-d.h */,
@@ -2195,6 +2205,8 @@
 				8542BF6B124821B500169509 /* gmp-unittest-mpq-md-2exp.m in Sources */,
 				8542BF701248226700169509 /* gmp-unittest-mpq-set-f.m in Sources */,
 				8542BF8A124824B600169509 /* gmp-unittest-mpq-set-str.m in Sources */,
+				853E3EF112493D3100A65C8D /* gmp-unittest-misc-locale.m in Sources */,
+				853E3F0B1249443100A65C8D /* gmp-unittest-misc-printf.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
