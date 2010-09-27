@@ -1,0 +1,13 @@
+/* 
+   gmp-calc.strings
+   gmp-calc
+
+   Created by Feldmaus on 20.09.10.
+   Copyright 2010 ischlecken.com. All rights reserved.
+ */
+
+"button.add"    = "+";
+"button.sub"    = "-";
+"button.times"  = "x";
+"button.divide" = "/";
+"button.power"  = "^";
