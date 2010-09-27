@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		256AC3DA0F4B6AC300CF3369 /* gmp_calcAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 256AC3D90F4B6AC300CF3369 /* gmp_calcAppDelegate.m */; };
-		8584C625124429CE00D90879 /* gmp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8584C624124429CE00D90879 /* gmp.framework */; };
+		85CBA62912515FED008E1343 /* gmp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85CBA62812515FED008E1343 /* gmp.framework */; };
 		85D312C612450BBA005AA787 /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D312C512450BBA005AA787 /* Calculator.m */; };
 		85FC58331246C6B9000A9DA3 /* gmp-calc.strings in Resources */ = {isa = PBXBuildFile; fileRef = 85FC58321246C6B9000A9DA3 /* gmp-calc.strings */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
@@ -28,7 +28,7 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		8584C624124429CE00D90879 /* gmp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = gmp.framework; path = ../../../Library/Frameworks/gmp.framework; sourceTree = SOURCE_ROOT; };
+		85CBA62812515FED008E1343 /* gmp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = gmp.framework; path = /Users/Shared/Library/Frameworks/gmp.framework; sourceTree = "<absolute>"; };
 		85D312C412450BBA005AA787 /* Calculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calculator.h; sourceTree = "<group>"; };
 		85D312C512450BBA005AA787 /* Calculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = "<group>"; };
 		85FC58321246C6B9000A9DA3 /* gmp-calc.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = "gmp-calc.strings"; sourceTree = "<group>"; };
@@ -42,7 +42,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
-				8584C625124429CE00D90879 /* gmp.framework in Frameworks */,
+				85CBA62912515FED008E1343 /* gmp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,7 +63,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8584C624124429CE00D90879 /* gmp.framework */,
+				85CBA62812515FED008E1343 /* gmp.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 			);
 			name = "Linked Frameworks";
@@ -220,6 +220,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../Library/Frameworks\"",
+					"\"$(SRCROOT)/../../../../../Shared/Library/Frameworks\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -241,6 +242,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../Library/Frameworks\"",
+					"\"$(SRCROOT)/../../../../../Shared/Library/Frameworks\"",
 				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

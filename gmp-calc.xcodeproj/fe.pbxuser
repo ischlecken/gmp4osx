@@ -81,21 +81,20 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 306623306;
-			PBXWorkspaceStateSaveDate = 306623306;
+			PBXPerProjectTemplateStateSaveDate = 307322770;
+			PBXWorkspaceStateSaveDate = 307322770;
 		};
 		perUserProjectItems = {
+			85CBA64212516052008E1343 /* PBXTextBookmark */ = 85CBA64212516052008E1343 /* PBXTextBookmark */;
 			85D312EF124516DB005AA787 /* PBXTextBookmark */ = 85D312EF124516DB005AA787 /* PBXTextBookmark */;
+			85EA87DC12515F80000952DC /* PBXTextBookmark */ = 85EA87DC12515F80000952DC /* PBXTextBookmark */;
 			85F5996412457D19008FA37F /* PBXTextBookmark */ = 85F5996412457D19008FA37F /* PBXTextBookmark */;
 			85FC57D91246BCEC000A9DA3 /* PBXTextBookmark */ = 85FC57D91246BCEC000A9DA3 /* PBXTextBookmark */;
 			85FC57DA1246BCEC000A9DA3 /* PBXTextBookmark */ = 85FC57DA1246BCEC000A9DA3 /* PBXTextBookmark */;
 			85FC58131246C44F000A9DA3 /* PBXTextBookmark */ = 85FC58131246C44F000A9DA3 /* PBXTextBookmark */;
-			85FC583C1246C8FA000A9DA3 /* PBXTextBookmark */ = 85FC583C1246C8FA000A9DA3 /* PBXTextBookmark */;
 			85FC58561246C9A6000A9DA3 /* PBXTextBookmark */ = 85FC58561246C9A6000A9DA3 /* PBXTextBookmark */;
 			85FC58591246C9CE000A9DA3 /* PBXTextBookmark */ = 85FC58591246C9CE000A9DA3 /* PBXTextBookmark */;
 			85FC585A1246C9CE000A9DA3 /* PBXTextBookmark */ = 85FC585A1246C9CE000A9DA3 /* PBXTextBookmark */;
-			85FC585B1246C9CE000A9DA3 /* PBXTextBookmark */ = 85FC585B1246C9CE000A9DA3 /* PBXTextBookmark */;
-			85FC58611246CAC3000A9DA3 /* PBXTextBookmark */ = 85FC58611246CAC3000A9DA3 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 8514DAB1124426C600D2E8B9 /* Source Control */;
 		userBuildSettings = {
@@ -154,6 +153,16 @@
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
 	};
+	85CBA64212516052008E1343 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 85D312C512450BBA005AA787 /* Calculator.m */;
+		name = "Calculator.m: 117";
+		rLen = 0;
+		rLoc = 1756;
+		rType = 0;
+		vrLen = 1292;
+		vrLoc = 550;
+	};
 	85D312C412450BBA005AA787 /* Calculator.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1332, 924}}";
@@ -165,7 +174,7 @@
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1332, 1560}}";
 			sepNavSelRange = "{1756, 0}";
-			sepNavVisRange = "{528, 1314}";
+			sepNavVisRange = "{550, 1292}";
 		};
 	};
 	85D312EF124516DB005AA787 /* PBXTextBookmark */ = {
@@ -185,6 +194,16 @@
 		path = /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/Foundation.framework/Versions/C/Headers/NSString.h;
 		sourceTree = "<absolute>";
 	};
+	85EA87DC12515F80000952DC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 85D312C512450BBA005AA787 /* Calculator.m */;
+		name = "Calculator.m: 117";
+		rLen = 0;
+		rLoc = 1756;
+		rType = 0;
+		vrLen = 1292;
+		vrLoc = 550;
+	};
 	85F5996412457D19008FA37F /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 85F5996512457D19008FA37F /* NSTextField.h */;
@@ -201,18 +220,6 @@
 		name = NSTextField.h;
 		path = /Developer/SDKs/MacOSX10.6.sdk/System/Library/Frameworks/AppKit.framework/Versions/C/Headers/NSTextField.h;
 		sourceTree = "<absolute>";
-	};
-	85F599A612459010008FA37F /* errno.c */ = {
-		isa = PBXFileReference;
-		lastKnownFileType = sourcecode.c.c;
-		name = errno.c;
-		path = /Users/fe/Projects/osx/gmp4osx/src/errno.c;
-		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1332, 924}}";
-			sepNavSelRange = "{1513, 0}";
-			sepNavVisRange = "{0, 1952}";
-		};
 	};
 	85FC57D91246BCEC000A9DA3 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -251,16 +258,6 @@
 			sepNavVisRange = "{0, 248}";
 		};
 	};
-	85FC583C1246C8FA000A9DA3 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 85F599A612459010008FA37F /* errno.c */;
-		name = "errno.c: 42";
-		rLen = 0;
-		rLoc = 1513;
-		rType = 0;
-		vrLen = 1952;
-		vrLoc = 0;
-	};
 	85FC584E1246C94F000A9DA3 /* gmp_calcAppDelegate.m:56 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
@@ -275,7 +272,7 @@
 		ignoreCount = 0;
 		lineNumber = 56;
 		location = "gmp-calc";
-		modificationTime = 306629259.417697;
+		modificationTime = 307322891.541361;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -308,26 +305,6 @@
 		rType = 0;
 		vrLen = 497;
 		vrLoc = 0;
-	};
-	85FC585B1246C9CE000A9DA3 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 85D312C512450BBA005AA787 /* Calculator.m */;
-		name = "Calculator.m: 53";
-		rLen = 0;
-		rLoc = 708;
-		rType = 0;
-		vrLen = 1224;
-		vrLoc = 514;
-	};
-	85FC58611246CAC3000A9DA3 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = 85D312C512450BBA005AA787 /* Calculator.m */;
-		name = "Calculator.m: 117";
-		rLen = 0;
-		rLoc = 1756;
-		rType = 0;
-		vrLen = 1314;
-		vrLoc = 528;
 	};
 	8D1107260486CEB800E47090 /* gmp-calc */ = {
 		activeExec = 0;
