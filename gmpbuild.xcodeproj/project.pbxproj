@@ -1,0 +1,682 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		858CE1C51232DF0C00BB15DC /* gen-src */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 858CE1CA1232DF3200BB15DC /* Build configuration list for PBXAggregateTarget "gen-src" */;
+			buildPhases = (
+				853ED24F1252A93C00EA8607 /* ShellScript */,
+			);
+			dependencies = (
+				85F26E5F1234175400B62153 /* PBXTargetDependency */,
+				85F26E5D1234174F00B62153 /* PBXTargetDependency */,
+				852031BC1234104D00A11CA5 /* PBXTargetDependency */,
+				852031BA1234104D00A11CA5 /* PBXTargetDependency */,
+				852031B81234104D00A11CA5 /* PBXTargetDependency */,
+			);
+			name = "gen-src";
+			productName = "gen-src";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		853ED0D91252A7CE00EA8607 /* gen-psqr.c in Sources */ = {isa = PBXBuildFile; fileRef = 85B4E87512345AC30091D2C2 /* gen-psqr.c */; };
+		853ED0DA1252A7E200EA8607 /* gen-fib.c in Sources */ = {isa = PBXBuildFile; fileRef = 85B4E87412345AC30091D2C2 /* gen-fib.c */; };
+		853ED0DB1252A7E900EA8607 /* gen-trialdivtab.c in Sources */ = {isa = PBXBuildFile; fileRef = 85B4E87612345AC30091D2C2 /* gen-trialdivtab.c */; };
+		853ED0DC1252A7EF00EA8607 /* gen-fac_ui.c in Sources */ = {isa = PBXBuildFile; fileRef = 85B4E87312345AC30091D2C2 /* gen-fac_ui.c */; };
+		853ED0DD1252A7FF00EA8607 /* gen-bases.c in Sources */ = {isa = PBXBuildFile; fileRef = 85B4E87212345AC30091D2C2 /* gen-bases.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		852031B71234104D00A11CA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 85876B6F1232BD23009F25BF;
+			remoteInfo = "gen-trialdivtab";
+		};
+		852031B91234104D00A11CA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 85876B641232BCE1009F25BF;
+			remoteInfo = "gen-fib";
+		};
+		852031BB1234104D00A11CA5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 85876B561232BC19009F25BF;
+			remoteInfo = "gen-psqr";
+		};
+		85F26E5C1234174F00B62153 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 85F26E561234173000B62153;
+			remoteInfo = "gen-fac_ui";
+		};
+		85F26E5E1234175400B62153 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 85F26E4E123416F100B62153;
+			remoteInfo = "gen-bases";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		32DBCF5E0370ADEE00C91783 /* gmp_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gmp_Prefix.pch; sourceTree = "<group>"; };
+		853ED22F1252A87400EA8607 /* gmpbuild.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = gmpbuild.xcconfig; sourceTree = "<group>"; };
+		85876B571232BC19009F25BF /* gen-psqr */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "gen-psqr"; sourceTree = BUILT_PRODUCTS_DIR; };
+		85876B651232BCE1009F25BF /* gen-fib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "gen-fib"; sourceTree = BUILT_PRODUCTS_DIR; };
+		85876B701232BD23009F25BF /* gen-trialdivtab */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "gen-trialdivtab"; sourceTree = BUILT_PRODUCTS_DIR; };
+		85B4E87212345AC30091D2C2 /* gen-bases.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "gen-bases.c"; path = "src/gen-bases.c"; sourceTree = "<group>"; };
+		85B4E87312345AC30091D2C2 /* gen-fac_ui.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "gen-fac_ui.c"; path = "src/gen-fac_ui.c"; sourceTree = "<group>"; };
+		85B4E87412345AC30091D2C2 /* gen-fib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "gen-fib.c"; path = "src/gen-fib.c"; sourceTree = "<group>"; };
+		85B4E87512345AC30091D2C2 /* gen-psqr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "gen-psqr.c"; path = "src/gen-psqr.c"; sourceTree = "<group>"; };
+		85B4E87612345AC30091D2C2 /* gen-trialdivtab.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "gen-trialdivtab.c"; path = "src/gen-trialdivtab.c"; sourceTree = "<group>"; };
+		85F26E4F123416F100B62153 /* gen-bases */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "gen-bases"; sourceTree = BUILT_PRODUCTS_DIR; };
+		85F26E571234173000B62153 /* gen-fac_ui */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "gen-fac_ui"; sourceTree = BUILT_PRODUCTS_DIR; };
+		85F26E851234188C00B62153 /* dumbmp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dumbmp.c; path = src/dumbmp.c; sourceTree = "<group>"; };
+		85FFA81B1233DCD3003299BA /* fib_table.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fib_table.c; path = build/src/mpn/fib_table.c; sourceTree = "<group>"; };
+		85FFA81C1233DCD3003299BA /* mp_bases.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mp_bases.c; path = build/src/mpn/mp_bases.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		85876B551232BC19009F25BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85876B631232BCE1009F25BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85876B6E1232BD23009F25BF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85F26E4D123416F100B62153 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85F26E551234173000B62153 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				85876B571232BC19009F25BF /* gen-psqr */,
+				85876B651232BCE1009F25BF /* gen-fib */,
+				85876B701232BD23009F25BF /* gen-trialdivtab */,
+				85F26E4F123416F100B62153 /* gen-bases */,
+				85F26E571234173000B62153 /* gen-fac_ui */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* gmp */ = {
+			isa = PBXGroup;
+			children = (
+				853ED22F1252A87400EA8607 /* gmpbuild.xcconfig */,
+				85FFA81B1233DCD3003299BA /* fib_table.c */,
+				85F26E851234188C00B62153 /* dumbmp.c */,
+				85FFA81C1233DCD3003299BA /* mp_bases.c */,
+				85B4E87212345AC30091D2C2 /* gen-bases.c */,
+				85B4E87312345AC30091D2C2 /* gen-fac_ui.c */,
+				85B4E87412345AC30091D2C2 /* gen-fib.c */,
+				85B4E87512345AC30091D2C2 /* gen-psqr.c */,
+				85B4E87612345AC30091D2C2 /* gen-trialdivtab.c */,
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				089C1665FE841158C02AAC07 /* Resources */,
+				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = gmp;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */,
+				1058C7B2FEA5585E11CA2CBB /* Other Frameworks */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C1665FE841158C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7B2FEA5585E11CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32DBCF5E0370ADEE00C91783 /* gmp_Prefix.pch */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		85876B561232BC19009F25BF /* gen-psqr */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85876B5B1232BC4B009F25BF /* Build configuration list for PBXNativeTarget "gen-psqr" */;
+			buildPhases = (
+				85876B541232BC19009F25BF /* Sources */,
+				85876B551232BC19009F25BF /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "gen-psqr";
+			productName = "gen-psqr";
+			productReference = 85876B571232BC19009F25BF /* gen-psqr */;
+			productType = "com.apple.product-type.tool";
+		};
+		85876B641232BCE1009F25BF /* gen-fib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85876B6C1232BD1F009F25BF /* Build configuration list for PBXNativeTarget "gen-fib" */;
+			buildPhases = (
+				85876B621232BCE1009F25BF /* Sources */,
+				85876B631232BCE1009F25BF /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "gen-fib";
+			productName = "gen-fib";
+			productReference = 85876B651232BCE1009F25BF /* gen-fib */;
+			productType = "com.apple.product-type.tool";
+		};
+		85876B6F1232BD23009F25BF /* gen-trialdivtab */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85876B7C1232BD53009F25BF /* Build configuration list for PBXNativeTarget "gen-trialdivtab" */;
+			buildPhases = (
+				85876B6D1232BD23009F25BF /* Sources */,
+				85876B6E1232BD23009F25BF /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "gen-trialdivtab";
+			productName = "gen-trialdivtab";
+			productReference = 85876B701232BD23009F25BF /* gen-trialdivtab */;
+			productType = "com.apple.product-type.tool";
+		};
+		85F26E4E123416F100B62153 /* gen-bases */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85F26E761234175E00B62153 /* Build configuration list for PBXNativeTarget "gen-bases" */;
+			buildPhases = (
+				85F26E4C123416F100B62153 /* Sources */,
+				85F26E4D123416F100B62153 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "gen-bases";
+			productName = "gen-bases";
+			productReference = 85F26E4F123416F100B62153 /* gen-bases */;
+			productType = "com.apple.product-type.tool";
+		};
+		85F26E561234173000B62153 /* gen-fac_ui */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85F26E751234175E00B62153 /* Build configuration list for PBXNativeTarget "gen-fac_ui" */;
+			buildPhases = (
+				85F26E541234173000B62153 /* Sources */,
+				85F26E551234173000B62153 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "gen-fac_ui";
+			productName = "gen-fac_ui";
+			productReference = 85F26E571234173000B62153 /* gen-fac_ui */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Stefan Thomas";
+			};
+			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "gmpbuild" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 0867D691FE84028FC02AAC07 /* gmp */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				85876B561232BC19009F25BF /* gen-psqr */,
+				85876B641232BCE1009F25BF /* gen-fib */,
+				85876B6F1232BD23009F25BF /* gen-trialdivtab */,
+				85F26E561234173000B62153 /* gen-fac_ui */,
+				85F26E4E123416F100B62153 /* gen-bases */,
+				858CE1C51232DF0C00BB15DC /* gen-src */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		853ED24F1252A93C00EA8607 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here\n\n#env\necho \"Building ${PRODUCT_NAME}\"\necho \"Build product dir ${BUILT_PRODUCTS_DIR}\"\necho \"Build dir ${BUILD_ROOT}\"\n\ntest -d ${BUILD_ROOT}/include/mpn || mkdir -p ${BUILD_ROOT}/include/mpn\ntest -d ${BUILD_ROOT}/include/mpz || mkdir -p ${BUILD_ROOT}/include/mpz\ntest -d ${BUILD_ROOT}/src/mpn || mkdir -p ${BUILD_ROOT}/src/mpn\n\n${BUILT_PRODUCTS_DIR}/gen-fac_ui 64 0 > ${BUILD_ROOT}/include/mpz/fac_ui.h\n\n${BUILT_PRODUCTS_DIR}/gen-fib header 64 0 > ${BUILD_ROOT}/include/fib_table.h\n${BUILT_PRODUCTS_DIR}/gen-fib table 64 0 > ${BUILD_ROOT}/src/mpn/fib_table.c\n\n${BUILT_PRODUCTS_DIR}/gen-bases header 64 0 > ${BUILD_ROOT}/include/mp_bases.h\n${BUILT_PRODUCTS_DIR}/gen-bases table 64 0 > ${BUILD_ROOT}/src/mpn/mp_bases.c\n\n${BUILT_PRODUCTS_DIR}/gen-trialdivtab 64 8000 > ${BUILD_ROOT}/include/trialdivtab.h\n\n${BUILT_PRODUCTS_DIR}/gen-psqr 64 0 > ${BUILD_ROOT}/include/mpn/perfsqr.h\n\n\nexit 0\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		85876B541232BC19009F25BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				853ED0D91252A7CE00EA8607 /* gen-psqr.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85876B621232BCE1009F25BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				853ED0DA1252A7E200EA8607 /* gen-fib.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85876B6D1232BD23009F25BF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				853ED0DB1252A7E900EA8607 /* gen-trialdivtab.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85F26E4C123416F100B62153 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				853ED0DD1252A7FF00EA8607 /* gen-bases.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85F26E541234173000B62153 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				853ED0DC1252A7EF00EA8607 /* gen-fac_ui.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		852031B81234104D00A11CA5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 85876B6F1232BD23009F25BF /* gen-trialdivtab */;
+			targetProxy = 852031B71234104D00A11CA5 /* PBXContainerItemProxy */;
+		};
+		852031BA1234104D00A11CA5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 85876B641232BCE1009F25BF /* gen-fib */;
+			targetProxy = 852031B91234104D00A11CA5 /* PBXContainerItemProxy */;
+		};
+		852031BC1234104D00A11CA5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 85876B561232BC19009F25BF /* gen-psqr */;
+			targetProxy = 852031BB1234104D00A11CA5 /* PBXContainerItemProxy */;
+		};
+		85F26E5D1234174F00B62153 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 85F26E561234173000B62153 /* gen-fac_ui */;
+			targetProxy = 85F26E5C1234174F00B62153 /* PBXContainerItemProxy */;
+		};
+		85F26E5F1234175400B62153 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 85F26E4E123416F100B62153 /* gen-bases */;
+			targetProxy = 85F26E5E1234175400B62153 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB91B208733DA50010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		1DEB91B308733DA50010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+		85876B591232BC19009F25BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 853ED22F1252A87400EA8607 /* gmpbuild.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = "";
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = "gen-psqr";
+			};
+			name = Debug;
+		};
+		85876B5A1232BC19009F25BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 853ED22F1252A87400EA8607 /* gmpbuild.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = "";
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = "gen-psqr";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		85876B671232BCE1009F25BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 853ED22F1252A87400EA8607 /* gmpbuild.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = core2;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = "gen-fib";
+			};
+			name = Debug;
+		};
+		85876B681232BCE1009F25BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 853ED22F1252A87400EA8607 /* gmpbuild.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = core2;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = "gen-fib";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		85876B721232BD23009F25BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 853ED22F1252A87400EA8607 /* gmpbuild.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = core2;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = "gen-trialdivtab";
+			};
+			name = Debug;
+		};
+		85876B731232BD23009F25BF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 853ED22F1252A87400EA8607 /* gmpbuild.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = core2;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = "gen-trialdivtab";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		858CE1C61232DF0C00BB15DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = "gen-src";
+			};
+			name = Debug;
+		};
+		858CE1C71232DF0C00BB15DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = "gen-src";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		85F26E51123416F100B62153 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 853ED22F1252A87400EA8607 /* gmpbuild.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = core2;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = "gen-bases";
+			};
+			name = Debug;
+		};
+		85F26E52123416F100B62153 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 853ED22F1252A87400EA8607 /* gmpbuild.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = core2;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = "gen-bases";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		85F26E591234173000B62153 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 853ED22F1252A87400EA8607 /* gmpbuild.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = core2;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = "gen-fac_ui";
+			};
+			name = Debug;
+		};
+		85F26E5A1234173000B62153 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 853ED22F1252A87400EA8607 /* gmpbuild.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = core2;
+				INSTALL_PATH = /usr/local/bin;
+				PREBINDING = NO;
+				PRODUCT_NAME = "gen-fac_ui";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "gmpbuild" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB91B208733DA50010E9CD /* Debug */,
+				1DEB91B308733DA50010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85876B5B1232BC4B009F25BF /* Build configuration list for PBXNativeTarget "gen-psqr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85876B591232BC19009F25BF /* Debug */,
+				85876B5A1232BC19009F25BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85876B6C1232BD1F009F25BF /* Build configuration list for PBXNativeTarget "gen-fib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85876B671232BCE1009F25BF /* Debug */,
+				85876B681232BCE1009F25BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85876B7C1232BD53009F25BF /* Build configuration list for PBXNativeTarget "gen-trialdivtab" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85876B721232BD23009F25BF /* Debug */,
+				85876B731232BD23009F25BF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		858CE1CA1232DF3200BB15DC /* Build configuration list for PBXAggregateTarget "gen-src" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				858CE1C61232DF0C00BB15DC /* Debug */,
+				858CE1C71232DF0C00BB15DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85F26E751234175E00B62153 /* Build configuration list for PBXNativeTarget "gen-fac_ui" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85F26E591234173000B62153 /* Debug */,
+				85F26E5A1234173000B62153 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85F26E761234175E00B62153 /* Build configuration list for PBXNativeTarget "gen-bases" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85F26E51123416F100B62153 /* Debug */,
+				85F26E52123416F100B62153 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}
