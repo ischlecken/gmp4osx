@@ -1,0 +1,21 @@
+#!/bin/sh
+
+IOS=/Developer/Platforms/iPhoneOS.platform/Developer
+
+./configure \
+CC="$IOS/usr/bin/gcc-4.2" \
+CXX="$IOS/usr/bin/g++-4.2" \
+CPP="$IOS/usr/bin/gcc-4.2 -E" \
+LD="$IOS/usr/bin/ld" \
+CPPFLAGS="-arch armv6 -isysroot $IOS/SDKs/iPhoneOS3.2.sdk -miphoneos-version-min=3.2" \
+AR="$IOS/usr/bin/ar" \
+NM="$IOS/usr/bin/nm" \
+NMEDIT="$IOS/usr/bin/nmedit" \
+LIBTOOL="$IOS/usr/bin/libtool" \
+LIPO="$IOS/usr/bin/lipo" \
+OTOOL="$IOS/usr/bin/otool" \
+RANLIB="$IOS/usr/bin/ranlib" \
+STRIP="$IOS/usr/bin/strip" \
+--disable-shared --enable-static --prefix=$IOS/usr/local \
+--host=none-apple-darwin10
+
