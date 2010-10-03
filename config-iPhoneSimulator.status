@@ -814,7 +814,7 @@ case $lt_ECHO in
   ;;
 esac
 
-ac_aux_dir='.'
+ac_aux_dir='../src'
 xsi_shell='yes'
 lt_shell_append='yes'
 
