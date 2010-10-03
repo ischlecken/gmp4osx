@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
+		8502C2F9125889D500811629 /* gen-src-dir */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 8502C2FC125889F400811629 /* Build configuration list for PBXAggregateTarget "gen-src-dir" */;
+			buildPhases = (
+				8502C2F8125889D500811629 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "gen-src-dir";
+			productName = "gen-src-dir";
+		};
 		858CE1C51232DF0C00BB15DC /* gen-src */ = {
 			isa = PBXAggregateTarget;
 			buildConfigurationList = 858CE1CA1232DF3200BB15DC /* Build configuration list for PBXAggregateTarget "gen-src" */;
@@ -14,6 +25,7 @@
 				853ED24F1252A93C00EA8607 /* ShellScript */,
 			);
 			dependencies = (
+				8502C30C12588D0600811629 /* PBXTargetDependency */,
 				85F26E5F1234175400B62153 /* PBXTargetDependency */,
 				85F26E5D1234174F00B62153 /* PBXTargetDependency */,
 				852031BC1234104D00A11CA5 /* PBXTargetDependency */,
@@ -34,6 +46,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		8502C30B12588D0600811629 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8502C2F9125889D500811629 /* gen-src-dir */;
+			remoteInfo = "gen-src-dir";
+		};
 		852031B71234104D00A11CA5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
@@ -311,11 +330,25 @@
 				85F26E561234173000B62153 /* gen-fac_ui */,
 				85F26E4E123416F100B62153 /* gen-bases */,
 				858CE1C51232DF0C00BB15DC /* gen-src */,
+				8502C2F9125889D500811629 /* gen-src-dir */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		8502C2F8125889D500811629 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#env\n\necho \"Creating links for various platforms\"\n\ntest -d ${BUILD_ROOT}/src-MacOSX || mkdir -p ${BUILD_ROOT}/src-MacOSX\ntest -d ${BUILD_ROOT}/src-iPhoneOS || mkdir -p ${BUILD_ROOT}/src-iPhoneOS\ntest -d ${BUILD_ROOT}/src-iPhoneSimulator || mkdir -p ${BUILD_ROOT}/src-iPhoneSimulator\n\ncd ${BUILD_ROOT}/src-MacOSX\n${PROJECT_DIR}/config-MacOSX.status\n\ncd ${BUILD_ROOT}/src-iPhoneOS\n${PROJECT_DIR}/config-iPhoneOS.status\n\ncd ${BUILD_ROOT}/src-iPhoneSimulator\n${PROJECT_DIR}/config-iPhoneSimulator.status\n\nexit 0\n";
+		};
 		853ED24F1252A93C00EA8607 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -375,6 +408,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		8502C30C12588D0600811629 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8502C2F9125889D500811629 /* gen-src-dir */;
+			targetProxy = 8502C30B12588D0600811629 /* PBXContainerItemProxy */;
+		};
 		852031B81234104D00A11CA5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 85876B6F1232BD23009F25BF /* gen-trialdivtab */;
@@ -426,6 +464,27 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				PREBINDING = NO;
 				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
+		8502C2FA125889D600811629 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = "gen-src-dir";
+			};
+			name = Debug;
+		};
+		8502C2FB125889D600811629 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = "gen-src-dir";
+				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
@@ -618,6 +677,15 @@
 			buildConfigurations = (
 				1DEB91B208733DA50010E9CD /* Debug */,
 				1DEB91B308733DA50010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8502C2FC125889F400811629 /* Build configuration list for PBXAggregateTarget "gen-src-dir" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8502C2FA125889D600811629 /* Debug */,
+				8502C2FB125889D600811629 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
