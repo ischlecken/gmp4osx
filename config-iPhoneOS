@@ -17,5 +17,5 @@ OTOOL="$IOS/usr/bin/otool" \
 RANLIB="$IOS/usr/bin/ranlib" \
 STRIP="$IOS/usr/bin/strip" \
 --disable-shared --enable-static --prefix=$IOS/usr/local \
---host=none-apple-darwin10
+--host=arm-apple-darwin10
 
