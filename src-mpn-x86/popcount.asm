@@ -1,1 +1,0 @@
-../src/mpn/x86_64/core2/popcount.asm
