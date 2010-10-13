@@ -50,7 +50,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8502C2F9125889D500811629 /* gen-src-dir */;
+			remoteGlobalIDString = 8502C2F9125889D500811629;
 			remoteInfo = "gen-src-dir";
 		};
 		852031B71234104D00A11CA5 /* PBXContainerItemProxy */ = {
@@ -360,7 +360,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# shell script goes here\n\n#env\necho \"Building ${PRODUCT_NAME}\"\necho \"Build product dir ${BUILT_PRODUCTS_DIR}\"\necho \"Build dir ${BUILD_ROOT}\"\n\ntest -d ${BUILD_ROOT}/include/mpn || mkdir -p ${BUILD_ROOT}/include/mpn\ntest -d ${BUILD_ROOT}/include/mpz || mkdir -p ${BUILD_ROOT}/include/mpz\ntest -d ${BUILD_ROOT}/src/mpn || mkdir -p ${BUILD_ROOT}/src/mpn\n\n${BUILT_PRODUCTS_DIR}/gen-fac_ui 64 0 > ${BUILD_ROOT}/include/mpz/fac_ui.h\n\n${BUILT_PRODUCTS_DIR}/gen-fib header 64 0 > ${BUILD_ROOT}/include/fib_table.h\n${BUILT_PRODUCTS_DIR}/gen-fib table 64 0 > ${BUILD_ROOT}/src/mpn/fib_table.c\n\n${BUILT_PRODUCTS_DIR}/gen-bases header 64 0 > ${BUILD_ROOT}/include/mp_bases.h\n${BUILT_PRODUCTS_DIR}/gen-bases table 64 0 > ${BUILD_ROOT}/src/mpn/mp_bases.c\n\n${BUILT_PRODUCTS_DIR}/gen-trialdivtab 64 8000 > ${BUILD_ROOT}/include/trialdivtab.h\n\n${BUILT_PRODUCTS_DIR}/gen-psqr 64 0 > ${BUILD_ROOT}/include/mpn/perfsqr.h\n\n\nexit 0\n";
+			shellScript = "# shell script goes here\n\n#env\necho \"Building ${PRODUCT_NAME}\"\necho \"Build product dir ${BUILT_PRODUCTS_DIR}\"\necho \"Build dir ${BUILD_ROOT}\"\n\ntest -d ${BUILD_ROOT}/include/mpn || mkdir -p ${BUILD_ROOT}/include/mpn\ntest -d ${BUILD_ROOT}/include/mpz || mkdir -p ${BUILD_ROOT}/include/mpz\ntest -d ${BUILD_ROOT}/src/mpn || mkdir -p ${BUILD_ROOT}/src/mpn\n\ntest -d ${BUILD_ROOT}/include32/mpn || mkdir -p ${BUILD_ROOT}/include32/mpn\ntest -d ${BUILD_ROOT}/include32/mpz || mkdir -p ${BUILD_ROOT}/include32/mpz\ntest -d ${BUILD_ROOT}/src32/mpn || mkdir -p ${BUILD_ROOT}/src32/mpn\n\n${BUILT_PRODUCTS_DIR}/gen-fac_ui 64 0 > ${BUILD_ROOT}/include/mpz/fac_ui.h\n\n${BUILT_PRODUCTS_DIR}/gen-fib header 64 0 > ${BUILD_ROOT}/include/fib_table.h\n${BUILT_PRODUCTS_DIR}/gen-fib table 64 0 > ${BUILD_ROOT}/src/mpn/fib_table.c\n\n${BUILT_PRODUCTS_DIR}/gen-bases header 64 0 > ${BUILD_ROOT}/include/mp_bases.h\n${BUILT_PRODUCTS_DIR}/gen-bases table 64 0 > ${BUILD_ROOT}/src/mpn/mp_bases.c\n\n${BUILT_PRODUCTS_DIR}/gen-trialdivtab 64 8000 > ${BUILD_ROOT}/include/trialdivtab.h\n\n${BUILT_PRODUCTS_DIR}/gen-psqr 64 0 > ${BUILD_ROOT}/include/mpn/perfsqr.h\n\n\n${BUILT_PRODUCTS_DIR}/gen-fac_ui 32 0 > ${BUILD_ROOT}/include32/mpz/fac_ui.h\n\n${BUILT_PRODUCTS_DIR}/gen-fib header 32 0 > ${BUILD_ROOT}/include32/fib_table.h\n${BUILT_PRODUCTS_DIR}/gen-fib table 32 0 > ${BUILD_ROOT}/src32/mpn/fib_table.c\n\n${BUILT_PRODUCTS_DIR}/gen-bases header 32 0 > ${BUILD_ROOT}/include32/mp_bases.h\n${BUILT_PRODUCTS_DIR}/gen-bases table 32 0 > ${BUILD_ROOT}/src32/mpn/mp_bases.c\n\n${BUILT_PRODUCTS_DIR}/gen-trialdivtab 32 8000 > ${BUILD_ROOT}/include32/trialdivtab.h\n\n${BUILT_PRODUCTS_DIR}/gen-psqr 32 0 > ${BUILD_ROOT}/include32/mpn/perfsqr.h\n\n\nexit 0\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
