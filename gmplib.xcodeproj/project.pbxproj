@@ -340,7 +340,7 @@
 		859B796C1265328300F6011C /* mp_bases.c in Sources */ = {isa = PBXBuildFile; fileRef = 859B796A1265328300F6011C /* mp_bases.c */; };
 		85A29D4B12402BA000EDE349 /* gmp-unittest-base.m in Sources */ = {isa = PBXBuildFile; fileRef = 85A29D4A12402BA000EDE349 /* gmp-unittest-base.m */; };
 		85AE0776123EE0DC0094E4B0 /* libgmp-testlib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85CC41FD123D8E4400514D1C /* libgmp-testlib.a */; };
-		85AE077B123EE0E10094E4B0 /* gmp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* gmp.framework */; };
+		85AE077B123EE0E10094E4B0 /* gmp in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* gmp */; };
 		85AE07E7123EEB830094E4B0 /* asprintf.c in Sources */ = {isa = PBXBuildFile; fileRef = 85D5E80412341FC80017B49B /* asprintf.c */; };
 		85AE07E8123EEB830094E4B0 /* asprntffuns.c in Sources */ = {isa = PBXBuildFile; fileRef = 85D5E80512341FC80017B49B /* asprntffuns.c */; };
 		85AE07E9123EEB830094E4B0 /* doprnt.c in Sources */ = {isa = PBXBuildFile; fileRef = 85D5E80612341FC80017B49B /* doprnt.c */; };
@@ -793,7 +793,7 @@
 		85C65D401242BF3E0056B5D8 /* gmp-unittest-mpq-aors.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C65D3F1242BF3E0056B5D8 /* gmp-unittest-mpq-aors.m */; };
 		85C65D551242C1970056B5D8 /* gmp-unittest-mpq-cmp.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C65D541242C1970056B5D8 /* gmp-unittest-mpq-cmp.m */; };
 		85C65DAD1242C8E90056B5D8 /* gmp-calc.c in Sources */ = {isa = PBXBuildFile; fileRef = 85C65D771242C4380056B5D8 /* gmp-calc.c */; };
-		85C65DAE1242C8FC0056B5D8 /* gmp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* gmp.framework */; };
+		85C65DAE1242C8FC0056B5D8 /* gmp in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* gmp */; };
 		85CC4217123D8E9200514D1C /* amd64call.asm in Sources */ = {isa = PBXBuildFile; fileRef = 85CC4201123D8E9200514D1C /* amd64call.asm */; };
 		85CC4218123D8E9200514D1C /* amd64check.c in Sources */ = {isa = PBXBuildFile; fileRef = 85CC4202123D8E9200514D1C /* amd64check.c */; };
 		85CC4219123D8E9200514D1C /* memory.c in Sources */ = {isa = PBXBuildFile; fileRef = 85CC4203123D8E9200514D1C /* memory.c */; };
@@ -1085,7 +1085,7 @@
 		85C65D541242C1970056B5D8 /* gmp-unittest-mpq-cmp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "gmp-unittest-mpq-cmp.m"; path = "src-test/gmp-unittest-mpq-cmp.m"; sourceTree = "<group>"; };
 		85C65D761242C4380056B5D8 /* gmp-calc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "gmp-calc.h"; sourceTree = "<group>"; };
 		85C65D771242C4380056B5D8 /* gmp-calc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "gmp-calc.c"; sourceTree = "<group>"; };
-		85C65D961242C8850056B5D8 /* gmp-calc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "gmp-calc"; sourceTree = BUILT_PRODUCTS_DIR; };
+		85C65D961242C8850056B5D8 /* gmp-calc */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "compiled.mach-o.executable"; path = "gmp-calc"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85CC41FD123D8E4400514D1C /* libgmp-testlib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libgmp-testlib.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85CC4201123D8E9200514D1C /* amd64call.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = amd64call.asm; path = src/tests/amd64call.asm; sourceTree = "<group>"; };
 		85CC4202123D8E9200514D1C /* amd64check.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = amd64check.c; path = src/tests/amd64check.c; sourceTree = "<group>"; };
@@ -1384,7 +1384,7 @@
 		85DBC6B61252AB49003AFD9E /* mp_bases.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mp_bases.c; path = build/src/mpn/mp_bases.c; sourceTree = "<group>"; };
 		85F26E851234188C00B62153 /* dumbmp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dumbmp.c; path = src/dumbmp.c; sourceTree = "<group>"; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8DC2EF5B0486A6940098B216 /* gmp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = gmp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DC2EF5B0486A6940098B216 /* gmp */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.framework; path = gmp; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1400,7 +1400,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				85AE0776123EE0DC0094E4B0 /* libgmp-testlib.a in Frameworks */,
-				85AE077B123EE0E10094E4B0 /* gmp.framework in Frameworks */,
+				85AE077B123EE0E10094E4B0 /* gmp in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1408,7 +1408,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85C65DAE1242C8FC0056B5D8 /* gmp.framework in Frameworks */,
+				85C65DAE1242C8FC0056B5D8 /* gmp in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1432,7 +1432,7 @@
 		034768DFFF38A50411DB9C8B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8DC2EF5B0486A6940098B216 /* gmp.framework */,
+				8DC2EF5B0486A6940098B216 /* gmp */,
 				85CC41FD123D8E4400514D1C /* libgmp-testlib.a */,
 				85AE0763123EDC7C0094E4B0 /* gmp-tests-basic.octest */,
 				85C65D961242C8850056B5D8 /* gmp-calc */,
@@ -2232,7 +2232,7 @@
 			name = gmp;
 			productInstallPath = "$(HOME)/Library/Frameworks";
 			productName = gmp;
-			productReference = 8DC2EF5B0486A6940098B216 /* gmp.framework */;
+			productReference = 8DC2EF5B0486A6940098B216 /* gmp */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -3252,6 +3252,7 @@
 					__GMP_WITHIN_GMP,
 					HAVE_CONFIG_H,
 				);
+				GCC_THUMB_SUPPORT = NO;
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/src",
 					"$(BUILD_ROOT)/include32",
