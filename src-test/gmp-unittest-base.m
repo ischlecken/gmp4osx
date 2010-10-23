@@ -1,5 +1,4 @@
 //
-//  first.m
 //  gmp
 //
 //  Created by Feldmaus on 14.09.10.
