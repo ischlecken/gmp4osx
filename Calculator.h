@@ -7,19 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-//#import <gmp/gmp.h>
+#import "gmp.h"
 
 @interface Calculator : NSObject 
 {
-/*
+
   mpz_t operandA;
   mpz_t operandB;
   mpz_t operandC;
-*/
-  NSString* operandA;
-  NSString* operandB;
-  NSString* operandC;
-  
+
 }
 
 -(void) setOperandA:(NSString*) opA;
