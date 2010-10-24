@@ -545,8 +545,15 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216 /* gmp */;
+			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = gmp;
+		};
+		85D37B77127493F700A266F7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 85AE0762123EDC7C0094E4B0 /* gmp-unittest */;
+			remoteInfo = "gmp-unittest";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -1850,6 +1857,7 @@
 			);
 			dependencies = (
 				85D10D7D127350D3008AA53F /* PBXTargetDependency */,
+				85D37B78127493F700A266F7 /* PBXTargetDependency */,
 			);
 			name = "gmp-calc";
 			productName = "gmp-calc";
@@ -2469,6 +2477,11 @@
 			isa = PBXTargetDependency;
 			target = 8DC2EF4F0486A6940098B216 /* gmp */;
 			targetProxy = 85D10D7C127350D3008AA53F /* PBXContainerItemProxy */;
+		};
+		85D37B78127493F700A266F7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 85AE0762123EDC7C0094E4B0 /* gmp-unittest */;
+			targetProxy = 85D37B77127493F700A266F7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

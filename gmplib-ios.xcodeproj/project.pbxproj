@@ -1590,6 +1590,20 @@
 		85D5E82112341FC80017B49B /* vsscanf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = vsscanf.c; path = src/scanf/vsscanf.c; sourceTree = "<group>"; };
 		85DBC6B51252AB49003AFD9E /* fib_table.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = fib_table.c; path = build/src/mpn/fib_table.c; sourceTree = "<group>"; };
 		85DBC6B61252AB49003AFD9E /* mp_bases.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mp_bases.c; path = build/src/mpn/mp_bases.c; sourceTree = "<group>"; };
+		85DD22BF1274D37B00EDD3E1 /* tal-notreent.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "tal-notreent.c"; path = "src/tal-notreent.c"; sourceTree = "<group>"; };
+		85DD22C01274D37B00EDD3E1 /* tal-debug.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "tal-debug.c"; path = "src/tal-debug.c"; sourceTree = "<group>"; };
+		85DD22C11274D37B00EDD3E1 /* randmt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = randmt.h; path = src/randmt.h; sourceTree = "<group>"; };
+		85DD22C21274D37B00EDD3E1 /* gmp-impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "gmp-impl.h"; path = "src/gmp-impl.h"; sourceTree = "<group>"; };
+		85DD22C31274D37B00EDD3E1 /* gmp-h.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "gmp-h.in"; path = "src/gmp-h.in"; sourceTree = "<group>"; };
+		85DD22C91274D42000EDD3E1 /* config-MacOSX.status */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "config-MacOSX.status"; sourceTree = "<group>"; };
+		85DD22CA1274D42000EDD3E1 /* config-MacOSX.m4 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "config-MacOSX.m4"; sourceTree = "<group>"; };
+		85DD22CB1274D42000EDD3E1 /* config-iPhoneSimulator */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "config-iPhoneSimulator"; sourceTree = "<group>"; };
+		85DD22CC1274D42000EDD3E1 /* config-iPhoneOS.status */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "config-iPhoneOS.status"; sourceTree = "<group>"; };
+		85DD22CD1274D42000EDD3E1 /* config-iPhoneOS.m4 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "config-iPhoneOS.m4"; sourceTree = "<group>"; };
+		85DD22CE1274D42000EDD3E1 /* config-iPhoneOS */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "config-iPhoneOS"; sourceTree = "<group>"; };
+		85DD22CF1274D48E00EDD3E1 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = "build/src-iPhoneSimulator/config.h"; sourceTree = "<group>"; };
+		85DD22D61274D4ED00EDD3E1 /* config-iPhoneSimulator.m4 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "config-iPhoneSimulator.m4"; sourceTree = "<group>"; };
+		85DD22D71274D4ED00EDD3E1 /* config-iPhoneSimulator.status */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "config-iPhoneSimulator.status"; sourceTree = "<group>"; };
 		85E480BE1273041F002916B5 /* libgmp-iPhoneSimulator.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libgmp-iPhoneSimulator.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85F26E851234188C00B62153 /* dumbmp.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dumbmp.c; path = src/dumbmp.c; sourceTree = "<group>"; };
 		8DC2EF5A0486A6940098B216 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1625,6 +1639,14 @@
 		0867D691FE84028FC02AAC07 /* gmp */ = {
 			isa = PBXGroup;
 			children = (
+				85DD22D61274D4ED00EDD3E1 /* config-iPhoneSimulator.m4 */,
+				85DD22D71274D4ED00EDD3E1 /* config-iPhoneSimulator.status */,
+				85DD22C91274D42000EDD3E1 /* config-MacOSX.status */,
+				85DD22CA1274D42000EDD3E1 /* config-MacOSX.m4 */,
+				85DD22CB1274D42000EDD3E1 /* config-iPhoneSimulator */,
+				85DD22CC1274D42000EDD3E1 /* config-iPhoneOS.status */,
+				85DD22CD1274D42000EDD3E1 /* config-iPhoneOS.m4 */,
+				85DD22CE1274D42000EDD3E1 /* config-iPhoneOS */,
 				850742EF12730982002C690E /* src32 */,
 				85B8FFE2125D4FEB00410B9E /* src-iPhoneSimulator */,
 				85B8FFE0125D4FC500410B9E /* src-iPhoneOS */,
@@ -1908,6 +1930,7 @@
 		85B8FFE2125D4FEB00410B9E /* src-iPhoneSimulator */ = {
 			isa = PBXGroup;
 			children = (
+				85DD22CF1274D48E00EDD3E1 /* config.h */,
 				8507431512730F24002C690E /* add_1.c */,
 				8507431612730F24002C690E /* add_n.c */,
 				8507431712730F24002C690E /* add.c */,
@@ -2078,6 +2101,11 @@
 		85D5E48F12341AE00017B49B /* src */ = {
 			isa = PBXGroup;
 			children = (
+				85DD22BF1274D37B00EDD3E1 /* tal-notreent.c */,
+				85DD22C01274D37B00EDD3E1 /* tal-debug.c */,
+				85DD22C11274D37B00EDD3E1 /* randmt.h */,
+				85DD22C21274D37B00EDD3E1 /* gmp-impl.h */,
+				85DD22C31274D37B00EDD3E1 /* gmp-h.in */,
 				859B797B126534B000F6011C /* longlong.h */,
 				85CC422F123D8EA100514D1C /* tests */,
 				85D5E7FA12341F750017B49B /* io */,
