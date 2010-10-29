@@ -6,6 +6,20 @@
 	objectVersion = 45;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		8599F359127B7B5A001247D7 /* gmp-ios */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 8599F35C127B7B79001247D7 /* Build configuration list for PBXAggregateTarget "gmp-ios" */;
+			buildPhases = (
+				8599F358127B7B5A001247D7 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "gmp-ios";
+			productName = "gmp-makeframework";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		850743A812730F24002C690E /* add_n.c in Sources */ = {isa = PBXBuildFile; fileRef = 8507431612730F24002C690E /* add_n.c */; };
 		850743AA12730F24002C690E /* addmul_1.c in Sources */ = {isa = PBXBuildFile; fileRef = 8507431812730F24002C690E /* addmul_1.c */; };
@@ -2440,9 +2454,28 @@
 				859B776A1265250E00F6011C /* gmp-iPhoneOS */,
 				85E480BD1273041F002916B5 /* gmp-iPhoneSimulator */,
 				85A6DAA6127784840047E483 /* gmp-core */,
+				8599F359127B7B5A001247D7 /* gmp-ios */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8599F358127B7B5A001247D7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${BUILD_ROOT}/${BUILD_STYLE}-iphoneos/libgmp-iPhoneOS.a",
+				"${BUILD_ROOT}/${BUILD_STYLE}-iphonesimulator/libgmp-iPhoneSimulator.a",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n\nfunction create_folder()\n{\n    echo creating folder $@\n    mkdir -p $@ >/dev/null 2>&1\n}\n\nfunction create_bundle_for_prefixes()\n{\n   local NAME=\"$1\"\n   local DEVICEPREFIX=\"$2\"\n   local SIMULATORPREFIX=\"$3\"\n   local OUTPUTDIR=\"$4\"\n   \n   if [ ! \\( -e \"$DEVICEPREFIX/lib/lib$NAME.a\" \\) ] ; then\n       return 1\n   fi\n   \n   create_folder \"$OUTPUTDIR/Libraries\"\n   \n   if [ -e \"$SIMULATORPREFIX/lib/lib$NAME.a\" ] ; then\n       lipo -create \"$DEVICEPREFIX/lib/lib$NAME.a\" \"$SIMULATORPREFIX/lib/lib$NAME.a\" -output \"$OUTPUTDIR/Libraries/lib$NAME.a\"\n   else\n       lipo -create \"$DEVICEPREFIX/lib/lib$NAME.a\" -output \"$OUTPUTDIR/Libraries/lib$NAME.a\"\n   fi\n   \n   if [ -d \"$DEVICEPREFIX/include/$NAME\" ] ; then\n       cp -rf \"$DEVICEPREFIX/include/$NAME\" \"$OUTPUTDIR/Headers\"\n   elif [ -d \"$SIMULATORPREFIX/include/$NAME\" ] ; then\n       cp -rf \"$SIMULATORPREFIX/include/$NAME\" \"$OUTPUTDIR/Headers\"\n   fi\n   return 0\n}\n\n\nlet inParams=${SCRIPT_INPUT_FILE_COUNT}\n\nif [ $inParams -ne 2 ]; then\n  echo \"Usage: lib1.a lib2.a\"\n  exit 1\nfi\n\n\nFRAMEWORK_NAME=$TARGET_NAME\nFRAMEWORK_VERSION=A\nFRAMEWORK_DIR0=${BUILD_ROOT}/${BUILD_STYLE}/$FRAMEWORK_NAME.framework\nFRAMEWORK_DIR1=$FRAMEWORK_DIR0/Versions/$FRAMEWORK_VERSION\n\ncreate_folder ${FRAMEWORK_DIR1}/\ncreate_folder ${FRAMEWORK_DIR1}/Resources\ncreate_folder ${FRAMEWORK_DIR1}/Headers\n\necho Framework: Creating library...\nlipo \\\n  -create \\\n  \"$SCRIPT_INPUT_FILE_0\" \\\n  \"$SCRIPT_INPUT_FILE_1\" \\\n  -o \"${FRAMEWORK_DIR1}/$FRAMEWORK_NAME\"\n\necho \"Coping headers...\" \ncp ${BUILD_ROOT}/src-iPhoneOS/gmp.h ${FRAMEWORK_DIR1}/Headers/$FRAMEWORK_NAME.h\ncp ${PROJECT_DIR}/info-ios.plist ${FRAMEWORK_DIR1}/Resources/info.plist\n\necho \"Creating symlinks...\"\nln -s $FRAMEWORK_VERSION $FRAMEWORK_DIR0/Versions/Current\nln -s Versions/$FRAMEWORK_VERSION/Headers $FRAMEWORK_DIR0/Headers\nln -s Versions/$FRAMEWORK_VERSION/Resources $FRAMEWORK_DIR0/Resources\nln -s Versions/$FRAMEWORK_VERSION/$FRAMEWORK_NAME $FRAMEWORK_DIR0/$FRAMEWORK_NAME\n\nexit 0";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		859B77681265250E00F6011C /* Sources */ = {
@@ -2976,6 +3009,27 @@
 			};
 			name = Release;
 		};
+		8599F35A127B7B5B001247D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = "gmp-ios";
+			};
+			name = Debug;
+		};
+		8599F35B127B7B5B001247D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = "gmp-makeframework";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		859B776C1265250F00F6011C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 85C7DF4A1273533300B70BF7 /* gmplib-ios.xcconfig */;
@@ -3113,6 +3167,15 @@
 			buildConfigurations = (
 				1DEB91B208733DA50010E9CD /* Debug */,
 				1DEB91B308733DA50010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8599F35C127B7B79001247D7 /* Build configuration list for PBXAggregateTarget "gmp-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8599F35A127B7B5B001247D7 /* Debug */,
+				8599F35B127B7B5B001247D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
