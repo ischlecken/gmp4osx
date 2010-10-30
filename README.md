@@ -1,7 +1,7 @@
 gmp4osx
 =============
 
-This is the GNU [GMP](http://gmplib.org/) Math Library for osx compiled with xcode 3.2.3.
+This is the GNU [GMP][gmp] Math Library for osx compiled with xcode 3.2.3.
 The main objective of this development should be to create an osx framework
 that is usable for osx and iphone development.
 
@@ -19,20 +19,23 @@ How to build
    * build the gmp-unittest target to build and call the unit tests
    * build the gmp-calc target to build and call the command line test tool using
      gmp framework
-   
-T.B.D.
+3. open gmplib-ios.xcodeproj to create a static framework for iOS
+   * build the target gmp-iPhoneSimulator for simulator
+   * build the target gmp-iPhoneOS for device
+   * build the target gmp-ios
+     the result is a static framework with both static libraries for iPhoneOS and iPhoneSimulator
+     lipod together
 
 Usage
 -----
-
-T.B.D.
+1. checkout the branch gmp-calc to get a MacOS basic calculator using the gmp framework
+2. checkout the branch icalc to get a iphone app that uses the static gmp framework
 
 Testing
 -------
+Run the unittest in the gmplib and the gmplib-ios projects.
 
-T.B.D.
-
-
+[gmp]: http://gmplib.org/
 [r2h]: http://github.com/github/markup/tree/master/lib/github/commands/rest2html
 [r2hc]: http://github.com/github/markup/tree/master/lib/github/markups.rb#L13
 [1]: http://github.com/github/markup/issues
