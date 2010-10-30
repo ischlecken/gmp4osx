@@ -339,7 +339,7 @@
 		85B4E8B112345AC30091D2C2 /* randsdui.c in Sources */ = {isa = PBXBuildFile; fileRef = 85B4E88C12345AC30091D2C2 /* randsdui.c */; };
 		85B4E8B412345AC30091D2C2 /* tal-reent.c in Sources */ = {isa = PBXBuildFile; fileRef = 85B4E88F12345AC30091D2C2 /* tal-reent.c */; };
 		85B4E8B512345AC30091D2C2 /* version.c in Sources */ = {isa = PBXBuildFile; fileRef = 85B4E89012345AC30091D2C2 /* version.c */; };
-		85B8021F125D522B00410B9E /* gmp.h in Headers */ = {isa = PBXBuildFile; fileRef = 85B80159125D51E900410B9E /* gmp.h */; };
+		85B8021F125D522B00410B9E /* gmp.h in Headers */ = {isa = PBXBuildFile; fileRef = 85B80159125D51E900410B9E /* gmp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		85B80220125D523A00410B9E /* add.c in Sources */ = {isa = PBXBuildFile; fileRef = 85B80162125D51E900410B9E /* add.c */; };
 		85B80221125D523A00410B9E /* add_1.c in Sources */ = {isa = PBXBuildFile; fileRef = 85B80163125D51E900410B9E /* add_1.c */; };
 		85B80222125D523A00410B9E /* add_n.asm in Sources */ = {isa = PBXBuildFile; fileRef = 85B80164125D51E900410B9E /* add_n.asm */; settings = {COMPILER_FLAGS = "-DOPERATION_add_n"; }; };
@@ -552,7 +552,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 85AE0762123EDC7C0094E4B0 /* gmp-unittest */;
+			remoteGlobalIDString = 85AE0762123EDC7C0094E4B0;
 			remoteInfo = "gmp-unittest";
 		};
 /* End PBXContainerItemProxy section */
@@ -1894,7 +1894,14 @@
 			};
 			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "gmplib" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* gmp */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
 			projectDirPath = "";
