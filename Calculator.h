@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "gmp.h"
+#import <gmp-ios/gmp-ios.h>
 
 @interface Calculator : NSObject 
 {

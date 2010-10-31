@@ -15,6 +15,10 @@
   SEL             calcOperation;
   NSMutableArray* validOperations;
   
+  UITextField*    operandA;
+  UITextField*    operandB;
+  UITextField*    operandC;
+  
 }
 
 @property (nonatomic, retain) IBOutlet UITextField* operandA;
