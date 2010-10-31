@@ -3138,6 +3138,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = NO;
 				PREBINDING = NO;
+				SDKROOT = iphonesimulator3.2;
 			};
 			name = Debug;
 		};
@@ -3150,6 +3151,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = NO;
 				PREBINDING = NO;
+				SDKROOT = iphonesimulator3.2;
 			};
 			name = Release;
 		};
