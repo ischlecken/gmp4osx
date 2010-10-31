@@ -28,6 +28,31 @@
 		850743E712730F24002C690E /* mul_1.c in Sources */ = {isa = PBXBuildFile; fileRef = 8507435512730F24002C690E /* mul_1.c */; };
 		8507441212730F24002C690E /* sub_n.c in Sources */ = {isa = PBXBuildFile; fileRef = 8507438012730F24002C690E /* sub_n.c */; };
 		8507441512730F24002C690E /* submul_1.c in Sources */ = {isa = PBXBuildFile; fileRef = 8507438312730F24002C690E /* submul_1.c */; };
+		8520FED8127C880800ECE4B0 /* gmp-unittest-mpq-set-f.m in Sources */ = {isa = PBXBuildFile; fileRef = 8542BF6F1248226700169509 /* gmp-unittest-mpq-set-f.m */; };
+		8520FED9127C880800ECE4B0 /* gmp-unittest-mpq-set-str.m in Sources */ = {isa = PBXBuildFile; fileRef = 8542BF89124824B600169509 /* gmp-unittest-mpq-set-str.m */; };
+		8520FEDA127C880800ECE4B0 /* gmp-unittest-misc-locale.m in Sources */ = {isa = PBXBuildFile; fileRef = 853E3EF012493D3100A65C8D /* gmp-unittest-misc-locale.m */; };
+		8520FEDB127C880800ECE4B0 /* gmp-unittest-misc-printf.m in Sources */ = {isa = PBXBuildFile; fileRef = 853E3F0A1249443100A65C8D /* gmp-unittest-misc-printf.m */; };
+		8520FEDC127C880800ECE4B0 /* gmp-unittest-mpq-md-2exp.m in Sources */ = {isa = PBXBuildFile; fileRef = 8542BF6A124821B500169509 /* gmp-unittest-mpq-md-2exp.m */; };
+		8520FEDD127C880800ECE4B0 /* gmp-unittest-mpq-get-d.m in Sources */ = {isa = PBXBuildFile; fileRef = 8542BF501248200B00169509 /* gmp-unittest-mpq-get-d.m */; };
+		8520FEDE127C880800ECE4B0 /* gmp-unittest-mpq-get-str.m in Sources */ = {isa = PBXBuildFile; fileRef = 8542BF521248200B00169509 /* gmp-unittest-mpq-get-str.m */; };
+		8520FEDF127C880800ECE4B0 /* gmp-unittest-mpq-inp-str.m in Sources */ = {isa = PBXBuildFile; fileRef = 8542BF541248200B00169509 /* gmp-unittest-mpq-inp-str.m */; };
+		8520FEE0127C880800ECE4B0 /* gmp-unittest-mpq-cmp_si.m in Sources */ = {isa = PBXBuildFile; fileRef = 8514DA2512441F7000D2E8B9 /* gmp-unittest-mpq-cmp_si.m */; };
+		8520FEE1127C880800ECE4B0 /* gmp-unittest-mpq-cmp_ui.m in Sources */ = {isa = PBXBuildFile; fileRef = 8514DA49124420A800D2E8B9 /* gmp-unittest-mpq-cmp_ui.m */; };
+		8520FEE2127C880800ECE4B0 /* gmp-unittest-mpq-equal.m in Sources */ = {isa = PBXBuildFile; fileRef = 8514DA5E1244229A00D2E8B9 /* gmp-unittest-mpq-equal.m */; };
+		8520FEE3127C880800ECE4B0 /* gmp-unittest-constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 8556F5421241967B00801DDE /* gmp-unittest-constants.m */; };
+		8520FEE4127C880800ECE4B0 /* gmp-unittest-mpq-aors.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C65D3F1242BF3E0056B5D8 /* gmp-unittest-mpq-aors.m */; };
+		8520FEE5127C880800ECE4B0 /* gmp-unittest-base.m in Sources */ = {isa = PBXBuildFile; fileRef = 85A29D4A12402BA000EDE349 /* gmp-unittest-base.m */; };
+		8520FEE6127C880800ECE4B0 /* gmp-unittest-mpq-cmp.m in Sources */ = {isa = PBXBuildFile; fileRef = 85C65D541242C1970056B5D8 /* gmp-unittest-mpq-cmp.m */; };
+		8520FEFD127C886100ECE4B0 /* memory.c in Sources */ = {isa = PBXBuildFile; fileRef = 85CC4203123D8E9200514D1C /* memory.c */; };
+		8520FEFE127C886100ECE4B0 /* misc.c in Sources */ = {isa = PBXBuildFile; fileRef = 85CC4204123D8E9200514D1C /* misc.c */; };
+		8520FEFF127C886100ECE4B0 /* refmpf.c in Sources */ = {isa = PBXBuildFile; fileRef = 85CC4205123D8E9200514D1C /* refmpf.c */; };
+		8520FF00127C886100ECE4B0 /* refmpn.c in Sources */ = {isa = PBXBuildFile; fileRef = 85CC4206123D8E9200514D1C /* refmpn.c */; };
+		8520FF01127C886100ECE4B0 /* refmpq.c in Sources */ = {isa = PBXBuildFile; fileRef = 85CC4207123D8E9200514D1C /* refmpq.c */; };
+		8520FF02127C886100ECE4B0 /* refmpz.c in Sources */ = {isa = PBXBuildFile; fileRef = 85CC4208123D8E9200514D1C /* refmpz.c */; };
+		8520FF03127C886100ECE4B0 /* spinner.c in Sources */ = {isa = PBXBuildFile; fileRef = 85CC4209123D8E9200514D1C /* spinner.c */; };
+		8520FF04127C886100ECE4B0 /* trace.c in Sources */ = {isa = PBXBuildFile; fileRef = 85CC4214123D8E9200514D1C /* trace.c */; };
+		8520FF49127C8D0F00ECE4B0 /* libgmp-iPhoneSimulator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E480BE1273041F002916B5 /* libgmp-iPhoneSimulator.a */; };
+		8520FF53127C8DA400ECE4B0 /* x86check.c in Sources */ = {isa = PBXBuildFile; fileRef = 8520FF1B127C8A3800ECE4B0 /* x86check.c */; };
 		8526A08C12779B9800D6BAE9 /* add_1.c in Sources */ = {isa = PBXBuildFile; fileRef = 85269FFD12779A9E00D6BAE9 /* add_1.c */; };
 		8526A08D12779B9800D6BAE9 /* add.c in Sources */ = {isa = PBXBuildFile; fileRef = 85269FFF12779A9E00D6BAE9 /* add.c */; };
 		8526A08E12779B9800D6BAE9 /* addsub_n.c in Sources */ = {isa = PBXBuildFile; fileRef = 8526A00112779A9E00D6BAE9 /* addsub_n.c */; };
@@ -482,9 +507,20 @@
 		85A6DC3E127789B20047E483 /* libgmp-core.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85A6DAA7127784840047E483 /* libgmp-core.a */; };
 		85A6DC52127790540047E483 /* fib_table.c in Sources */ = {isa = PBXBuildFile; fileRef = 850742F4127309AE002C690E /* fib_table.c */; };
 		85A6DC53127790540047E483 /* mp_bases.c in Sources */ = {isa = PBXBuildFile; fileRef = 850742F5127309AE002C690E /* mp_bases.c */; };
+		85D0A1B3127DAD9200C2C2A4 /* mul_1.asm in Sources */ = {isa = PBXBuildFile; fileRef = 85301F44126BA700004EA07A /* mul_1.asm */; settings = {COMPILER_FLAGS = "-DOPERATION_mul_1"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
+		8520FF0D127C88D000ECE4B0 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = sourcecode.asm.asm;
+			isEditable = 1;
+			outputFiles = (
+				"${DERIVED_FILES_DIR}/${INPUT_FILE_BASE}.s",
+			);
+			script = "#env\nmkdir -p ${DERIVED_FILES_DIR}\nm4 ${OTHER_INPUT_FILE_FLAGS} -I ${BUILD_ROOT}/src-MacOSX/mpn -I ${PROJECT_DIR}/src/tests -DHAVE_CONFIG_H -DPIC ${INPUT_FILE_PATH} > ${DERIVED_FILES_DIR}/${INPUT_FILE_BASE}.s";
+		};
 		8530205A126BA9F2004EA07A /* PBXBuildRule */ = {
 			isa = PBXBuildRule;
 			compilerSpec = com.apple.compilers.proxy.script;
@@ -498,6 +534,13 @@
 /* End PBXBuildRule section */
 
 /* Begin PBXContainerItemProxy section */
+		8520FF4E127C8D3800ECE4B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 85E480BD1273041F002916B5;
+			remoteInfo = "gmp-iPhoneSimulator";
+		};
 		85A6DC4B12778A270047E483 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
@@ -670,6 +713,11 @@
 		8514DA49124420A800D2E8B9 /* gmp-unittest-mpq-cmp_ui.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "gmp-unittest-mpq-cmp_ui.m"; path = "src-test/gmp-unittest-mpq-cmp_ui.m"; sourceTree = "<group>"; };
 		8514DA5D1244229A00D2E8B9 /* gmp-unittest-mpq-equal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "gmp-unittest-mpq-equal.h"; path = "src-test/gmp-unittest-mpq-equal.h"; sourceTree = "<group>"; };
 		8514DA5E1244229A00D2E8B9 /* gmp-unittest-mpq-equal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "gmp-unittest-mpq-equal.m"; path = "src-test/gmp-unittest-mpq-equal.m"; sourceTree = "<group>"; };
+		8520FEC8127C873D00ECE4B0 /* gmp-unittest.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "gmp-unittest.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8520FEC9127C873D00ECE4B0 /* gmp-unittest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "gmp-unittest-Info.plist"; sourceTree = "<group>"; };
+		8520FF10127C890500ECE4B0 /* gmp-ios.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "gmp-ios.framework"; path = "build/Debug/gmp-ios.framework"; sourceTree = SOURCE_ROOT; };
+		8520FF1A127C8A3800ECE4B0 /* x86call.asm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm.asm; name = x86call.asm; path = src/tests/x86call.asm; sourceTree = "<group>"; };
+		8520FF1B127C8A3800ECE4B0 /* x86check.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = x86check.c; path = src/tests/x86check.c; sourceTree = "<group>"; };
 		85269FFD12779A9E00D6BAE9 /* add_1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = add_1.c; path = src/mpn/generic/add_1.c; sourceTree = "<group>"; };
 		85269FFE12779A9E00D6BAE9 /* add_n.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = add_n.c; path = src/mpn/generic/add_n.c; sourceTree = "<group>"; };
 		85269FFF12779A9E00D6BAE9 /* add.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = add.c; path = src/mpn/generic/add.c; sourceTree = "<group>"; };
@@ -1340,6 +1388,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8520FEC5127C873D00ECE4B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8520FF49127C8D0F00ECE4B0 /* libgmp-iPhoneSimulator.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		859B77691265250E00F6011C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1372,6 +1428,7 @@
 				859B776B1265250E00F6011C /* libgmp-iPhoneOS.a */,
 				85E480BE1273041F002916B5 /* libgmp-iPhoneSimulator.a */,
 				85A6DAA7127784840047E483 /* libgmp-core.a */,
+				8520FEC8127C873D00ECE4B0 /* gmp-unittest.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1402,6 +1459,8 @@
 				85C65D761242C4380056B5D8 /* gmp-calc.h */,
 				85C65D771242C4380056B5D8 /* gmp-calc.c */,
 				85C7DF4A1273533300B70BF7 /* gmplib-ios.xcconfig */,
+				8520FEC9127C873D00ECE4B0 /* gmp-unittest-Info.plist */,
+				8520FF10127C890500ECE4B0 /* gmp-ios.framework */,
 			);
 			name = gmp;
 			sourceTree = "<group>";
@@ -1972,6 +2031,8 @@
 		85CC422F123D8EA100514D1C /* tests */ = {
 			isa = PBXGroup;
 			children = (
+				8520FF1A127C8A3800ECE4B0 /* x86call.asm */,
+				8520FF1B127C8A3800ECE4B0 /* x86check.c */,
 				85CC4201123D8E9200514D1C /* amd64call.asm */,
 				85CC4202123D8E9200514D1C /* amd64check.c */,
 				85CC4203123D8E9200514D1C /* memory.c */,
@@ -2376,6 +2437,26 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		8520FEC7127C873D00ECE4B0 /* gmp-unittest-iPhoneSimulator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8520FECC127C873D00ECE4B0 /* Build configuration list for PBXNativeTarget "gmp-unittest-iPhoneSimulator" */;
+			buildPhases = (
+				8520FEC3127C873D00ECE4B0 /* Resources */,
+				8520FEC4127C873D00ECE4B0 /* Sources */,
+				8520FEC5127C873D00ECE4B0 /* Frameworks */,
+				8520FEC6127C873D00ECE4B0 /* ShellScript */,
+			);
+			buildRules = (
+				8520FF0D127C88D000ECE4B0 /* PBXBuildRule */,
+			);
+			dependencies = (
+				8520FF4F127C8D3800ECE4B0 /* PBXTargetDependency */,
+			);
+			name = "gmp-unittest-iPhoneSimulator";
+			productName = "gmp-unittest";
+			productReference = 8520FEC8127C873D00ECE4B0 /* gmp-unittest.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 		859B776A1265250E00F6011C /* gmp-iPhoneOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 859B776E1265252D00F6011C /* Build configuration list for PBXNativeTarget "gmp-iPhoneOS" */;
@@ -2457,11 +2538,35 @@
 				85E480BD1273041F002916B5 /* gmp-iPhoneSimulator */,
 				85A6DAA6127784840047E483 /* gmp-core */,
 				8599F359127B7B5A001247D7 /* gmp-ios */,
+				8520FEC7127C873D00ECE4B0 /* gmp-unittest-iPhoneSimulator */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		8520FEC3127C873D00ECE4B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXShellScriptBuildPhase section */
+		8520FEC6127C873D00ECE4B0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
 		8599F358127B7B5A001247D7 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2480,10 +2585,42 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8520FEC4127C873D00ECE4B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8520FF53127C8DA400ECE4B0 /* x86check.c in Sources */,
+				8520FEFD127C886100ECE4B0 /* memory.c in Sources */,
+				8520FEFE127C886100ECE4B0 /* misc.c in Sources */,
+				8520FEFF127C886100ECE4B0 /* refmpf.c in Sources */,
+				8520FF00127C886100ECE4B0 /* refmpn.c in Sources */,
+				8520FF01127C886100ECE4B0 /* refmpq.c in Sources */,
+				8520FF02127C886100ECE4B0 /* refmpz.c in Sources */,
+				8520FF03127C886100ECE4B0 /* spinner.c in Sources */,
+				8520FF04127C886100ECE4B0 /* trace.c in Sources */,
+				8520FED8127C880800ECE4B0 /* gmp-unittest-mpq-set-f.m in Sources */,
+				8520FED9127C880800ECE4B0 /* gmp-unittest-mpq-set-str.m in Sources */,
+				8520FEDA127C880800ECE4B0 /* gmp-unittest-misc-locale.m in Sources */,
+				8520FEDB127C880800ECE4B0 /* gmp-unittest-misc-printf.m in Sources */,
+				8520FEDC127C880800ECE4B0 /* gmp-unittest-mpq-md-2exp.m in Sources */,
+				8520FEDD127C880800ECE4B0 /* gmp-unittest-mpq-get-d.m in Sources */,
+				8520FEDE127C880800ECE4B0 /* gmp-unittest-mpq-get-str.m in Sources */,
+				8520FEDF127C880800ECE4B0 /* gmp-unittest-mpq-inp-str.m in Sources */,
+				8520FEE0127C880800ECE4B0 /* gmp-unittest-mpq-cmp_si.m in Sources */,
+				8520FEE1127C880800ECE4B0 /* gmp-unittest-mpq-cmp_ui.m in Sources */,
+				8520FEE2127C880800ECE4B0 /* gmp-unittest-mpq-equal.m in Sources */,
+				8520FEE3127C880800ECE4B0 /* gmp-unittest-constants.m in Sources */,
+				8520FEE4127C880800ECE4B0 /* gmp-unittest-mpq-aors.m in Sources */,
+				8520FEE5127C880800ECE4B0 /* gmp-unittest-base.m in Sources */,
+				8520FEE6127C880800ECE4B0 /* gmp-unittest-mpq-cmp.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		859B77681265250E00F6011C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85D0A1B3127DAD9200C2C2A4 /* mul_1.asm in Sources */,
 				85301F98126BA700004EA07A /* add_n.asm in Sources */,
 				85301F99126BA700004EA07A /* addmul_1.asm in Sources */,
 				85301FA3126BA700004EA07A /* copyd.asm in Sources */,
@@ -2962,6 +3099,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		8520FF4F127C8D3800ECE4B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 85E480BD1273041F002916B5 /* gmp-iPhoneSimulator */;
+			targetProxy = 8520FF4E127C8D3800ECE4B0 /* PBXContainerItemProxy */;
+		};
 		85A6DC4C12778A270047E483 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 85A6DAA6127784840047E483 /* gmp-core */;
@@ -3011,6 +3153,74 @@
 			};
 			name = Release;
 		};
+		8520FECA127C873D00ECE4B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85C7DF4A1273533300B70BF7 /* gmplib-ios.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\"$(SRCROOT)/build/Debug\"",
+				);
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/src",
+					"$(BUILD_ROOT)/include32",
+					"$(BUILD_ROOT)/include32/mpn",
+					"$(BUILD_ROOT)/include32/mpz",
+					"$(BUILD_ROOT)/src-iPhoneSimulator",
+				);
+				INFOPLIST_FILE = "gmp-unittest-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					SenTestingKit,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "gmp-unittest";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		8520FECB127C873D00ECE4B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85C7DF4A1273533300B70BF7 /* gmplib-ios.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"\"$(SRCROOT)/build/Debug\"",
+				);
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				INFOPLIST_FILE = "gmp-unittest-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					SenTestingKit,
+					"-framework",
+					UIKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "gmp-unittest";
+				WRAPPER_EXTENSION = octest;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
 		8599F35A127B7B5B001247D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -3038,7 +3248,6 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = "";
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -3090,7 +3299,6 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				PREBINDING = NO;
 				PRODUCT_NAME = "gmp-core";
@@ -3119,7 +3327,6 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				HEADER_SEARCH_PATHS = (
@@ -3169,6 +3376,15 @@
 			buildConfigurations = (
 				1DEB91B208733DA50010E9CD /* Debug */,
 				1DEB91B308733DA50010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8520FECC127C873D00ECE4B0 /* Build configuration list for PBXNativeTarget "gmp-unittest-iPhoneSimulator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8520FECA127C873D00ECE4B0 /* Debug */,
+				8520FECB127C873D00ECE4B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
