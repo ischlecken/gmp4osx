@@ -13,19 +13,22 @@
 {
   NSWindow*       window;
   NSMatrix*       operatorMatrix;
+  NSTextField*    operandA;
+  NSTextField*    operandB;
+  NSTextField*    operandC;
   
   Calculator*     calculator;
   SEL             calcOperation;
   NSMutableArray* validOperations;
 }
 
-@property (assign) IBOutlet NSWindow*    window;
+@property (retain) IBOutlet NSWindow*    window;
 
-@property (assign) IBOutlet NSTextField* operandA;
-@property (assign) IBOutlet NSTextField* operandB;
-@property (assign) IBOutlet NSTextField* operandC;
+@property (retain) IBOutlet NSTextField* operandA;
+@property (retain) IBOutlet NSTextField* operandB;
+@property (retain) IBOutlet NSTextField* operandC;
 
-@property (assign) IBOutlet NSMatrix*    operatorMatrix;
+@property (retain) IBOutlet NSMatrix*    operatorMatrix;
 
 -(IBAction) setOperation:(id)sender;
 -(IBAction) calcResult:(id)sender;
