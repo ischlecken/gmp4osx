@@ -1,0 +1,1074 @@
+// !$*UTF8*$!
+{
+	0867D690FE84028FC02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 85D6D334127DBDAF00E4EA45 /* otest iPhoneSimulator3.2 */;
+		activeSDKPreference = iphonesimulator3.2;
+		activeTarget = 85E480BD1273041F002916B5 /* gmp-iPhoneSimulator */;
+		addToTargets = (
+			8520FEC7127C873D00ECE4B0 /* gmp-unittest-iPhoneSimulator */,
+		);
+		breakpoints = (
+			85D6D313127DB99500E4EA45 /* gmp-unittest-misc-printf.m:178 */,
+			85D6D39D127DEFC600E4EA45 /* gmp-unittest-misc-printf.m:728 */,
+		);
+		codeSenseManager = 85C0595D12749F950091323F /* Code sense */;
+		executables = (
+			85D6D334127DBDAF00E4EA45 /* otest iPhoneSimulator3.2 */,
+		);
+		perUserDictionary = {
+			"PBXConfiguration.PBXBreakpointsDataSource.v1:1CA1AED706398EBD00589147" = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXBreakpointsDataSource_BreakpointID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					20,
+					198,
+					20,
+					99,
+					99,
+					29,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXBreakpointsDataSource_ActionID,
+					PBXBreakpointsDataSource_TypeID,
+					PBXBreakpointsDataSource_BreakpointID,
+					PBXBreakpointsDataSource_UseID,
+					PBXBreakpointsDataSource_LocationID,
+					PBXBreakpointsDataSource_ConditionID,
+					PBXBreakpointsDataSource_IgnoreCountID,
+					PBXBreakpointsDataSource_ContinueID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXBookmarksDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXBookmarksDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					200,
+					200,
+					1657,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXBookmarksDataSource_LocationID,
+					PBXBookmarksDataSource_NameID,
+					PBXBookmarksDataSource_CommentsID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXExecutablesDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXExecutablesDataSource_NameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					22,
+					300,
+					582,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXExecutablesDataSource_ActiveFlagID,
+					PBXExecutablesDataSource_NameID,
+					PBXExecutablesDataSource_CommentsID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = 1;
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Target_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					694,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXFindDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFindDataSource_LocationID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					200,
+					709.20849609375,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFindDataSource_MessageID,
+					PBXFindDataSource_LocationID,
+				);
+			};
+			PBXConfiguration.PBXFileTableDataSource3.PBXSymbolsDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXSymbolsDataSource_SymbolNameID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					16,
+					200,
+					50,
+					635.20849609375,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXSymbolsDataSource_SymbolTypeIconID,
+					PBXSymbolsDataSource_SymbolNameID,
+					PBXSymbolsDataSource_SymbolTypeID,
+					PBXSymbolsDataSource_ReferenceNameID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					654,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 310261500;
+			PBXWorkspaceStateSaveDate = 310261500;
+		};
+		perUserProjectItems = {
+			85310614127E3AE5001A294B /* PBXTextBookmark */ = 85310614127E3AE5001A294B /* PBXTextBookmark */;
+			85310642127E4724001A294B /* PBXTextBookmark */ = 85310642127E4724001A294B /* PBXTextBookmark */;
+			85310643127E4724001A294B /* PBXTextBookmark */ = 85310643127E4724001A294B /* PBXTextBookmark */;
+			85310644127E4724001A294B /* PBXTextBookmark */ = 85310644127E4724001A294B /* PBXTextBookmark */;
+			85310645127E4724001A294B /* PBXTextBookmark */ = 85310645127E4724001A294B /* PBXTextBookmark */;
+			85D0A19C127DAD1600C2C2A4 /* PBXTextBookmark */ = 85D0A19C127DAD1600C2C2A4 /* PBXTextBookmark */;
+			85D0A1B6127DADA000C2C2A4 /* PBXTextBookmark */ = 85D0A1B6127DADA000C2C2A4 /* PBXTextBookmark */;
+			85D0A1B7127DADA000C2C2A4 /* PBXTextBookmark */ = 85D0A1B7127DADA000C2C2A4 /* PBXTextBookmark */;
+			85D0A1C1127DAE6100C2C2A4 /* PBXTextBookmark */ = 85D0A1C1127DAE6100C2C2A4 /* PBXTextBookmark */;
+			85D0A1C4127DAF5D00C2C2A4 /* PBXTextBookmark */ = 85D0A1C4127DAF5D00C2C2A4 /* PBXTextBookmark */;
+			85D6D337127DBE1300E4EA45 /* PBXTextBookmark */ = 85D6D337127DBE1300E4EA45 /* PBXTextBookmark */;
+			85D6D339127DBE1300E4EA45 /* PlistBookmark */ = 85D6D339127DBE1300E4EA45 /* PlistBookmark */;
+			85D6D3A2127DF04300E4EA45 /* PBXTextBookmark */ = 85D6D3A2127DF04300E4EA45 /* PBXTextBookmark */;
+		};
+		sourceControlManager = 85C0595C12749F950091323F /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	850742F4127309AE002C690E /* fib_table.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2025, 982}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1794}";
+		};
+	};
+	850742F5127309AE002C690E /* mp_bases.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2025, 3640}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 5364}";
+		};
+	};
+	8507431512730F24002C690E /* add_1.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2025, 982}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 848}";
+		};
+	};
+	8507431712730F24002C690E /* add.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2025, 982}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 843}";
+		};
+	};
+	850743A512730F24002C690E /* xor_n.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2499, 884}}";
+			sepNavSelRange = "{1560, 0}";
+			sepNavVisRange = "{1054, 532}";
+		};
+	};
+	8514DA5E1244229A00D2E8B9 /* gmp-unittest-mpq-equal.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2056, 2288}}";
+			sepNavSelRange = "{1097, 9}";
+			sepNavVisRange = "{1359, 858}";
+		};
+	};
+	8520FEC7127C873D00ECE4B0 /* gmp-unittest-iPhoneSimulator */ = {
+		activeExec = 0;
+	};
+	8520FF1A127C8A3800ECE4B0 /* x86call.asm */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {873, 1469}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1284}";
+		};
+	};
+	8520FF1B127C8A3800ECE4B0 /* x86check.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {873, 1261}}";
+			sepNavSelRange = "{2166, 1}";
+			sepNavVisRange = "{1526, 1309}";
+		};
+	};
+	85269FFD12779A9E00D6BAE9 /* add_1.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1057, 969}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 848}";
+		};
+	};
+	85269FFE12779A9E00D6BAE9 /* add_n.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {873, 1027}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1234}";
+		};
+	};
+	85269FFF12779A9E00D6BAE9 /* add.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1057, 969}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 843}";
+		};
+	};
+	8526A00012779A9E00D6BAE9 /* addmul_1.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {873, 1508}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1384}";
+		};
+	};
+	8526A00912779A9E00D6BAE9 /* copyd.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {873, 559}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 921}";
+		};
+	};
+	8526A00A12779A9E00D6BAE9 /* copyi.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {873, 559}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 940}";
+		};
+	};
+	8526A02A12779A9E00D6BAE9 /* logops_n.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {872, 1115}}";
+			sepNavSelRange = "{1560, 0}";
+			sepNavVisRange = "{0, 1586}";
+		};
+	};
+	8526A03A12779A9E00D6BAE9 /* mul_1.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {872, 1144}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{72, 1897}";
+		};
+	};
+	8526A04312779A9E00D6BAE9 /* nussbaumer_mul.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2025, 983}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1829}";
+		};
+	};
+	8526A04612779A9E00D6BAE9 /* popham.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {872, 1378}}";
+			sepNavSelRange = "{1389, 0}";
+			sepNavVisRange = "{0, 2663}";
+		};
+	};
+	8526A06412779A9E00D6BAE9 /* sub_n.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {872, 1119}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1789}";
+		};
+	};
+	8526A06712779A9E00D6BAE9 /* submul_1.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {872, 1612}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 2232}";
+		};
+	};
+	85301F04126BA700004EA07A /* add_n.asm */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {872, 1117}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1832}";
+		};
+	};
+	85301F05126BA700004EA07A /* addmul_1.asm */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {872, 1352}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 2062}";
+		};
+	};
+	85301F09126BA700004EA07A /* bdiv_q.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2056, 780}}";
+			sepNavSelRange = "{1419, 11}";
+			sepNavVisRange = "{137, 1462}";
+		};
+	};
+	85301F0F126BA700004EA07A /* copyd.asm */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {872, 1119}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1651}";
+		};
+	};
+	85301F10126BA700004EA07A /* copyi.asm */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {872, 1119}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1513}";
+		};
+	};
+	85301F2A126BA700004EA07A /* hamdist.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {873, 1313}}";
+			sepNavSelRange = "{1389, 0}";
+			sepNavVisRange = "{152, 2402}";
+		};
+	};
+	85301F2E126BA700004EA07A /* invert_limb.asm */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {872, 1222}}";
+			sepNavSelRange = "{1521, 5}";
+			sepNavVisRange = "{0, 3418}";
+		};
+	};
+	85301F44126BA700004EA07A /* mul_1.asm */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {872, 1117}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 2045}";
+		};
+	};
+	85301F51126BA700004EA07A /* popcount.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {873, 1326}}";
+			sepNavSelRange = "{1389, 0}";
+			sepNavVisRange = "{152, 2402}";
+		};
+	};
+	85301F6F126BA700004EA07A /* sub_n.asm */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {872, 1119}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1873}";
+		};
+	};
+	85301F71126BA700004EA07A /* submul_1.asm */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {872, 1352}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 2070}";
+		};
+	};
+	85301F7A126BA700004EA07A /* toom44_mul.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2499, 2860}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1335}";
+		};
+	};
+	85301F92126BA700004EA07A /* udiv.asm */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {872, 1222}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 2567}";
+		};
+	};
+	85310614127E3AE5001A294B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 85310615127E3AE5001A294B /* run-otest-iPhoneSimulator3.2.sh */;
+		rLen = 0;
+		rLoc = 9223372036854775807;
+		rType = 0;
+	};
+	85310615127E3AE5001A294B /* run-otest-iPhoneSimulator3.2.sh */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = text.script.sh;
+		name = "run-otest-iPhoneSimulator3.2.sh";
+		path = "/Users/fe/Projects/osx/gmp/gmp4osx/run-otest-iPhoneSimulator3.2.sh";
+		sourceTree = "<absolute>";
+	};
+	85310642127E4724001A294B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 853E3F0A1249443100A65C8D /* gmp-unittest-misc-printf.m */;
+		name = "gmp-unittest-misc-printf.m: 683";
+		rLen = 0;
+		rLoc = 17719;
+		rType = 0;
+		vrLen = 2158;
+		vrLoc = 17800;
+	};
+	85310643127E4724001A294B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 859B78EA12652D5A00F6011C /* gmp.h */;
+		rLen = 1;
+		rLoc = 277;
+		rType = 1;
+	};
+	85310644127E4724001A294B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 859B78EA12652D5A00F6011C /* gmp.h */;
+		name = "gmp.h: 278";
+		rLen = 46;
+		rLoc = 9556;
+		rType = 0;
+		vrLen = 2358;
+		vrLoc = 7978;
+	};
+	85310645127E4724001A294B /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 85310646127E4724001A294B /* run-otest-iPhoneSimulator3.2.sh */;
+		name = "run-otest-iPhoneSimulator3.2.sh: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 940;
+		vrLoc = 0;
+	};
+	85310646127E4724001A294B /* run-otest-iPhoneSimulator3.2.sh */ = {
+		isa = PBXFileReference;
+		name = "run-otest-iPhoneSimulator3.2.sh";
+		path = "/Users/fe/Projects/osx/gmp/gmp4osx/run-otest-iPhoneSimulator3.2.sh";
+		sourceTree = "<absolute>";
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1266, 1064}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 940}";
+			sepNavWindowFrame = "{{1441, 226}, {1325, 1192}}";
+		};
+	};
+	853E3EF012493D3100A65C8D /* gmp-unittest-misc-locale.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {728, 2730}}";
+			sepNavSelRange = "{1714, 0}";
+			sepNavVisRange = "{852, 1514}";
+		};
+	};
+	853E3F0A1249443100A65C8D /* gmp-unittest-misc-printf.m */ = {
+		uiCtxt = {
+			sepNavFolds = "{\n    c =     (\n                {\n            r = \"{5689, 1153}\";\n            s = 0;\n        }\n    );\n    r = \"{0, 25781}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {728, 12194}}";
+			sepNavSelRange = "{3953, 0}";
+			sepNavVisRange = "{2781, 2556}";
+		};
+	};
+	8542BF501248200B00169509 /* gmp-unittest-mpq-get-d.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {873, 3432}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1239}";
+		};
+	};
+	8542BF6A124821B500169509 /* gmp-unittest-mpq-md-2exp.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {873, 2912}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1087}";
+		};
+	};
+	8542BF6F1248226700169509 /* gmp-unittest-mpq-set-f.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {873, 2626}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{970, 950}";
+		};
+	};
+	8542BF89124824B600169509 /* gmp-unittest-mpq-set-str.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {873, 1586}}";
+			sepNavSelRange = "{1428, 16}";
+			sepNavVisRange = "{1059, 813}";
+		};
+	};
+	8599F359127B7B5A001247D7 /* gmp-ios */ = {
+		activeExec = 0;
+	};
+	859B776A1265250E00F6011C /* gmp-iPhoneOS */ = {
+		activeExec = 0;
+	};
+	859B78E812652D5A00F6011C /* config.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2025, 7410}}";
+			sepNavSelRange = "{8312, 27}";
+			sepNavVisRange = "{7111, 2868}";
+		};
+	};
+	859B78EA12652D5A00F6011C /* gmp.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {872, 29939}}";
+			sepNavSelRange = "{9556, 46}";
+			sepNavVisRange = "{7978, 2358}";
+		};
+	};
+	859B79691265328300F6011C /* fib_table.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2025, 979}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1794}";
+		};
+	};
+	859B797B126534B000F6011C /* longlong.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2056, 25675}}";
+			sepNavSelRange = "{8231, 11}";
+			sepNavVisRange = "{7461, 1335}";
+		};
+	};
+	85A29D4A12402BA000EDE349 /* gmp-unittest-base.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {950, 5252}}";
+			sepNavSelRange = "{3616, 12}";
+			sepNavVisRange = "{3169, 766}";
+		};
+	};
+	85A6DAA6127784840047E483 /* gmp-core */ = {
+		activeExec = 0;
+	};
+	85B4E86D12345AC30091D2C2 /* assert.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2025, 982}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1488}";
+		};
+	};
+	85B4E87D12345AC30091D2C2 /* mp_minv_tab.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2056, 637}}";
+			sepNavSelRange = "{1111, 12}";
+			sepNavVisRange = "{0, 1739}";
+		};
+	};
+	85B4E88F12345AC30091D2C2 /* tal-reent.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2025, 982}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 2194}";
+		};
+	};
+	85B4E89012345AC30091D2C2 /* version.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2025, 982}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 904}";
+		};
+	};
+	85C0595C12749F950091323F /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	85C0595D12749F950091323F /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	85C65D3F1242BF3E0056B5D8 /* gmp-unittest-mpq-aors.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {873, 2717}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1063}";
+		};
+	};
+	85C65D541242C1970056B5D8 /* gmp-unittest-mpq-cmp.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {873, 1625}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{1578, 828}";
+		};
+	};
+	85C7DF4A1273533300B70BF7 /* gmplib-ios.xcconfig */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {873, 579}}";
+			sepNavSelRange = "{594, 0}";
+			sepNavVisRange = "{0, 597}";
+		};
+	};
+	85CC4201123D8E9200514D1C /* amd64call.asm */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {873, 2106}}";
+			sepNavSelRange = "{2655, 0}";
+			sepNavVisRange = "{1609, 1176}";
+		};
+	};
+	85CC4213123D8E9200514D1C /* tests.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2056, 6591}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 814}";
+		};
+	};
+	85D0A19C127DAD1600C2C2A4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 85301F71126BA700004EA07A /* submul_1.asm */;
+		name = "submul_1.asm: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2070;
+		vrLoc = 0;
+	};
+	85D0A1B6127DADA000C2C2A4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8526A04612779A9E00D6BAE9 /* popham.c */;
+		name = "popham.c: 49";
+		rLen = 0;
+		rLoc = 1389;
+		rType = 0;
+		vrLen = 2663;
+		vrLoc = 0;
+	};
+	85D0A1B7127DADA000C2C2A4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 85301F04126BA700004EA07A /* add_n.asm */;
+		name = "add_n.asm: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1832;
+		vrLoc = 0;
+	};
+	85D0A1C1127DAE6100C2C2A4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 85301F92126BA700004EA07A /* udiv.asm */;
+		name = "udiv.asm: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2567;
+		vrLoc = 0;
+	};
+	85D0A1C4127DAF5D00C2C2A4 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 85301F44126BA700004EA07A /* mul_1.asm */;
+		name = "mul_1.asm: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 2045;
+		vrLoc = 0;
+	};
+	85D5E5CD12341D990017B49B /* aors.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2025, 1703}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1856}";
+		};
+	};
+	85D5E60D12341D990017B49B /* hamdist.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2025, 2210}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1792}";
+		};
+	};
+	85D5E60E12341D990017B49B /* import.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2025, 2236}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 2246}";
+		};
+	};
+	85D5E62A12341D990017B49B /* mul.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1973, 1885}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 857}";
+		};
+	};
+	85D5E63712341D990017B49B /* pprime_p.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2499, 2015}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{3818, 456}";
+		};
+	};
+	85D5E64912341D990017B49B /* setbit.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1973, 1469}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 841}";
+		};
+	};
+	85D5E71812341EC30017B49B /* abs.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2025, 982}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1286}";
+		};
+	};
+	85D5E7B412341F1D0017B49B /* abs.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2025, 982}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1406}";
+		};
+	};
+	85D5E80412341FC80017B49B /* asprintf.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2025, 982}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1341}";
+		};
+	};
+	85D5E80612341FC80017B49B /* doprnt.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {728, 7917}}";
+			sepNavSelRange = "{6046, 0}";
+			sepNavVisRange = "{11259, 2095}";
+		};
+	};
+	85D5E80712341FC80017B49B /* doprntf.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {728, 4836}}";
+			sepNavSelRange = "{3073, 0}";
+			sepNavVisRange = "{1457, 2683}";
+		};
+	};
+	85D5E81312341FC80017B49B /* sprintffuns.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {728, 1208}}";
+			sepNavSelRange = "{2155, 0}";
+			sepNavVisRange = "{0, 2417}";
+		};
+	};
+	85D5E81812341FC80017B49B /* vsprintf.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {728, 1208}}";
+			sepNavSelRange = "{1106, 0}";
+			sepNavVisRange = "{0, 1247}";
+		};
+	};
+	85D5E81912341FC80017B49B /* doscan.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {872, 10738}}";
+			sepNavSelRange = "{14560, 0}";
+			sepNavVisRange = "{18551, 2045}";
+		};
+	};
+	85D6D313127DB99500E4EA45 /* gmp-unittest-misc-printf.m:178 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 853E3F0A1249443100A65C8D /* gmp-unittest-misc-printf.m */;
+		functionName = "-check_vsprintf:::";
+		hitCount = 5;
+		ignoreCount = 0;
+		lineNumber = 178;
+		location = "gmp-unittest";
+		modificationTime = 310265465.601234;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	85D6D334127DBDAF00E4EA45 /* otest iPhoneSimulator3.2 */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+			YES,
+			YES,
+		);
+		argumentStrings = (
+			"-SenTest Self",
+			"/Users/fe/Projects/osx/gmp/gmp4osx/build/Debug-iphonesimulator/gmp-unittest.octest",
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 1;
+		configStateDict = {
+			"PBXLSLaunchAction-0" = {
+				PBXLSLaunchAction = 0;
+				PBXLSLaunchStartAction = 1;
+				PBXLSLaunchStdioStyle = 3;
+				PBXLSLaunchStyle = 0;
+				class = PBXLSRunLaunchConfig;
+				commandLineArgs = (
+				);
+				displayName = "Executable Runner";
+				environment = {
+				};
+				identifier = com.apple.Xcode.launch.runConfig;
+				remoteHostInfo = "";
+				startActionInfo = "";
+			};
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+			{
+				active = YES;
+				name = CFFIXED_USER_HOME;
+				value = .;
+			},
+			{
+				active = YES;
+				name = IPHONE_SIMULATOR_ROOT;
+				value = "${SDKROOT}";
+			},
+			{
+				active = YES;
+				name = DYLD_NEW_LOCAL_SHARED_REGIONS;
+				value = YES;
+			},
+			{
+				active = YES;
+				name = DYLD_NO_FIX_PREBINDING;
+				value = YES;
+			},
+			{
+				active = YES;
+				name = DYLD_FORCE_FLAT_NAMESPACE;
+				value = YES;
+			},
+			{
+				active = YES;
+				name = DYLD_FRAMEWORK_PATH;
+				value = "${BUILD_PRODUCTS_DIR}:${SDKROOT}/Developer/Library/Frameworks:${DEVELOPER_LIBRARY_DIR}/Frameworks";
+			},
+			{
+				active = YES;
+				name = DYLD_LIBRARY_PATH;
+				value = "${BUILD_PRODUCTS_DIR}:${SDKROOT}/usr/lib";
+			},
+			{
+				active = YES;
+				name = DYLD_ROOT_PATH;
+				value = "${SDKROOT}";
+			},
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		launchableReference = 85D6D335127DBDAF00E4EA45 /* otest */;
+		libgmallocEnabled = 0;
+		name = "otest iPhoneSimulator3.2";
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+		startupPath = "<<ProductDirectory>>";
+		variableFormatDictionary = {
+			$cs = 1;
+			$ds = 1;
+			$eax = 1;
+			$ebp = 1;
+			$ebx = 1;
+			$ecx = 1;
+			$edi = 1;
+			$edx = 1;
+			$eflags = 1;
+			$eip = 1;
+			$es = 1;
+			$esi = 1;
+			$esp = 1;
+			$fctrl = 1;
+			$fioff = 1;
+			$fiseg = 1;
+			$fooff = 1;
+			$fop = 1;
+			$foseg = 1;
+			$fs = 1;
+			$fstat = 1;
+			$ftag = 1;
+			$gs = 1;
+			$mxcsr = 1;
+			$ss = 1;
+		};
+	};
+	85D6D335127DBDAF00E4EA45 /* otest */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = "compiled.mach-o.executable";
+		name = otest;
+		path = Developer/usr/bin/otest;
+		sourceTree = SDKROOT;
+	};
+	85D6D337127DBE1300E4EA45 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8526A02A12779A9E00D6BAE9 /* logops_n.c */;
+		name = "logops_n.c: 66";
+		rLen = 0;
+		rLoc = 1560;
+		rType = 0;
+		vrLen = 1586;
+		vrLoc = 0;
+	};
+	85D6D339127DBE1300E4EA45 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 85D6D33A127DBE1300E4EA45 /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/fe/Projects/osx/gmp/gmp4osx/build/Debug-iphonesimulator/gmp-unittest.octest/Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775808;
+	};
+	85D6D33A127DBE1300E4EA45 /* Info.plist */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = file.bplist;
+		name = Info.plist;
+		path = "/Users/fe/Projects/osx/gmp/gmp4osx/build/Debug-iphonesimulator/gmp-unittest.octest/Info.plist";
+		sourceTree = "<absolute>";
+	};
+	85D6D39D127DEFC600E4EA45 /* gmp-unittest-misc-printf.m:728 */ = {
+		isa = PBXFileBreakpoint;
+		actions = (
+		);
+		breakpointStyle = 0;
+		continueAfterActions = 0;
+		countType = 0;
+		delayBeforeContinue = 0;
+		fileReference = 853E3F0A1249443100A65C8D /* gmp-unittest-misc-printf.m */;
+		functionName = "-testCheckF";
+		hitCount = 1;
+		ignoreCount = 0;
+		lineNumber = 728;
+		location = "gmp-unittest";
+		modificationTime = 310262959.370703;
+		originalNumberOfMultipleMatches = 1;
+		state = 1;
+	};
+	85D6D3A2127DF04300E4EA45 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 85D5E81912341FC80017B49B /* doscan.c */;
+		name = "doscan.c: 497";
+		rLen = 0;
+		rLoc = 14560;
+		rType = 0;
+		vrLen = 2045;
+		vrLoc = 18551;
+	};
+	85DBC6B51252AB49003AFD9E /* fib_table.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2025, 1482}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 2397}";
+		};
+	};
+	85DBC6B61252AB49003AFD9E /* mp_bases.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2499, 3653}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 2172}";
+			sepNavWindowFrame = "{{15, 107}, {2390, 1309}}";
+		};
+	};
+	85DD22BF1274D37B00EDD3E1 /* tal-notreent.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2025, 1521}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 2405}";
+		};
+	};
+	85DD22C01274D37B00EDD3E1 /* tal-debug.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2025, 1833}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{2316, 1973}";
+		};
+	};
+	85DD22C21274D37B00EDD3E1 /* gmp-impl.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2056, 60671}}";
+			sepNavSelRange = "{151936, 17}";
+			sepNavVisRange = "{150783, 1629}";
+		};
+	};
+	85DD22C91274D42000EDD3E1 /* config-MacOSX.status */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2056, 36426}}";
+			sepNavSelRange = "{62127, 27}";
+			sepNavVisRange = "{61349, 1349}";
+		};
+	};
+	85DD22CB1274D42000EDD3E1 /* config-iPhoneSimulator */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2025, 988}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 605}";
+		};
+	};
+	85DD22CC1274D42000EDD3E1 /* config-iPhoneOS.status */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2025, 35308}}";
+			sepNavSelRange = "{61097, 27}";
+			sepNavVisRange = "{59702, 2108}";
+		};
+	};
+	85DD22CD1274D42000EDD3E1 /* config-iPhoneOS.m4 */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2025, 982}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1125}";
+		};
+	};
+	85DD22CE1274D42000EDD3E1 /* config-iPhoneOS */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2025, 988}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 591}";
+		};
+	};
+	85DD22CF1274D48E00EDD3E1 /* config.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2056, 7475}}";
+			sepNavSelRange = "{8327, 27}";
+			sepNavVisRange = "{9773, 1406}";
+		};
+	};
+	85DD22D61274D4ED00EDD3E1 /* config-iPhoneSimulator.m4 */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2025, 982}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1157}";
+		};
+	};
+	85DD22D71274D4ED00EDD3E1 /* config-iPhoneSimulator.status */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {41263, 30381}}";
+			sepNavSelRange = "{347, 0}";
+			sepNavVisRange = "{59854, 2147}";
+		};
+	};
+	85E480BD1273041F002916B5 /* gmp-iPhoneSimulator */ = {
+		activeExec = 0;
+	};
+	8DC2EF5A0486A6940098B216 /* Info.plist */ = {
+		uiCtxt = {
+			sepNavWindowFrame = "{{15, 110}, {2390, 1308}}";
+		};
+	};
+}
