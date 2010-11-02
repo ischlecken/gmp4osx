@@ -91,6 +91,8 @@ nl_langinfo (nl_item n)
 -(void) tearDown
 {
   tests_memory_end ();
+  
+  decimal_point = ".";
 }
 
 -(void) testCheckInput 

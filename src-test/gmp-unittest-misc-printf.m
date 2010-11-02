@@ -904,15 +904,16 @@ ASSERT_ALWAYS (x[1] == (type) ~ (type) 0);		\
   
   [self check_one:"!": "%c", '!'];
   
-  [self check_one:"hello world": "hello %s", "world"];
-  [self check_one:"hello:": "%s:", "hello"];
+  [self check_one:"hellow world": "hellow %s", "world"];
+  [self check_one:"helloe:": "%s:", "helloe"];
   mpz_set_ui (z, 0L);
-  [self check_one:"hello0": "%s%Zd", "hello", z, z];
+  [self check_one:"hellox0": "%s%Zd", "hellox", z];
   
-  {
-    static char  xs[801];
+  { static char xs[801];
+    
     memset (xs, 'x', sizeof(xs)-1);
-    [self check_one:xs, "%s": xs];
+    
+    [self check_one:xs: "%s", xs];
   }
   
   mpz_set_ui (z, 12345L);

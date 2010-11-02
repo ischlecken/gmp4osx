@@ -2565,7 +2565,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\" 1> /tmp/RunUnitTests.out \n";
 		};
 		8599F358127B7B5A001247D7 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
