@@ -34,16 +34,42 @@ along with the GNU MP Library.  If not, see http://www.gnu.org/licenses/.  */
 #include "gmp-impl.h"
 #include "tests.h"
 
+#import <SenTestingKit/SenTestingKit.h>
+
+@interface gmp_unittest_mpn_get_d : SenTestCase {
+  
+}
+
+@end
+
 
 #ifndef _GMP_IEEE_FLOATS
 #define _GMP_IEEE_FLOATS 0
 #endif
 
+@implementation gmp_unittest_mpn_get_d
+
+/**
+ *
+ */
+-(void) setUp
+{
+  tests_start ();
+  mp_trace_base = -16;
+}
+
+/**
+ *
+ */
+-(void) tearDown
+{
+  tests_end ();
+}
+
 
 /* Exercise various 2^n values, with various exponents and positive and
    negative.  */
-void
-check_onebit (void)
+-(void) testCheckOnebit
 {
   static const int bit_table[] = {
     0, 1, 2, 3,
@@ -119,7 +145,7 @@ check_onebit (void)
                   printf    ("   nsize    %ld\n", (long) nsize);
                   d_trace   ("   want     ", want);
                   d_trace   ("   got      ", got);
-                  abort();
+                  STFail(@"testCheckOnebit failed.");
                 }
             }
         }
@@ -128,8 +154,7 @@ check_onebit (void)
 
 
 /* Exercise values 2^n+1, while such a value fits the mantissa of a double. */
-void
-check_twobit (void)
+-(void) testCheckTwobit
 {
   int        i, mant_bits;
   double     got, want;
@@ -160,7 +185,7 @@ check_twobit (void)
               printf    ("   nsize    %ld\n", (long) nsize);
               d_trace   ("   want     ", want);
               d_trace   ("   got      ", got);
-              abort();
+              STFail(@"testCheckTwobit failed.");
             }
           want = -want;
         }
@@ -175,8 +200,7 @@ check_twobit (void)
 /* Expect large negative exponents to underflow to 0.0.
    Some systems might have hardware traps for such an underflow (though
    usually it's not the default), so watch out for SIGFPE. */
-void
-check_underflow (void)
+-(void) testCheckUnderflow
 {
   static const long exp_table[] = {
     -999999L, LONG_MIN,
@@ -206,7 +230,7 @@ check_underflow (void)
                   printf  ("  exp      %ld\n", exp);
                   printf  ("  sign     %ld\n", (long) sign);
                   d_trace ("  got      ", got);
-                  abort ();
+                  STFail(@"testCheckUnderflow failed.");
                 }
             }
         }
@@ -220,8 +244,7 @@ check_underflow (void)
 
 
 /* Expect large values to result in +/-inf, on IEEE systems. */
-void
-check_inf (void)
+-(void) testCheckInf
 {
   static const long exp_table[] = {
     999999L, LONG_MAX,
@@ -254,7 +277,7 @@ check_inf (void)
                   printf  ("  sign     %ld\n", (long) sign);
                   d_trace ("  got      ", got);
                   printf  ("  got sign %ld\n", (long) got_sign);
-                  abort ();
+                  STFail(@"testCheckInf failed.");
                 }
               if (got_sign != sign)
                 {
@@ -269,8 +292,7 @@ check_inf (void)
 /* Check values 2^n approaching and into IEEE denorm range.
    Some systems might not support denorms, or might have traps setup, so
    watch out for SIGFPE.  */
-void
-check_ieee_denorm (void)
+-(void) testCheck_ieee_denorm
 {
   static long exp;
   mp_limb_t  n = 1;
@@ -301,7 +323,7 @@ check_ieee_denorm (void)
                   printf  ("  sign  %ld\n", (long) sign);
                   d_trace ("  got   ", got);
                   d_trace ("  want  ", want);
-                  abort ();
+                  STFail(@"testCheck_ieee_denorm failed.");
                 }
               want = -want;
             }
@@ -319,8 +341,7 @@ check_ieee_denorm (void)
 
 /* Check values 2^n approaching exponent overflow.
    Some systems might trap on overflow, so watch out for SIGFPE.  */
-void
-check_ieee_overflow (void)
+-(void) testCheck_ieee_overflow
 {
   static long exp;
   mp_limb_t  n = 1;
@@ -351,7 +372,7 @@ check_ieee_overflow (void)
                   printf  ("  sign  %ld\n", (long) sign);
                   d_trace ("  got   ", got);
                   d_trace ("  want  ", want);
-                  abort ();
+                  STFail(@"testCheck_ieee_overflow failed.");
                 }
               want = -want;
             }
@@ -371,8 +392,7 @@ check_ieee_overflow (void)
    conversions, resulting in for instance 0x81c25113 incorrectly converted.
    This test exercises that value, to see mpn_get_d has avoided the
    problem.  */
-void
-check_0x81c25113 (void)
+-(void) testCheck_0x81c25113
 {
 #if GMP_NUMB_BITS >= 32
   double     want = 2176995603.0;
@@ -397,15 +417,14 @@ check_0x81c25113 (void)
           printf  ("  exp    %ld\n", exp);
           d_trace ("  got    ", got);
           d_trace ("  want   ", want);
-          abort ();
+          STFail(@"testCheck_0x81c25113 failed.");
         }
     }
 #endif
 }
 
 
-void
-check_rand (void)
+-(void) testCheck_rand
 {
   gmp_randstate_ptr rands = RANDS;
   int            rep, i;
@@ -474,29 +493,10 @@ check_rand (void)
           printf    ("   exp      %ld\n", exp);
           d_trace   ("   want     ", want);
           d_trace   ("   got      ", got);
-          abort();
+          STFail(@"testCheck_rand failed.");
         }
     }
 
   free (np);
 }
-
-
-int
-main (void)
-{
-  tests_start ();
-  mp_trace_base = -16;
-
-  check_onebit ();
-  check_twobit ();
-  check_inf ();
-  check_underflow ();
-  check_ieee_denorm ();
-  check_ieee_overflow ();
-  check_0x81c25113 ();
-  check_rand ();
-
-  tests_end ();
-  exit (0);
-}
+@end

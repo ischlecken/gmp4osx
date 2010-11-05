@@ -24,9 +24,28 @@ along with the GNU MP Library.  If not, see http://www.gnu.org/licenses/.  */
 #include "gmp-impl.h"
 #include "tests.h"
 
+#import "gmp-unittest-mpn-divrem_1.h"
 
-void
-check_data (void)
+@implementation gmp_unittest_mpn_divrem_1
+
+/**
+ *
+ */
+-(void) setUp
+{
+  tests_start ();
+  mp_trace_base = -16;
+}
+
+/**
+ *
+ */
+-(void) tearDown
+{
+  tests_end ();
+}
+
+-(void) testCheckData
 {
   static const struct {
     mp_limb_t  n[1];
@@ -84,7 +103,7 @@ check_data (void)
           mpn_trace     ("  got  q", got_q, qsize);
           mp_limb_trace ("  want r", data[i].want_r);
           mp_limb_trace ("  got  r", got_r);
-          abort ();
+          STFail(@"testCheckData failed.");
         }
 
       /* test if available */
@@ -105,15 +124,4 @@ check_data (void)
 #endif
     }
 }
-
-int
-main (void)
-{
-  tests_start ();
-  mp_trace_base = -16;
-
-  check_data ();
-
-  tests_end ();
-  exit (0);
-}
+@end
