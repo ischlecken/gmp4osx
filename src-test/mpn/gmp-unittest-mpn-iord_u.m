@@ -24,6 +24,10 @@ along with the GNU MP Library.  If not, see http://www.gnu.org/licenses/.  */
 #include "gmp-impl.h"
 #include "tests.h"
 
+#import <SenTestingKit/SenTestingKit.h>
+@interface gmp_unittest_mpn_iord_u : SenTestCase 
+{ }
+@end
 
 /* The i386 MPN_INCR_U and MPN_DECR_U have special cases for "n" being a
    compile-time constant 1, so that's exercised explicitly.  */
@@ -32,11 +36,34 @@ along with the GNU MP Library.  If not, see http://www.gnu.org/licenses/.  */
 #define M     GMP_NUMB_MAX
 #define SIZE  ((mp_size_t) 10)
 
+@implementation gmp_unittest_mpn_iord_u
 
-void
-check_one (const char *name, int i,
-           mp_srcptr src, mp_limb_t n,
-           mp_srcptr got, mp_srcptr want, mp_size_t size)
+/**
+ *
+ */
+-(void) setUp
+{
+  tests_start ();
+  mp_trace_base = -16;
+}
+
+/**
+ *
+ */
+-(void) tearDown
+{
+  tests_end ();
+}
+
+
+
+-(void) check_one:(const char *)name 
+                 :(int) i
+                 :(mp_srcptr) src 
+                 :(mp_limb_t) n
+                 :(mp_srcptr) got 
+                 :(mp_srcptr) want 
+                 :(mp_size_t) size
 {
   if (! refmpn_equal_anynail (got, want, size))
     {
@@ -45,13 +72,11 @@ check_one (const char *name, int i,
       mpn_trace ("    n", &n,   (mp_size_t) 1);
       mpn_trace ("  got", got,  size);
       mpn_trace (" want", want, size);
-      abort ();
+      STFail(@"one_test failed.");
     }
 }
 
-
-void
-check_incr_data (void)
+-(void) testCheck_incr_data
 {
   static const struct {
     mp_limb_t        n;
@@ -107,23 +132,22 @@ check_incr_data (void)
     {
       refmpn_copyi (got, data[i].src, SIZE);
       MPN_INCR_U (got, SIZE, data[i].n);
-      check_one ("check_incr (general)", i,
-                 data[i].src, data[i].n,
-                 got, data[i].want, SIZE);
+      [self check_one :"check_incr (general)": i
+                      :data[i].src: data[i].n
+                 :got: data[i].want: SIZE];
 
       if (data[i].n == 1)
         {
           refmpn_copyi (got, data[i].src, SIZE);
           MPN_INCR_U (got, SIZE, CNST_LIMB(1));
-          check_one ("check_incr (const 1)", i,
-                     data[i].src, data[i].n,
-                     got, data[i].want, SIZE);
+          [self check_one:"check_incr (const 1)": i
+                     :data[i].src:data[i].n
+                     :got:data[i].want:SIZE];
         }
     }
 }
 
-void
-check_decr_data (void)
+-(void) testCheck_decr_data
 {
   static const struct {
     mp_limb_t        n;
@@ -191,31 +215,18 @@ check_decr_data (void)
     {
       refmpn_copyi (got, data[i].src, SIZE);
       MPN_DECR_U (got, SIZE, data[i].n);
-      check_one ("check_decr_data", i,
-                 data[i].src, data[i].n,
-                 got, data[i].want, SIZE);
+      [self check_one :"check_decr_data": i
+                      :data[i].src: data[i].n
+                      :got: data[i].want: SIZE];
 
       if (data[i].n == 1)
         {
           refmpn_copyi (got, data[i].src, SIZE);
           MPN_DECR_U (got, SIZE, CNST_LIMB(1));
-          check_one ("check_decr (const 1)", i,
-                     data[i].src, data[i].n,
-                     got, data[i].want, SIZE);
+          [self check_one:"check_decr (const 1)": i
+                         :data[i].src: data[i].n
+                         :got: data[i].want: SIZE];
         }
     }
 }
-
-
-int
-main (void)
-{
-  tests_start ();
-  mp_trace_base = -16;
-
-  check_incr_data ();
-  check_decr_data ();
-
-  tests_end ();
-  exit (0);
-}
+@end

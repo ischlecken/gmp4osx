@@ -24,6 +24,11 @@ along with the GNU MP Library.  If not, see http://www.gnu.org/licenses/.  */
 #include "gmp-impl.h"
 #include "tests.h"
 
+#import <SenTestingKit/SenTestingKit.h>
+@interface gmp_unittest_mpn_invert : SenTestCase 
+{ }
+@end
+
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -58,12 +63,30 @@ invert_valid (mp_srcptr ip, mp_srcptr dp, mp_size_t n)
   return (cy == -1);
 }
 
-/*
-  Chech the result of the mpn_invert function in the library.
-*/
 
-int
-main (int argc, char **argv)
+@implementation gmp_unittest_mpn_invert
+
+/**
+ *
+ */
+-(void) setUp
+{
+  tests_start ();
+}
+
+/**
+ *
+ */
+-(void) tearDown
+{
+  tests_end ();
+}
+
+/*
+ Chech the result of the mpn_invert function in the library.
+ */
+
+-(void) testInvert
 {
   mp_ptr ip, dp, scratch;
   int count = COUNT;
@@ -71,91 +94,78 @@ main (int argc, char **argv)
   gmp_randstate_ptr rands;
   TMP_DECL;
   TMP_MARK;
-
-  if (argc > 1)
-    {
-      char *end;
-      count = strtol (argv[1], &end, 0);
-      if (*end || count <= 0)
-	{
-	  fprintf (stderr, "Invalid test count: %s.\n", argv[1]);
-	  return 1;
-	}
-    }
-
-  tests_start ();
+  
   rands = RANDS;
-
+  
   dp = TMP_ALLOC_LIMBS (MAX_N);
   ip = 1+TMP_ALLOC_LIMBS (MAX_N + 2);
   scratch
-    = 1+TMP_ALLOC_LIMBS (mpn_invert_itch (MAX_N) + 2);
-
+  = 1+TMP_ALLOC_LIMBS (mpn_invert_itch (MAX_N) + 2);
+  
   for (test = 0; test < count; test++)
+  {
+    unsigned size_min;
+    unsigned size_range;
+    mp_size_t n;
+    mp_size_t itch;
+    mp_limb_t i_before, i_after, s_before, s_after;
+    
+    for (size_min = 1; (1L << size_min) < MIN_N; size_min++)
+      ;
+    
+    /* We generate an in the MIN_N <= n <= (1 << size_range). */
+    size_range = size_min
+    + gmp_urandomm_ui (rands, SIZE_LOG + 1 - size_min);
+    
+    n = MIN_N
+    + gmp_urandomm_ui (rands, (1L << size_range) + 1 - MIN_N);
+    
+    mpn_random2 (dp, n);
+    
+    mpn_random2 (ip-1, n + 2);
+    i_before = ip[-1];
+    i_after = ip[n];
+    
+    itch = mpn_invert_itch (n);
+    ASSERT_ALWAYS (itch <= mpn_invert_itch (MAX_N));
+    mpn_random2 (scratch-1, itch+2);
+    s_before = scratch[-1];
+    s_after = scratch[itch];
+    
+    dp[n-1] |= GMP_NUMB_HIGHBIT;
+    mpn_invert (ip, dp, n, scratch);
+    if (ip[-1] != i_before || ip[n] != i_after
+        || scratch[-1] != s_before || scratch[itch] != s_after
+        || ! invert_valid(ip, dp, n))
     {
-      unsigned size_min;
-      unsigned size_range;
-      mp_size_t n;
-      mp_size_t itch;
-      mp_limb_t i_before, i_after, s_before, s_after;
-
-      for (size_min = 1; (1L << size_min) < MIN_N; size_min++)
-	;
-
-      /* We generate an in the MIN_N <= n <= (1 << size_range). */
-      size_range = size_min
-	+ gmp_urandomm_ui (rands, SIZE_LOG + 1 - size_min);
-
-      n = MIN_N
-	+ gmp_urandomm_ui (rands, (1L << size_range) + 1 - MIN_N);
-
-      mpn_random2 (dp, n);
-
-      mpn_random2 (ip-1, n + 2);
-      i_before = ip[-1];
-      i_after = ip[n];
-
-      itch = mpn_invert_itch (n);
-      ASSERT_ALWAYS (itch <= mpn_invert_itch (MAX_N));
-      mpn_random2 (scratch-1, itch+2);
-      s_before = scratch[-1];
-      s_after = scratch[itch];
-
-      dp[n-1] |= GMP_NUMB_HIGHBIT;
-      mpn_invert (ip, dp, n, scratch);
-      if (ip[-1] != i_before || ip[n] != i_after
-	  || scratch[-1] != s_before || scratch[itch] != s_after
-	  || ! invert_valid(ip, dp, n))
-	{
-	  printf ("ERROR in test %d, n = %d\n",
-		  test, (int) n);
-	  if (ip[-1] != i_before)
+      printf ("ERROR in test %d, n = %d\n",
+              test, (int) n);
+      if (ip[-1] != i_before)
 	    {
 	      printf ("before ip:"); mpn_dump (ip -1, 1);
 	      printf ("keep:   "); mpn_dump (&i_before, 1);
 	    }
-	  if (ip[n] != i_after)
+      if (ip[n] != i_after)
 	    {
 	      printf ("after ip:"); mpn_dump (ip + n, 1);
 	      printf ("keep:   "); mpn_dump (&i_after, 1);
 	    }
-	  if (scratch[-1] != s_before)
+      if (scratch[-1] != s_before)
 	    {
 	      printf ("before scratch:"); mpn_dump (scratch-1, 1);
 	      printf ("keep:   "); mpn_dump (&s_before, 1);
 	    }
-	  if (scratch[itch] != s_after)
+      if (scratch[itch] != s_after)
 	    {
 	      printf ("after scratch:"); mpn_dump (scratch + itch, 1);
 	      printf ("keep:   "); mpn_dump (&s_after, 1);
 	    }
-	  mpn_dump (dp, n);
-	  mpn_dump (ip, n);
-
-	  abort();
-	}
+      mpn_dump (dp, n);
+      mpn_dump (ip, n);
+      
+      STFail(@"testInvert failed.");
     }
+  }
   TMP_FREE;
-  tests_end ();
-  return 0;
 }
+@end

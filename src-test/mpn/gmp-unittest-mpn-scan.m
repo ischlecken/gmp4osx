@@ -25,12 +25,39 @@ along with the GNU MP Library.  If not, see http://www.gnu.org/licenses/.  */
 
 #include "tests.h"
 
+#import <SenTestingKit/SenTestingKit.h>
+
+
+@interface gmp_unittest_mpn_scan : SenTestCase {
+  
+}
+
+@end
 
 #define SIZE  ((mp_size_t) 3)
 mp_limb_t  x[SIZE+1];
 
-void
-check (void)
+@implementation gmp_unittest_mpn_scan
+
+/**
+ *
+ */
+-(void) setUp
+{
+  tests_start ();
+  mp_trace_base = -16;
+}
+
+/**
+ *
+ */
+-(void) tearDown
+{
+  tests_end ();
+}
+
+
+-(void) check
 {
   unsigned long  i, got, want;
 
@@ -46,7 +73,7 @@ check (void)
           printf ("  got   %lu\n", got);
           printf ("  want  %lu\n", want);
           mpn_trace ("  x    ", x, SIZE);
-          abort ();
+          STFail(@"one_test failed.");
         }
     }
 
@@ -62,13 +89,12 @@ check (void)
           printf ("  got   %lu\n", got);
           printf ("  want  %lu\n", want);
           mpn_trace ("  x    ", x, SIZE);
-          abort ();
+          STFail(@"one_test failed.");
         }
     }
 }
 
-void
-check_twobits (void)
+-(void) testCheck_twobits
 {
 #define TWOBITS(a, b) \
   ((CNST_LIMB(1) << (a)) | (CNST_LIMB(1) << (b)))
@@ -102,8 +128,7 @@ check_twobits (void)
 }
 
 /* This is unused, it takes too long, especially on 64-bit systems. */
-void
-check_twobits_exhaustive (void)
+-(void) testCheck_twobits_exhaustive 
 {
   unsigned long  i, j;
 
@@ -119,8 +144,7 @@ check_twobits_exhaustive (void)
     }
 }
 
-void
-check_rand (void)
+-(void) testCheck_rand
 {
   int  i;
 
@@ -131,15 +155,5 @@ check_rand (void)
     }
 }
 
-int
-main (void)
-{
-  mp_trace_base = -16;
-  tests_start ();
+@end
 
-  check_twobits ();
-  check_rand ();
-
-  tests_end ();
-  exit (0);
-}

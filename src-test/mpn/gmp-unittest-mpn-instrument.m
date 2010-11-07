@@ -25,6 +25,11 @@ along with the GNU MP Library.  If not, see http://www.gnu.org/licenses/.  */
 #include "tests.h"
 
 
+#import <SenTestingKit/SenTestingKit.h>
+@interface gmp_unittest_mpn_instrument : SenTestCase 
+{ }
+@end
+
 #if WANT_PROFILING_INSTRUMENT
 
 /* This program exercises each mpn routine that might be implemented in
@@ -392,25 +397,47 @@ check (void)
 #endif
 }
 
+@implementation gmp_unittest_mpn_instrument
 
-int
-main (void)
+/**
+ *
+ */
+-(void) setUp
 {
   tests_start ();
-
-  check ();
-
-  tests_end ();
-  exit (0);
 }
 
+/**
+ *
+ */
+-(void) tearDown
+{
+  tests_end ();
+}
+
+-(void) testInstruments
+{
+  check ();
+}
+@end
 
 #else /* ! WANT_PROFILING_INSTRUMENT */
 
-int
-main (void)
-{
-  exit (0);
-}
+@implementation gmp_unittest_mpn_instrument
 
+/**
+ *
+ */
+-(void) setUp
+{}
+
+/**
+ *
+ */
+-(void) tearDown
+{ }
+
+-(void) testInstruments
+{ }
+@end
 #endif

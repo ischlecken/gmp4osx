@@ -26,12 +26,8 @@ along with the GNU MP Library.  If not, see http://www.gnu.org/licenses/.  */
 #include "tests.h"
 
 #import <SenTestingKit/SenTestingKit.h>
-
-
-@interface gmp_unittest_mpn_hgcd : SenTestCase {
-  
-}
-
+@interface gmp_unittest_mpn_hgcd : SenTestCase 
+{ }
 @end
 
 static mp_size_t one_test __GMP_PROTO ((mpz_t, mpz_t, int));

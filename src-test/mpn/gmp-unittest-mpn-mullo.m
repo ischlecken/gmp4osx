@@ -22,6 +22,11 @@ along with the GNU MP Library.  If not, see http://www.gnu.org/licenses/.  */
 #include "gmp-impl.h"
 #include "tests.h"
 
+#import <SenTestingKit/SenTestingKit.h>
+@interface gmp_unittest_mpn_mullo : SenTestCase 
+{ }
+@end
+
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -37,8 +42,27 @@ along with the GNU MP Library.  If not, see http://www.gnu.org/licenses/.  */
 #define MAX_N (1L << SIZE_LOG)
 #define MIN_N (1)
 
-int
-main (int argc, char **argv)
+
+@implementation gmp_unittest_mpn_mullo
+
+/**
+ *
+ */
+-(void) setUp
+{
+  tests_start ();
+}
+
+/**
+ *
+ */
+-(void) tearDown
+{
+  tests_end ();
+}
+
+
+-(void) testMullo
 {
   mp_ptr ap, bp, refp, pp, scratch;
   int count = COUNT;
@@ -46,97 +70,84 @@ main (int argc, char **argv)
   gmp_randstate_ptr rands;
   TMP_DECL;
   TMP_MARK;
-
-  if (argc > 1)
-    {
-      char *end;
-      count = strtol (argv[1], &end, 0);
-      if (*end || count <= 0)
-	{
-	  fprintf (stderr, "Invalid test count: %s.\n", argv[1]);
-	  return 1;
-	}
-    }
-
-  tests_start ();
+  
   rands = RANDS;
-
+  
 #define mpn_mullo_itch(n) (0)
-
+  
   ap = TMP_ALLOC_LIMBS (MAX_N);
   bp = TMP_ALLOC_LIMBS (MAX_N);
   refp = TMP_ALLOC_LIMBS (MAX_N * 2);
   pp = 1+TMP_ALLOC_LIMBS (MAX_N + 2);
   scratch
-    = 1+TMP_ALLOC_LIMBS (mpn_mullo_itch (MAX_N) + 2);
-
+  = 1+TMP_ALLOC_LIMBS (mpn_mullo_itch (MAX_N) + 2);
+  
   for (test = 0; test < count; test++)
+  {
+    unsigned size_min;
+    unsigned size_range;
+    mp_size_t n;
+    mp_size_t itch;
+    mp_limb_t p_before, p_after, s_before, s_after;
+    
+    for (size_min = 1; (1L << size_min) < MIN_N; size_min++)
+      ;
+    
+    /* We generate an in the MIN_N <= n <= (1 << size_range). */
+    size_range = size_min
+    + gmp_urandomm_ui (rands, SIZE_LOG + 1 - size_min);
+    
+    n = MIN_N
+    + gmp_urandomm_ui (rands, (1L << size_range) + 1 - MIN_N);
+    
+    mpn_random2 (ap, n);
+    mpn_random2 (bp, n);
+    mpn_random2 (pp-1, n + 2);
+    p_before = pp[-1];
+    p_after = pp[n];
+    
+    itch = mpn_mullo_itch (n);
+    ASSERT_ALWAYS (itch <= mpn_mullo_itch (MAX_N));
+    mpn_random2 (scratch-1, itch+2);
+    s_before = scratch[-1];
+    s_after = scratch[itch];
+    
+    mpn_mullo_n (pp, ap, bp, n);
+    mpn_mul_n (refp, ap, bp, n);
+    if (pp[-1] != p_before || pp[n] != p_after
+        || scratch[-1] != s_before || scratch[itch] != s_after
+        || mpn_cmp (refp, pp, n) != 0)
     {
-      unsigned size_min;
-      unsigned size_range;
-      mp_size_t n;
-      mp_size_t itch;
-      mp_limb_t p_before, p_after, s_before, s_after;
-
-      for (size_min = 1; (1L << size_min) < MIN_N; size_min++)
-	;
-
-      /* We generate an in the MIN_N <= n <= (1 << size_range). */
-      size_range = size_min
-	+ gmp_urandomm_ui (rands, SIZE_LOG + 1 - size_min);
-
-      n = MIN_N
-	+ gmp_urandomm_ui (rands, (1L << size_range) + 1 - MIN_N);
-
-      mpn_random2 (ap, n);
-      mpn_random2 (bp, n);
-      mpn_random2 (pp-1, n + 2);
-      p_before = pp[-1];
-      p_after = pp[n];
-
-      itch = mpn_mullo_itch (n);
-      ASSERT_ALWAYS (itch <= mpn_mullo_itch (MAX_N));
-      mpn_random2 (scratch-1, itch+2);
-      s_before = scratch[-1];
-      s_after = scratch[itch];
-
-      mpn_mullo_n (pp, ap, bp, n);
-      mpn_mul_n (refp, ap, bp, n);
-      if (pp[-1] != p_before || pp[n] != p_after
-	  || scratch[-1] != s_before || scratch[itch] != s_after
-	  || mpn_cmp (refp, pp, n) != 0)
-	{
-	  printf ("ERROR in test %d, n = %d",
-		  test, (int) n);
-	  if (pp[-1] != p_before)
+      printf ("ERROR in test %d, n = %d",
+              test, (int) n);
+      if (pp[-1] != p_before)
 	    {
 	      printf ("before pp:"); mpn_dump (pp -1, 1);
 	      printf ("keep:   "); mpn_dump (&p_before, 1);
 	    }
-	  if (pp[n] != p_after)
+      if (pp[n] != p_after)
 	    {
 	      printf ("after pp:"); mpn_dump (pp + n, 1);
 	      printf ("keep:   "); mpn_dump (&p_after, 1);
 	    }
-	  if (scratch[-1] != s_before)
+      if (scratch[-1] != s_before)
 	    {
 	      printf ("before scratch:"); mpn_dump (scratch-1, 1);
 	      printf ("keep:   "); mpn_dump (&s_before, 1);
 	    }
-	  if (scratch[itch] != s_after)
+      if (scratch[itch] != s_after)
 	    {
 	      printf ("after scratch:"); mpn_dump (scratch + itch, 1);
 	      printf ("keep:   "); mpn_dump (&s_after, 1);
 	    }
-	  mpn_dump (ap, n);
-	  mpn_dump (bp, n);
-	  mpn_dump (pp, n);
-	  mpn_dump (refp, n);
-
-	  abort();
-	}
+      mpn_dump (ap, n);
+      mpn_dump (bp, n);
+      mpn_dump (pp, n);
+      mpn_dump (refp, n);
+      
+      STFail(@"testMullo failed.");
     }
+  }
   TMP_FREE;
-  tests_end ();
-  return 0;
 }
+@end

@@ -24,13 +24,39 @@ along with the GNU MP Library.  If not, see http://www.gnu.org/licenses/.  */
 #include "gmp-impl.h"
 #include "tests.h"
 
+#import <SenTestingKit/SenTestingKit.h>
+
+
+@interface gmp_unittest_mpn_perfsqr : SenTestCase {
+  
+}
+
+@end
+
 #include "mpn/perfsqr.h"
 
 
+@implementation gmp_unittest_mpn_perfsqr
+
+/**
+ *
+ */
+-(void) setUp
+{
+  tests_start ();
+}
+
+/**
+ *
+ */
+-(void) tearDown
+{
+  tests_end ();
+}
+
 #define PERFSQR_MOD_MASK   ((CNST_LIMB(1) << PERFSQR_MOD_BITS) - 1)
 
-void
-check_mod_2 (mp_limb_t d, mp_limb_t inv, mp_limb_t got_hi, mp_limb_t got_lo)
+-(void) check_mod_2:(mp_limb_t) d :(mp_limb_t) inv :(mp_limb_t) got_hi :(mp_limb_t) got_lo
 {
   int        want[2*GMP_LIMB_BITS], got;
   unsigned   r, idx;
@@ -67,26 +93,24 @@ check_mod_2 (mp_limb_t d, mp_limb_t inv, mp_limb_t got_hi, mp_limb_t got_lo)
           printf ("  idx=%u\n", idx);
           printf ("  got  %d\n", got);
           printf ("  want %d\n", want[r]);
-          abort ();
+          STFail(@"testCheck_mod_2 failed.");
         }
     }
 }
 
 /* Check the generated data in perfsqr.h. */
-void
-check_mod (void)
+-(void) testCheck_mod
 {
 #define PERFSQR_MOD_34(r, up, usize)       { r = 0; } /* so r isn't unused */
 #define PERFSQR_MOD_PP(r, up, usize)       { r = 0; }
-#define PERFSQR_MOD_1(r, d, inv, mask)     check_mod_2 (d, inv, CNST_LIMB(0), mask)
-#define PERFSQR_MOD_2(r, d, inv, mhi, mlo) check_mod_2 (d, inv, mhi, mlo)
+#define PERFSQR_MOD_1(r, d, inv, mask)     [self check_mod_2:d :inv :CNST_LIMB(0) :mask]
+#define PERFSQR_MOD_2(r, d, inv, mhi, mlo) [self check_mod_2:d :inv :mhi :mlo]
 
   PERFSQR_MOD_TEST (dummy, dummy);
 }
 
 /* Check PERFSQR_PP, if in use. */
-void
-check_pp (void)
+-(void) testCheck_pp
 {
 #ifdef PERFSQR_PP
   ASSERT_ALWAYS_LIMB (PERFSQR_PP);
@@ -104,14 +128,5 @@ check_pp (void)
 #endif
 }
 
-int
-main (void)
-{
-  tests_start ();
+@end
 
-  check_mod ();
-  check_pp ();
-
-  tests_end ();
-  exit (0);
-}

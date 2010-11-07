@@ -26,6 +26,10 @@ along with the GNU MP Library.  If not, see http://www.gnu.org/licenses/.  */
 #include "longlong.h"
 #include "tests.h"
 
+#import <SenTestingKit/SenTestingKit.h>
+@interface gmp_unittest_mpn_fat : SenTestCase 
+{ }
+@end
 
 /* In this program we're aiming to pick up certain subtle problems that
    might creep into a fat binary.
@@ -75,8 +79,27 @@ struct cpuvec_t __gmpn_cpuvec;
 /* saved from program startup */
 struct cpuvec_t  initial_cpuvec;
 
-void
-check_functions (void)
+
+@implementation gmp_unittest_mpn_fat
+
+/**
+ *
+ */
+-(void) setUp
+{
+  memcpy (&initial_cpuvec, &__gmpn_cpuvec, sizeof (__gmpn_cpuvec));
+  tests_start ();
+}
+
+/**
+ *
+ */
+-(void) tearDown
+{
+  tests_end ();
+}
+
+-(void) testCheck_functions
 {
   mp_limb_t  wp[2], xp[2], yp[2], r;
   int  i;
@@ -271,8 +294,7 @@ check_functions (void)
 
 /* Expect the first use of a each fat threshold to invoke the necessary
    initialization.  */
-void
-check_thresholds (void)
+-(void) testCheck_thresholds
 {
 #define ITERATE(name,field)                                             \
   do {                                                                  \
@@ -284,18 +306,4 @@ check_thresholds (void)
 
   ITERATE_FAT_THRESHOLDS ();
 }
-
-
-int
-main (void)
-{
-  memcpy (&initial_cpuvec, &__gmpn_cpuvec, sizeof (__gmpn_cpuvec));
-
-  tests_start ();
-
-  check_functions ();
-  check_thresholds ();
-
-  tests_end ();
-  exit (0);
-}
+@end
