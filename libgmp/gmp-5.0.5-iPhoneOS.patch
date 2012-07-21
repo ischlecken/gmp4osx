@@ -1,0 +1,26 @@
+diff -uwbr gmp-5.0.5.orig/mpn/arm/invert_limb.asm gmp-5.0.5-iPhoneOS/mpn/arm/invert_limb.asm
+--- gmp-5.0.5.orig/mpn/arm/invert_limb.asm	2012-05-06 13:19:50.000000000 +0200
++++ gmp-5.0.5-iPhoneOS/mpn/arm/invert_limb.asm	2012-07-21 14:29:22.000000000 +0200
+@@ -19,6 +19,13 @@
+ 
+ include(`../config.m4')
+ 
++define(`APPLE',1)
++
++ifdef(`APPLE',
++  `define(`RODATA',`.const')',
++  `define(`RODATA',`.section .rodata')')
++
++
+ ASM_START()
+ PROLOGUE(mpn_invert_limb)
+ 	ldr	r2, L(4)
+@@ -48,7 +55,7 @@
+ L(4):	.word	approx_tab-8-512-L(2)
+ EPILOGUE()
+ 
+-	.section .rodata
++        RODATA
+ 	ALIGN(2)
+ approx_tab:
+ 	.short    0xffc0,0xfec0,0xfdc0,0xfcc0,0xfbc0,0xfac0,0xfa00,0xf900

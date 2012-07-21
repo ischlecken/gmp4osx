@@ -1,6 +1,0 @@
-//
-// Prefix header for all source files of the 'gmp' target in the 'gmp' project.
-//
-
-#ifdef __OBJC__
-#endif

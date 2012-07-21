@@ -1,0 +1,245 @@
+#!/bin/sh
+############################################################################
+# 
+# 
+# 
+############################################################################
+trap cleanup EXIT 
+
+SCRIPTDIR=$(dirname $0)
+SCRIPTDIR=$(cd "$SCRIPTDIR" && pwd )
+SCRIPTNAME=$(basename $0)
+BUILDDIR=$SCRIPTDIR/build
+LIBDIR=$BUILDDIR/lib
+LIBNAME=gmp
+VERSION=5.0.5
+SOFTWARETAR="$SCRIPTDIR/$LIBNAME-$VERSION.tar.bz2"
+
+DEVDIR=/Applications/Xcode.app/Contents/Developer/Platforms
+IOSVERSION=5.1
+
+CONFIGSCRIPT=$(mktemp -t $SCRIPTNAME)
+
+#
+# cleanup
+#
+cleanup()
+{ logMsg "cleanup"
+
+  [ -f "$CONFIGSCRIPT"        ] && rm "$CONFIGSCRIPT"
+}
+
+#
+# log to file
+# logMsg <msg>
+#
+logMsg()
+{
+  printf "[%11s] %s %s \n" $SCRIPTNAME "$(date +'%H:%M:%S')" "$1"
+  
+}
+
+#
+# errorExit <number> <message>
+#
+errorExit()
+{ local exitNo=$1
+  shift
+  
+  logMsg "$@"
+  logMsg "NOT SUCCESSFULL"
+  exit $exitNo
+}
+
+#
+# $1: name
+#
+extractSoftware()
+{ local name=$1
+  local extractdir="$BUILDDIR/$name"
+  local patchfile="$SCRIPTDIR/$LIBNAME-$VERSION-$name.patch"
+  
+  [ -d "$extractdir" ] || mkdir -p "$extractdir"
+  
+  cd "$extractdir"
+  logMsg "extract software for $name..."
+  tar -xf "$SOFTWARETAR" --strip-components 1
+  
+  if [ -f "$patchfile" ]; then
+    logMsg "patching software..."
+    patch -p1 < "$patchfile"
+  fi
+}
+
+#
+# $1: name
+#
+configureSoftware()
+{ local name=$1
+  local extractdir="$BUILDDIR/$name"
+  local localdev="$DEVDIR/$name.platform/Developer"
+  local arch=""
+  local host=""
+  local commonparam="--disable-shared --enable-static"
+  
+
+  if [ "$name" == "iPhoneOS" -o "$name" == "iPhoneSimulator" ]; then
+	  case $name in
+	    iPhoneOS) 
+	      arch="armv7" 
+	      host="arm-apple-darwin10"
+	      ;;
+	    iPhoneSimulator) 
+	      arch="i386"
+	      host="none-apple-darwin10"
+	      ;;
+	  esac
+
+    cat >"$CONFIGSCRIPT" << EOF
+#!/bin/sh
+
+cd "$extractdir"
+./configure \
+CC="$localdev/usr/bin/gcc" \
+CXX="$localdev/usr/bin/g++" \
+CPP="$localdev/usr/bin/gcc -E" \
+LD="$localdev/usr/bin/ld" \
+CPPFLAGS="-arch $arch -isysroot $localdev/SDKs/$name$IOSVERSION.sdk -miphoneos-version-min=$IOSVERSION" \
+AR="$localdev/usr/bin/ar" \
+NM="$localdev/usr/bin/nm" \
+NMEDIT="$localdev/usr/bin/nmedit" \
+LIBTOOL="$localdev/usr/bin/libtool" \
+LIPO="$localdev/usr/bin/lipo" \
+OTOOL="$localdev/usr/bin/otool" \
+RANLIB="$localdev/usr/bin/ranlib" \
+STRIP="$localdev/usr/bin/strip" \
+$commonparam --prefix=$localdev/usr/local --host=$host 
+
+EOF
+  else
+    cat >"$CONFIGSCRIPT" << EOF
+#!/bin/sh
+
+cd "$extractdir"
+./configure $commonparam
+
+EOF
+
+	fi
+	
+	chmod +x "$CONFIGSCRIPT"
+  $CONFIGSCRIPT	
+}
+
+#
+# $1: name
+#
+makeSoftware()
+{ local name=$1
+  local extractdir="$BUILDDIR/$name"
+
+  logMsg "make software for $name..."
+  cd "$extractdir"
+  make
+  
+  [ -d "$LIBDIR" ] || mkdir -p "$LIBDIR"
+  
+  logMsg "copy result to $LIBDIR..."
+  cp .libs/lib$LIBNAME.a "$LIBDIR/lib$LIBNAME-$name.a"
+}
+
+#
+# $1:framework name
+# $2:framework version
+#
+createFramework()
+{ local FRAMEWORK_NAME=$1
+	local FRAMEWORK_VERSION=$2
+	local FRAMEWORK_DIR0="$BUILDDIR/$FRAMEWORK_NAME.framework"
+	local FRAMEWORK_DIR1="$FRAMEWORK_DIR0/Versions/$FRAMEWORK_VERSION"
+	
+	[ -d "${FRAMEWORK_DIR1}" ]           || mkdir -p "${FRAMEWORK_DIR1}"
+	[ -d "${FRAMEWORK_DIR1}/Resources" ] || mkdir -p "${FRAMEWORK_DIR1}/Resources"
+	[ -d "${FRAMEWORK_DIR1}/Headers" ]   || mkdir -p "${FRAMEWORK_DIR1}/Headers"
+	
+	logMsg "creating framework..."
+	
+	lipo \
+	-create \
+	"$LIBDIR/lib$LIBNAME-MacOSX.a" \
+	"$LIBDIR/lib$LIBNAME-iPhoneOS.a" \
+	"$LIBDIR/lib$LIBNAME-iPhoneSimulator.a" \
+	-o "${FRAMEWORK_DIR1}/${FRAMEWORK_NAME}"
+	
+	logMsg "Coping headers..."
+	cp $BUILDDIR/MacOSX/$LIBNAME.h           "${FRAMEWORK_DIR1}/Headers"
+	
+	logMsg "Creating symlinks..."
+	ln -fs "$FRAMEWORK_VERSION" "$FRAMEWORK_DIR0/Versions/Current"
+	ln -fs "Versions/$FRAMEWORK_VERSION/Headers" "$FRAMEWORK_DIR0/Headers"
+	ln -fs "Versions/$FRAMEWORK_VERSION/Resources" "$FRAMEWORK_DIR0/Resources"
+	ln -fs "Versions/$FRAMEWORK_VERSION/$FRAMEWORK_NAME" "$FRAMEWORK_DIR0/$FRAMEWORK_NAME"
+	
+	lipo "${FRAMEWORK_DIR1}/${FRAMEWORK_NAME}" -info
+}
+
+#
+# print help screen
+#
+printHelp()
+{ echo "$SCRIPTNAME [options] "
+  echo "  -b: build"
+  echo "  -f: create framework"
+  echo
+
+  errorExit -1 "unknown options"
+}
+
+command=""
+
+while getopts bfc? OPTION 
+do
+  case $OPTION in
+    b) command="build" ;;
+    f) command="framework" ;;
+    c) command="clean" ;;
+   \?) printHelp;;
+  esac
+done
+
+ANZ=$(( $OPTIND-1 ))
+shift $ANZ
+
+
+#if [ $# -lt 2 ]; then
+if [ "$command" = "" ] ; then
+  printHelp
+fi
+
+case $command in
+  build)
+    extractSoftware MacOSX
+    extractSoftware iPhoneOS
+    extractSoftware iPhoneSimulator
+    
+    configureSoftware MacOSX
+    configureSoftware iPhoneOS
+    configureSoftware iPhoneSimulator
+    
+    makeSoftware MacOSX
+    makeSoftware iPhoneOS
+    makeSoftware iPhoneSimulator
+    
+    createFramework lib$LIBNAME $VERSION
+    
+    ;;
+  framework)
+    createFramework lib$LIBNAME $VERSION
+    ;;
+  clean)
+    logMsg "remove $BUILDDIR..."
+    rm -rf "$BUILDDIR"
+    ;;
+esac
+
+logMsg "OK"
