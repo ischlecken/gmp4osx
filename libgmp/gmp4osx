@@ -121,7 +121,7 @@ EOF
 #!/bin/sh
 
 cd "$extractdir"
-./configure $commonparam
+./configure $commonparam --with-pic
 
 EOF
 
@@ -142,6 +142,11 @@ makeSoftware()
   cd "$extractdir"
   make
   
+  if [ "$name" == "MacOSX" ] ; then
+    logMsg "check result..."
+    make check
+  fi
+  
   [ -d "$LIBDIR" ] || mkdir -p "$LIBDIR"
   
   logMsg "copy result to $LIBDIR..."
@@ -157,39 +162,50 @@ createFramework()
 	local FRAMEWORK_VERSION=$2
 	local FRAMEWORK_DIR0="$BUILDDIR/$FRAMEWORK_NAME.framework"
 	local FRAMEWORK_DIR1="$FRAMEWORK_DIR0/Versions/$FRAMEWORK_VERSION"
-	
+	local SHARED_LIBRARY_FRAMEWORKS="/Users/Shared/Library/Frameworks"
+
 	[ -d "${FRAMEWORK_DIR1}" ]           || mkdir -p "${FRAMEWORK_DIR1}"
 	[ -d "${FRAMEWORK_DIR1}/Resources" ] || mkdir -p "${FRAMEWORK_DIR1}/Resources"
 	[ -d "${FRAMEWORK_DIR1}/Headers" ]   || mkdir -p "${FRAMEWORK_DIR1}/Headers"
-	
+
 	logMsg "creating framework..."
-	
+
 	lipo \
 	-create \
 	"$LIBDIR/lib$LIBNAME-MacOSX.a" \
 	"$LIBDIR/lib$LIBNAME-iPhoneOS.a" \
 	"$LIBDIR/lib$LIBNAME-iPhoneSimulator.a" \
 	-o "${FRAMEWORK_DIR1}/${FRAMEWORK_NAME}"
-	
+
 	logMsg "Coping headers..."
-	cp $BUILDDIR/MacOSX/$LIBNAME.h           "${FRAMEWORK_DIR1}/Headers"
-	
+	cp "$BUILDDIR/MacOSX/$LIBNAME.h"           "${FRAMEWORK_DIR1}/Headers/$LIBNAME-MacOSX.h"
+  cp "$BUILDDIR/iPhoneOS/$LIBNAME.h"         "${FRAMEWORK_DIR1}/Headers/$LIBNAME-iPhoneOS.h"
+  cp "$BUILDDIR/iPhoneSimulator/$LIBNAME.h"  "${FRAMEWORK_DIR1}/Headers/$LIBNAME-iPhoneSimulator.h"
+
 	logMsg "Creating symlinks..."
-	ln -fs "$FRAMEWORK_VERSION" "$FRAMEWORK_DIR0/Versions/Current"
-	ln -fs "Versions/$FRAMEWORK_VERSION/Headers" "$FRAMEWORK_DIR0/Headers"
-	ln -fs "Versions/$FRAMEWORK_VERSION/Resources" "$FRAMEWORK_DIR0/Resources"
+	ln -fs "$FRAMEWORK_VERSION"                          "$FRAMEWORK_DIR0/Versions/Current"
+	ln -fs "Versions/$FRAMEWORK_VERSION/Headers"         "$FRAMEWORK_DIR0/Headers"
+	ln -fs "Versions/$FRAMEWORK_VERSION/Resources"       "$FRAMEWORK_DIR0/Resources"
 	ln -fs "Versions/$FRAMEWORK_VERSION/$FRAMEWORK_NAME" "$FRAMEWORK_DIR0/$FRAMEWORK_NAME"
-	
+
 	lipo "${FRAMEWORK_DIR1}/${FRAMEWORK_NAME}" -info
+
+  logMsg "copy $FRAMEWORK_NAME to shared users library..."
+  
+  [ -d "$SHARED_LIBRARY_FRAMEWORKS/$FRAMEWORK_NAME.framework" ] && rm -rf "$SHARED_LIBRARY_FRAMEWORKS/$FRAMEWORK_NAME.framework"
+  cp -R ${FRAMEWORK_DIR0} "$SHARED_LIBRARY_FRAMEWORKS"
 }
 
-#
+	#
 # print help screen
 #
 printHelp()
 { echo "$SCRIPTNAME [options] "
-  echo "  -b: build"
+  echo "  -c: clean"
+  echo "  -e: extract"
+  echo "  -g: config"
   echo "  -f: create framework"
+  echo "  -b: build all"
   echo
 
   errorExit -1 "unknown options"
@@ -197,9 +213,11 @@ printHelp()
 
 command=""
 
-while getopts bfc? OPTION 
+while getopts gbefc? OPTION 
 do
   case $OPTION in
+    g) command="config" ;;
+    e) command="extract" ;;
     b) command="build" ;;
     f) command="framework" ;;
     c) command="clean" ;;
@@ -217,7 +235,22 @@ if [ "$command" = "" ] ; then
 fi
 
 case $command in
+  extract)
+    extractSoftware MacOSX
+    extractSoftware iPhoneOS
+    extractSoftware iPhoneSimulator
+    ;;
+  config)
+    configureSoftware MacOSX
+    configureSoftware iPhoneOS
+    configureSoftware iPhoneSimulator
+    ;;
   build)
+    if [ -d "$BUILDDIR" ] ; then
+      logMsg "clean old build $BUILDDIR..."
+      rm -rf "$BUILDDIR"
+    fi
+    
     extractSoftware MacOSX
     extractSoftware iPhoneOS
     extractSoftware iPhoneSimulator
@@ -231,7 +264,6 @@ case $command in
     makeSoftware iPhoneSimulator
     
     createFramework lib$LIBNAME $VERSION
-    
     ;;
   framework)
     createFramework lib$LIBNAME $VERSION
