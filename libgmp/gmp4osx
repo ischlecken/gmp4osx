@@ -181,6 +181,7 @@ createFramework()
 	cp "$BUILDDIR/MacOSX/$LIBNAME.h"           "${FRAMEWORK_DIR1}/Headers/$LIBNAME-MacOSX.h"
   cp "$BUILDDIR/iPhoneOS/$LIBNAME.h"         "${FRAMEWORK_DIR1}/Headers/$LIBNAME-iPhoneOS.h"
   cp "$BUILDDIR/iPhoneSimulator/$LIBNAME.h"  "${FRAMEWORK_DIR1}/Headers/$LIBNAME-iPhoneSimulator.h"
+  cp "$SCRIPTDIR/$LIBNAME.h"                 "${FRAMEWORK_DIR1}/Headers/$LIBNAME.h"
 
 	logMsg "Creating symlinks..."
 	ln -fs "$FRAMEWORK_VERSION"                          "$FRAMEWORK_DIR0/Versions/Current"

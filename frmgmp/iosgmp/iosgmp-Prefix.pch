@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'iosgmp' target in the 'iosgmp' project
+//
+
+#ifdef __OBJC__
+  #import <Foundation/Foundation.h>
+#endif
