@@ -7,36 +7,29 @@
 //
 
 #import "osxgmpTests.h"
-#import <libgmp/gmp.h>
+#import <osxgmp/MPInteger.h>
 
 @implementation osxgmpTests
 
 - (void)setUp
 {
-    [super setUp];
-    
-    // Set-up code here.
+  [super setUp];
 }
 
 - (void)tearDown
-{
-    // Tear-down code here.
-    
-    [super tearDown];
+{  [super tearDown];
 }
 
-- (void)testExample
+- (void)testMPAdd
 {
-   
-  mpz_t n;
+  MPInteger* i = [[MPInteger alloc] initWithString:@"9999999999999999999999999999999999999999"];
+  MPInteger* k = [[MPInteger alloc] initWithString:@"2"];
   
-  mpz_init (n);
+  [i add:k];
   
-  STAssertFalse(mpz_set_str (n, "12345", 0) ,@"format error");
+  NSString* result = [i stringValue];
   
-  int class = mpz_probab_prime_p (n, 5);
-  
-  NSLog(@"prime class=%d",class);
+  STAssertTrue( [result isEqualToString:@"10000000000000000000000000000000000000001"],@"" );
 }
 
 @end

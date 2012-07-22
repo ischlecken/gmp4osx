@@ -7,19 +7,6 @@
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "frmgmp/osxgmpTests/osxgmpTests.m"
-         timestampString = "364668033.5516"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "37"
-         endingLineNumber = "37"
-         landmarkName = "-testExample"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
          filePath = "frmgmp/iosgmpTests/iosgmpTests.m"
          timestampString = "364668636.657929"
          startingColumnNumber = "9223372036854775807"
@@ -27,6 +14,19 @@
          startingLineNumber = "30"
          endingLineNumber = "30"
          landmarkName = "-testExample"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "frmgmp/osxgmpTests/osxgmpTests.m"
+         timestampString = "364675106.320257"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "32"
+         endingLineNumber = "32"
+         landmarkName = "-testMPAdd"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

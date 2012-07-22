@@ -24,10 +24,15 @@
 		85F261C115BC629600FC715A /* iosgmp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85F261A615BC629600FC715A /* iosgmp.framework */; };
 		85F261C815BC629600FC715A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 85F261C615BC629600FC715A /* InfoPlist.strings */; };
 		85F261CB15BC629600FC715A /* iosgmpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F261CA15BC629600FC715A /* iosgmpTests.m */; };
-		85F261D315BC63FE00FC715A /* libgmp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85F261D215BC63FE00FC715A /* libgmp.framework */; };
 		85F261D415BC642100FC715A /* libgmp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85F261D215BC63FE00FC715A /* libgmp.framework */; };
 		85F261D515BC643300FC715A /* libgmp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85F261D215BC63FE00FC715A /* libgmp.framework */; };
 		85F261D715BC668400FC715A /* iosgmp.h in Headers */ = {isa = PBXBuildFile; fileRef = 85F261B015BC629600FC715A /* iosgmp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		85F261DB15BC76DA00FC715A /* MPInteger.h in Headers */ = {isa = PBXBuildFile; fileRef = 85F261D915BC76DA00FC715A /* MPInteger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		85F261DC15BC76DA00FC715A /* MPInteger.h in Headers */ = {isa = PBXBuildFile; fileRef = 85F261D915BC76DA00FC715A /* MPInteger.h */; };
+		85F261DD15BC76DA00FC715A /* MPInteger.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F261DA15BC76DA00FC715A /* MPInteger.m */; };
+		85F261DE15BC76DA00FC715A /* MPInteger.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F261DA15BC76DA00FC715A /* MPInteger.m */; };
+		85F261DF15BC76DA00FC715A /* MPInteger.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F261DA15BC76DA00FC715A /* MPInteger.m */; };
+		85F261E015BC76DA00FC715A /* MPInteger.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F261DA15BC76DA00FC715A /* MPInteger.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +90,8 @@
 		85F261C915BC629600FC715A /* iosgmpTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iosgmpTests.h; sourceTree = "<group>"; };
 		85F261CA15BC629600FC715A /* iosgmpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iosgmpTests.m; sourceTree = "<group>"; };
 		85F261D215BC63FE00FC715A /* libgmp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libgmp.framework; path = /Users/Shared/Library/Frameworks/libgmp.framework; sourceTree = "<absolute>"; };
+		85F261D915BC76DA00FC715A /* MPInteger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPInteger.h; path = src/MPInteger.h; sourceTree = "<group>"; };
+		85F261DA15BC76DA00FC715A /* MPInteger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MPInteger.m; path = src/MPInteger.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +108,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85F261D315BC63FE00FC715A /* libgmp.framework in Frameworks */,
 				85F2618C15BC627B00FC715A /* SenTestingKit.framework in Frameworks */,
 				85F2618D15BC627B00FC715A /* Cocoa.framework in Frameworks */,
 				85F2619015BC627B00FC715A /* osxgmp.framework in Frameworks */,
@@ -134,6 +140,7 @@
 		85F2616415BC623300FC715A = {
 			isa = PBXGroup;
 			children = (
+				85F261D815BC765200FC715A /* Classes */,
 				85F2617B15BC627B00FC715A /* osxgmp */,
 				85F2619115BC627B00FC715A /* osxgmpTests */,
 				85F261A915BC629600FC715A /* iosgmp */,
@@ -255,6 +262,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		85F261D815BC765200FC715A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				85F261D915BC76DA00FC715A /* MPInteger.h */,
+				85F261DA15BC76DA00FC715A /* MPInteger.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -262,6 +278,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85F261DB15BC76DA00FC715A /* MPInteger.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				85F261D715BC668400FC715A /* iosgmp.h in Headers */,
+				85F261DC15BC76DA00FC715A /* MPInteger.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +483,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				85F2618415BC627B00FC715A /* osxgmp.m in Sources */,
+				85F261DD15BC76DA00FC715A /* MPInteger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +492,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				85F2619915BC627B00FC715A /* osxgmpTests.m in Sources */,
+				85F261DE15BC76DA00FC715A /* MPInteger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +501,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				85F261B215BC629600FC715A /* iosgmp.m in Sources */,
+				85F261DF15BC76DA00FC715A /* MPInteger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,6 +510,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				85F261CB15BC629600FC715A /* iosgmpTests.m in Sources */,
+				85F261E015BC76DA00FC715A /* MPInteger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
