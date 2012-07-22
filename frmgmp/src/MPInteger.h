@@ -17,4 +17,6 @@
 
 -(NSString*) stringValue;
 -(MPInteger*) add:(MPInteger*)a;
+-(MPInteger*) sub:(MPInteger*)a;
+-(MPInteger*) mul:(MPInteger*)a;
 @end

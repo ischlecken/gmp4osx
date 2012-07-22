@@ -7,28 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8560750415BCC12B00735C49 /* MPIntegerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8560750315BCC12B00735C49 /* MPIntegerTests.m */; };
+		8560750515BCC12B00735C49 /* MPIntegerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8560750315BCC12B00735C49 /* MPIntegerTests.m */; };
 		85F2617615BC627B00FC715A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85F2617515BC627B00FC715A /* Cocoa.framework */; };
 		85F2618015BC627B00FC715A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 85F2617E15BC627B00FC715A /* InfoPlist.strings */; };
-		85F2618415BC627B00FC715A /* osxgmp.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F2618315BC627B00FC715A /* osxgmp.m */; };
 		85F2618C15BC627B00FC715A /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85F2618B15BC627B00FC715A /* SenTestingKit.framework */; };
 		85F2618D15BC627B00FC715A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85F2617515BC627B00FC715A /* Cocoa.framework */; };
 		85F2619015BC627B00FC715A /* osxgmp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85F2617215BC627B00FC715A /* osxgmp.framework */; };
 		85F2619615BC627B00FC715A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 85F2619415BC627B00FC715A /* InfoPlist.strings */; };
-		85F2619915BC627B00FC715A /* osxgmpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F2619815BC627B00FC715A /* osxgmpTests.m */; };
 		85F261A815BC629600FC715A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85F261A715BC629600FC715A /* Foundation.framework */; };
 		85F261AE15BC629600FC715A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 85F261AC15BC629600FC715A /* InfoPlist.strings */; };
-		85F261B215BC629600FC715A /* iosgmp.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F261B115BC629600FC715A /* iosgmp.m */; };
 		85F261B915BC629600FC715A /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85F2618B15BC627B00FC715A /* SenTestingKit.framework */; };
 		85F261BB15BC629600FC715A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85F261BA15BC629600FC715A /* UIKit.framework */; };
 		85F261BC15BC629600FC715A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85F261A715BC629600FC715A /* Foundation.framework */; };
 		85F261C115BC629600FC715A /* iosgmp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85F261A615BC629600FC715A /* iosgmp.framework */; };
 		85F261C815BC629600FC715A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 85F261C615BC629600FC715A /* InfoPlist.strings */; };
-		85F261CB15BC629600FC715A /* iosgmpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F261CA15BC629600FC715A /* iosgmpTests.m */; };
 		85F261D415BC642100FC715A /* libgmp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85F261D215BC63FE00FC715A /* libgmp.framework */; };
 		85F261D515BC643300FC715A /* libgmp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85F261D215BC63FE00FC715A /* libgmp.framework */; };
-		85F261D715BC668400FC715A /* iosgmp.h in Headers */ = {isa = PBXBuildFile; fileRef = 85F261B015BC629600FC715A /* iosgmp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		85F261DB15BC76DA00FC715A /* MPInteger.h in Headers */ = {isa = PBXBuildFile; fileRef = 85F261D915BC76DA00FC715A /* MPInteger.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		85F261DC15BC76DA00FC715A /* MPInteger.h in Headers */ = {isa = PBXBuildFile; fileRef = 85F261D915BC76DA00FC715A /* MPInteger.h */; };
+		85F261DC15BC76DA00FC715A /* MPInteger.h in Headers */ = {isa = PBXBuildFile; fileRef = 85F261D915BC76DA00FC715A /* MPInteger.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		85F261DD15BC76DA00FC715A /* MPInteger.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F261DA15BC76DA00FC715A /* MPInteger.m */; };
 		85F261DE15BC76DA00FC715A /* MPInteger.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F261DA15BC76DA00FC715A /* MPInteger.m */; };
 		85F261DF15BC76DA00FC715A /* MPInteger.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F261DA15BC76DA00FC715A /* MPInteger.m */; };
@@ -60,6 +57,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8560750215BCC12B00735C49 /* MPIntegerTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPIntegerTests.h; path = src/MPIntegerTests.h; sourceTree = "<group>"; };
+		8560750315BCC12B00735C49 /* MPIntegerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MPIntegerTests.m; path = src/MPIntegerTests.m; sourceTree = "<group>"; };
 		85F2617215BC627B00FC715A /* osxgmp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = osxgmp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85F2617515BC627B00FC715A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		85F2617815BC627B00FC715A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -68,27 +67,19 @@
 		85F2617D15BC627B00FC715A /* osxgmp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "osxgmp-Info.plist"; sourceTree = "<group>"; };
 		85F2617F15BC627B00FC715A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		85F2618115BC627B00FC715A /* osxgmp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "osxgmp-Prefix.pch"; sourceTree = "<group>"; };
-		85F2618215BC627B00FC715A /* osxgmp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = osxgmp.h; sourceTree = "<group>"; };
-		85F2618315BC627B00FC715A /* osxgmp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = osxgmp.m; sourceTree = "<group>"; };
 		85F2618A15BC627B00FC715A /* osxgmpTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = osxgmpTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		85F2618B15BC627B00FC715A /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		85F2619315BC627B00FC715A /* osxgmpTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "osxgmpTests-Info.plist"; sourceTree = "<group>"; };
 		85F2619515BC627B00FC715A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		85F2619715BC627B00FC715A /* osxgmpTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = osxgmpTests.h; sourceTree = "<group>"; };
-		85F2619815BC627B00FC715A /* osxgmpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = osxgmpTests.m; sourceTree = "<group>"; };
 		85F261A615BC629600FC715A /* iosgmp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework.static; includeInIndex = 0; path = iosgmp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85F261A715BC629600FC715A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		85F261AB15BC629600FC715A /* iosgmp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iosgmp-Info.plist"; sourceTree = "<group>"; };
 		85F261AD15BC629600FC715A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		85F261AF15BC629600FC715A /* iosgmp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iosgmp-Prefix.pch"; sourceTree = "<group>"; };
-		85F261B015BC629600FC715A /* iosgmp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iosgmp.h; sourceTree = "<group>"; };
-		85F261B115BC629600FC715A /* iosgmp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iosgmp.m; sourceTree = "<group>"; };
 		85F261B815BC629600FC715A /* iosgmpTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iosgmpTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		85F261BA15BC629600FC715A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		85F261C515BC629600FC715A /* iosgmpTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iosgmpTests-Info.plist"; sourceTree = "<group>"; };
 		85F261C715BC629600FC715A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		85F261C915BC629600FC715A /* iosgmpTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iosgmpTests.h; sourceTree = "<group>"; };
-		85F261CA15BC629600FC715A /* iosgmpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iosgmpTests.m; sourceTree = "<group>"; };
 		85F261D215BC63FE00FC715A /* libgmp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libgmp.framework; path = /Users/Shared/Library/Frameworks/libgmp.framework; sourceTree = "<absolute>"; };
 		85F261D915BC76DA00FC715A /* MPInteger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPInteger.h; path = src/MPInteger.h; sourceTree = "<group>"; };
 		85F261DA15BC76DA00FC715A /* MPInteger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MPInteger.m; path = src/MPInteger.m; sourceTree = "<group>"; };
@@ -137,10 +128,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8560750115BCC0F900735C49 /* TestClasses */ = {
+			isa = PBXGroup;
+			children = (
+				8560750215BCC12B00735C49 /* MPIntegerTests.h */,
+				8560750315BCC12B00735C49 /* MPIntegerTests.m */,
+			);
+			name = TestClasses;
+			sourceTree = "<group>";
+		};
 		85F2616415BC623300FC715A = {
 			isa = PBXGroup;
 			children = (
 				85F261D815BC765200FC715A /* Classes */,
+				8560750115BCC0F900735C49 /* TestClasses */,
 				85F2617B15BC627B00FC715A /* osxgmp */,
 				85F2619115BC627B00FC715A /* osxgmpTests */,
 				85F261A915BC629600FC715A /* iosgmp */,
@@ -187,8 +188,6 @@
 		85F2617B15BC627B00FC715A /* osxgmp */ = {
 			isa = PBXGroup;
 			children = (
-				85F2618215BC627B00FC715A /* osxgmp.h */,
-				85F2618315BC627B00FC715A /* osxgmp.m */,
 				85F2617C15BC627B00FC715A /* Supporting Files */,
 			);
 			path = osxgmp;
@@ -207,8 +206,6 @@
 		85F2619115BC627B00FC715A /* osxgmpTests */ = {
 			isa = PBXGroup;
 			children = (
-				85F2619715BC627B00FC715A /* osxgmpTests.h */,
-				85F2619815BC627B00FC715A /* osxgmpTests.m */,
 				85F2619215BC627B00FC715A /* Supporting Files */,
 			);
 			path = osxgmpTests;
@@ -226,8 +223,6 @@
 		85F261A915BC629600FC715A /* iosgmp */ = {
 			isa = PBXGroup;
 			children = (
-				85F261B015BC629600FC715A /* iosgmp.h */,
-				85F261B115BC629600FC715A /* iosgmp.m */,
 				85F261AA15BC629600FC715A /* Supporting Files */,
 			);
 			path = iosgmp;
@@ -246,8 +241,6 @@
 		85F261C315BC629600FC715A /* iosgmpTests */ = {
 			isa = PBXGroup;
 			children = (
-				85F261C915BC629600FC715A /* iosgmpTests.h */,
-				85F261CA15BC629600FC715A /* iosgmpTests.m */,
 				85F261C415BC629600FC715A /* Supporting Files */,
 			);
 			path = iosgmpTests;
@@ -286,7 +279,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85F261D715BC668400FC715A /* iosgmp.h in Headers */,
 				85F261DC15BC76DA00FC715A /* MPInteger.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,7 +474,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85F2618415BC627B00FC715A /* osxgmp.m in Sources */,
 				85F261DD15BC76DA00FC715A /* MPInteger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -491,8 +482,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85F2619915BC627B00FC715A /* osxgmpTests.m in Sources */,
 				85F261DE15BC76DA00FC715A /* MPInteger.m in Sources */,
+				8560750415BCC12B00735C49 /* MPIntegerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,7 +491,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85F261B215BC629600FC715A /* iosgmp.m in Sources */,
 				85F261DF15BC76DA00FC715A /* MPInteger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,8 +499,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85F261CB15BC629600FC715A /* iosgmpTests.m in Sources */,
 				85F261E015BC76DA00FC715A /* MPInteger.m in Sources */,
+				8560750515BCC12B00735C49 /* MPIntegerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -869,6 +859,7 @@
 				85F2619C15BC627B00FC715A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		85F2619D15BC627B00FC715A /* Build configuration list for PBXNativeTarget "osxgmpTests" */ = {
 			isa = XCConfigurationList;
@@ -877,6 +868,7 @@
 				85F2619F15BC627B00FC715A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		85F261CC15BC629600FC715A /* Build configuration list for PBXNativeTarget "iosgmp" */ = {
 			isa = XCConfigurationList;
@@ -885,6 +877,7 @@
 				85F261CE15BC629600FC715A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		85F261CF15BC629600FC715A /* Build configuration list for PBXNativeTarget "iosgmpTests" */ = {
 			isa = XCConfigurationList;
@@ -893,6 +886,7 @@
 				85F261D115BC629600FC715A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

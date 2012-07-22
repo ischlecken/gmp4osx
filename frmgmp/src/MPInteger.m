@@ -113,4 +113,24 @@
   
   return self;
 }
+
+/**
+ *
+ */
+-(MPInteger*) sub:(MPInteger*)a
+{ if( a!=nil )
+    mpz_sub(_number,_number,a->_number);
+  
+  return self;
+}
+
+/**
+ *
+ */
+-(MPInteger*) mul:(MPInteger*)a
+{ if( a!=nil )
+    mpz_mul(_number,_number,a->_number);
+  
+  return self;
+}
 @end
