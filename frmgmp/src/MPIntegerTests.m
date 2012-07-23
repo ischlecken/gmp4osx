@@ -29,41 +29,82 @@
  *
  */
 - (void)testMPAdd
-{ MPInteger* i = [[MPInteger alloc] initWithString:@"9999999999999999999999999999999999999999"];
-  MPInteger* k = [[MPInteger alloc] initWithString:@"2"];
+{ MPInteger* i = [MPInteger mpIntegerWithString:@"9999999999999999999999999999999999999999"];
+  MPInteger* k = [MPInteger mpIntegerWithString:@"2"];
+  MPInteger* r = [i add:k];
   
-  [i add:k];
-  
-  NSString* result = [i stringValue];
-  
-  STAssertTrue( [result isEqualToString:@"10000000000000000000000000000000000000001"],@"" );
+  STAssertTrue( [r isEqual:@"10000000000000000000000000000000000000001"],@"" );
 }
 
 /**
  *
  */
 - (void)testMPSub
-{ MPInteger* i = [[MPInteger alloc] initWithString:@"10000000000000000000000000000000000000001"];
-  MPInteger* k = [[MPInteger alloc] initWithString:@"2"];
+{ MPInteger* i = [MPInteger mpIntegerWithString:@"10000000000000000000000000000000000000001"];
+  MPInteger* k = [MPInteger mpIntegerWithString:@"2"];
+  MPInteger* r = [i sub:k];
   
-  [i sub:k];
-  
-  NSString* result = [i stringValue];
-  
-  STAssertTrue( [result isEqualToString:@"9999999999999999999999999999999999999999"],@"" );
+  STAssertTrue( [r isEqual:@"9999999999999999999999999999999999999999"],@"" );
 }
 
 /**
  *
  */
 - (void)testMPMul
-{ MPInteger* i = [[MPInteger alloc] initWithString:@"10000000000000000000000000000000000000000"];
-  MPInteger* k = [[MPInteger alloc] initWithString:@"2"];
+{ MPInteger* i = [MPInteger mpIntegerWithString:@"10000000000000000000000000000000000000000"];
+  MPInteger* k = [MPInteger mpIntegerWithString:@"2"];
   
-  [i mul:k];
+  MPInteger* r = [i mul:k];
   
-  NSString* result = [i stringValue];
+  STAssertTrue( [r isEqual:@"20000000000000000000000000000000000000000"],@"" );
+}
+
+/**
+ *
+ */
+- (void)testMPDiv
+{ MPInteger* i = [MPInteger mpIntegerWithString:@"10000000000000000000000000000000000000000"];
+  MPInteger* k = [MPInteger mpIntegerWithString:@"2"];
   
-  STAssertTrue( [result isEqualToString:@"20000000000000000000000000000000000000000"],@"" );
+  MPInteger* r = [i div:k];
+  
+  STAssertTrue( [r isEqual:@"5000000000000000000000000000000000000000"],@"" );
+}
+
+/**
+ *
+ */
+- (void)testMPMod
+{ MPInteger* i = [MPInteger mpIntegerWithString:@"10000000000000000000000000000000000000001"];
+  MPInteger* k = [MPInteger mpIntegerWithString:@"2"];
+  
+  MPInteger* r = [i mod:k];
+  
+  STAssertTrue( [r isEqual:@"1"],@"" );
+}
+
+/**
+ *
+ */
+- (void)testMPPowm
+{ MPInteger* i = [MPInteger mpIntegerWithString:@"10000000000000000000000000000000000000000"];
+  MPInteger* e = [MPInteger mpIntegerWithString:@"2"];
+  MPInteger* m = [MPInteger mpIntegerWithString:@"13"];
+  
+  MPInteger* r = [i powm:e using:m];
+  
+  STAssertTrue( [r isEqual:@"9"],@"" );
+}
+
+/**
+ *
+ */
+- (void)testExpression
+{ MPInteger* i = [MPInteger mpIntegerWithString:@"3"];
+  MPInteger* k = [MPInteger mpIntegerWithString:@"2"];
+  
+  MPInteger* r = [[[[i mul:k] add:k] sub:k] div:[MPInteger mpIntegerWithString:@"2"]];
+  
+  STAssertTrue( [r isEqual:@"3"],@"" );
 }
 @end
